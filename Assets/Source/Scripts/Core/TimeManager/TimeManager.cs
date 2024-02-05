@@ -21,6 +21,9 @@ namespace Clicker.Core.Time
         public delegate void OnNewHour(int hour);
         public static OnNewHour onNewHour;
 
+        public delegate void OnNewMinute(int minute);
+        public static OnNewMinute onNewMinute;
+
 
         // Во сколько раз время идёт быстрее реального
         public const int TimeMultiplayer = 2000;
@@ -34,6 +37,7 @@ namespace Clicker.Core.Time
             {
                 _seconds = 0;
                 _minutes++;
+                onNewMinute?.Invoke(_minutes);
             }
             if (_minutes >= 60)
             {

@@ -41,7 +41,7 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
         if (data.currentClickerProgress >= data.maxProgressBarClicks)
         {
             data.Money += data.MoneyPerClick * (data.currentClickerProgress / data.maxProgressBarClicks);
-            data.currentClickerProgress = data.currentClickerProgress % data.maxProgressBarClicks;
+            data.currentClickerProgress %= data.maxProgressBarClicks;
             onFoodCooked?.Invoke();
         }
 
