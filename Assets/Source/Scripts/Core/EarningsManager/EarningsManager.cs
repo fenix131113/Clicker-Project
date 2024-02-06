@@ -11,19 +11,19 @@ namespace Clicker.Core.Earnings
 
         public void AddOrUpdateHistoryEntry(int dayNum, string categoryName, int earnMoney, int expensesMoney = 0)
         {
-            if (CalendarManager.Day - 1 > dayNum)
+            if (CalendarManager.Day > dayNum)
             {
                 Debug.LogWarning("You trying to add earning into the past!");
                 return;
             }
-            EarningDayHistory earningDay = GetEarnDayHistoryByDayIndex(dayNum - 1);
+            EarningDayHistory earningDay = GetEarnDayHistoryByDayIndex(dayNum);
 
             //If earning in this day is clear - add new day history
             if (earningDay != null)
                 earningDay.AddOrUpdateCategory(categoryName, earnMoney, expensesMoney);
             else // if not clear - add new category or update the old one
             {
-                _earningsList.Add(new EarningDayHistory(dayNum - 1, new(categoryName, earnMoney, expensesMoney)));
+                _earningsList.Add(new EarningDayHistory(dayNum, new(categoryName, earnMoney, expensesMoney)));
                 if (_earningsList.Count > 14)
                     _earningsList.RemoveAt(0);
             }

@@ -36,16 +36,16 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
 
     private void ClickLogic()
     {
-        data.currentClickerProgress += data.ClickPower;
+        data.SetCurrentClickerProgress(data.CurrentClickerProgress + data.ClickPower);
 
-        if (data.currentClickerProgress >= data.maxProgressBarClicks)
+        if (data.CurrentClickerProgress >= data.MaxProgressBarClicks)
         {
-            data.Money += data.MoneyPerClick * (data.currentClickerProgress / data.maxProgressBarClicks);
-            data.currentClickerProgress %= data.maxProgressBarClicks;
+            data.Money += data.MoneyPerClick * (data.CurrentClickerProgress / data.MaxProgressBarClicks);
+            data.SetCurrentClickerProgress(data.CurrentClickerProgress % data.MaxProgressBarClicks);
             onFoodCooked?.Invoke();
         }
 
-        clickProgressFiller.DOFillAmount(1 / (float)data.maxProgressBarClicks * data.currentClickerProgress, 0.1f);
+        clickProgressFiller.DOFillAmount(1 / (float)data.MaxProgressBarClicks * data.CurrentClickerProgress, 0.1f);
     }
     private void ClickAnimation()
     {

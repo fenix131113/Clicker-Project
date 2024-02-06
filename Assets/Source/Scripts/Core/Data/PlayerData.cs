@@ -1,9 +1,20 @@
+using Clicker.Core.Workers;
 using UnityEngine;
 
 // All data in this script will save in database
 public class PlayerData
 {
-	private int _money;
+    [SerializeField]private RobberyManager _robberyManager;
+	public RobberyManager RobberyManager => _robberyManager;
+
+	[SerializeField] private WorkersManager _workersManager;
+	public WorkersManager WorkersManager => _workersManager;
+
+	[SerializeField] private GeneralPassiveMoneyController _passiveMoneyController;
+	public GeneralPassiveMoneyController PassiveMoneyController => _passiveMoneyController;
+
+
+    private int _money;
 	public int Money
 	{
 		get { return _money; }
@@ -18,6 +29,11 @@ public class PlayerData
 		}
 	}
 
+	private int _skillPoints;
+	public int SkillPoints => _skillPoints;
+	public void AddSkillPoints(int count) => _skillPoints += count;
+	public void RemoveSkillPoints(int count) => _skillPoints -= count;
+
 
 	private int _clickPower = 1;
 	public int ClickPower => _clickPower;
@@ -29,26 +45,25 @@ public class PlayerData
 	public void AddMoneyPerClick(int count) => _moneyPerClick += count;
 
 
-	public int maxProgressBarClicks = 10;
-	public int currentClickerProgress = 0;
+	private int _maxProgressBarClicks = 10;
+	public int MaxProgressBarClicks => _maxProgressBarClicks;
+	public void SetMaxProgressBarClicks(int count) => _maxProgressBarClicks = count;
 
 
-	private int _workers = 2;
-	public int Workers => _workers;
-	public void AddWorkers(int count) => _workers += count;
+	private int _currentClickerProgress = 0;
+	public int CurrentClickerProgress => _currentClickerProgress;
+	public void SetCurrentClickerProgress(int count) => _currentClickerProgress = count;
 
 
-	private int _moneyPerWorker = 1;
-	public int MoneyPerWorker => _moneyPerWorker;
-	public void AddMoneyPerWorker(int count) => _moneyPerWorker += count;
+    public PlayerData(RobberyManager robberyManager, WorkersManager workersManager, GeneralPassiveMoneyController passiveMoneyController)
+    {
+        _robberyManager = robberyManager;
+		robberyManager.SetData(this);
 
+		_workersManager = workersManager;
+		_workersManager.SetData(this);
 
-	private int _salaryPerWorker = 30;
-	public int SalayPerWorker => _salaryPerWorker;
-	public void ReduceSalaryPerWorker(int count) => _salaryPerWorker -= count;
-
-
-	private int _utilityServiceCost = 100;
-	public int UtilityServiceCost => _utilityServiceCost;
-	public void ReduceUtilityServiceCost(int count) => _utilityServiceCost -= count;
+		_passiveMoneyController = passiveMoneyController;
+		passiveMoneyController.SetData(this);
+    }
 }

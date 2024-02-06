@@ -1,15 +1,32 @@
 using Clicker.Core.Earnings;
 using Clicker.Core.Time;
+using UnityEngine;
 
 public class GeneralPassiveMoneyController
 {
-    readonly PlayerData data;
-    readonly EarningsManager earningsManager;
+    #region Saving Data
+    [SerializeField] private int _utilityServiceCost = 100;
+    public int UtilityServiceCost => _utilityServiceCost;
+    public void ReduceUtilityServiceCost(int count) => _utilityServiceCost -= count;
 
-    public GeneralPassiveMoneyController(PlayerData data, EarningsManager earningsManager)
+
+    [SerializeField] private int _consumablesPayPeriod = 7;
+    public int ConsumablesPayPeriod => _consumablesPayPeriod;
+    public void SetConsumablesPayPeriod(int days) => _consumablesPayPeriod = days;
+
+
+    [SerializeField] private int _consumablesCost = 50;
+    public int ConsumablesCost => _consumablesCost;
+    public void SetConsumablesCost(int cost) => _consumablesCost = cost;
+    #endregion
+
+    private PlayerData data;
+    private readonly EarningsManager earningsManager;
+
+    public void SetData(PlayerData data) => this.data = data;
+    public GeneralPassiveMoneyController(EarningsManager earningsManager)
     {
         CalendarManager.onNewDay += OnNewDay;
-        this.data = data;
         this.earningsManager = earningsManager;
     }
 
@@ -17,8 +34,16 @@ public class GeneralPassiveMoneyController
     {
         if(dayIndex % 7 == 0)
         {
-            data.Money -= data.UtilityServiceCost;
-            earningsManager.AddOrUpdateHistoryEntry(dayIndex, "Коммунальные услуги", 0, data.UtilityServiceCost);
+            //Utility service
+            data.Money -= UtilityServiceCost;
+            earningsManager.AddOrUpdateHistoryEntry(dayIndex, "Коммунальные услуги", 0, UtilityServiceCost);
+        }
+
+        if (dayIndex % ConsumablesPayPeriod == 0)
+        {
+            //Consumables paying
+            data.Money -= ConsumablesCost;
+            earningsManager.AddOrUpdateHistoryEntry(dayIndex, "Расходы", 0, ConsumablesCost);
         }
     }
 }
