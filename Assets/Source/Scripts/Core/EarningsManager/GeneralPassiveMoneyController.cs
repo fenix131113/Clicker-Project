@@ -5,9 +5,9 @@ using UnityEngine;
 public class GeneralPassiveMoneyController
 {
     #region Saving Data
-    [SerializeField] private int _utilityServiceCost = 100;
+    [SerializeField] private int _utilityServiceCost = 50;
     public int UtilityServiceCost => _utilityServiceCost;
-    public void ReduceUtilityServiceCost(int count) => _utilityServiceCost -= count;
+    public void SetUtilityServiceCost(int count) => _utilityServiceCost = count;
 
 
     [SerializeField] private int _consumablesPayPeriod = 7;

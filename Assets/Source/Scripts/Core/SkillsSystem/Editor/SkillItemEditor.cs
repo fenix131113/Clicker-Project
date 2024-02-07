@@ -13,6 +13,7 @@ namespace Clicker.Core.SkillSystem
         private SerializedProperty selectedIconProp;
         private SerializedProperty defaultIconProp;
         private SerializedProperty skillScriptProp;
+        private SerializedProperty needToBuyItemsArrayProp;
 
         private SkillEditorWindow skillEditorWindow;
 
@@ -31,6 +32,9 @@ namespace Clicker.Core.SkillSystem
 
             FieldInfo skillScriptFieldInfo = target.GetType().GetField("_skill", BindingFlags.Instance | BindingFlags.NonPublic);
             skillScriptProp = serializedObject.FindProperty(skillScriptFieldInfo.Name);
+
+            FieldInfo needToBuyItemsFieldInfo = target.GetType().GetField("needToBuyItems", BindingFlags.Instance | BindingFlags.NonPublic);
+            needToBuyItemsArrayProp = serializedObject.FindProperty(needToBuyItemsFieldInfo.Name);
         }
 
         public override void OnInspectorGUI()
@@ -40,6 +44,7 @@ namespace Clicker.Core.SkillSystem
             EditorGUILayout.PropertyField(buyedIconProp, new GUIContent("Buyed Icon"));
             EditorGUILayout.PropertyField(selectedIconProp, new GUIContent("Selected Icon"));
             EditorGUILayout.PropertyField(defaultIconProp, new GUIContent("Default Icon"));
+            EditorGUILayout.PropertyField(needToBuyItemsArrayProp, new GUIContent("Need To Buy"));
 
             GUILayout.Space(25);
 
@@ -94,7 +99,8 @@ namespace Clicker.Core.SkillSystem
                     skillEditorWindow.Close();
 
                 EditorUtility.SetDirty(script);
-                EditorSceneManager.MarkSceneDirty(script.gameObject.scene);
+                if (!EditorApplication.isPlaying)
+                    EditorSceneManager.MarkSceneDirty(script.gameObject.scene);
             }
         }
     }

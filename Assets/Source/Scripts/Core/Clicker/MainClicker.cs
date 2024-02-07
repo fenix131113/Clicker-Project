@@ -1,4 +1,6 @@
 using DG.Tweening;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -6,16 +8,19 @@ using Zenject;
 
 public class MainClicker : MonoBehaviour, IPointerClickHandler
 {
+    [SerializeField] private GameObject[] foodObjects;
     [SerializeField] private float clickAnimDuration;
     [SerializeField] private Image clickProgressBarBack;
     [SerializeField] private Image clickProgressFiller;
+    [SerializeField] private Transform canvas;
+    [SerializeField] private GameObject moneyEarnPrefab;
     private Vector3 _clickerStartScale;
     private Vector3 _progressBarStartPos;
     private Vector3 _cameraStartPos;
     private PlayerData data;
     private RectTransform _rect;
 
-    public delegate void OnFoodCooked();
+    public delegate void OnFoodCooked(int moneyEarned);
     public OnFoodCooked onFoodCooked;
 
     [Inject]
@@ -26,6 +31,7 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
         _progressBarStartPos = clickProgressBarBack.rectTransform.position;
         _clickerStartScale = _rect.localScale;
         _cameraStartPos = Camera.main.transform.position;
+        onFoodCooked += FoodCooked;
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -40,12 +46,36 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
 
         if (data.CurrentClickerProgress >= data.MaxProgressBarClicks)
         {
-            data.Money += data.MoneyPerClick * (data.CurrentClickerProgress / data.MaxProgressBarClicks);
+            data.Money += data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks);
+            onFoodCooked?.Invoke(data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks));
             data.SetCurrentClickerProgress(data.CurrentClickerProgress % data.MaxProgressBarClicks);
-            onFoodCooked?.Invoke();
         }
 
         clickProgressFiller.DOFillAmount(1 / (float)data.MaxProgressBarClicks * data.CurrentClickerProgress, 0.1f);
+    }
+
+    private void FoodCooked(int earnedMoney)
+    {
+        CreateEarnedMoneyLabel(earnedMoney);
+
+        List<GameObject> unlockedFoodObjects = new();
+
+        for(int i = 0; i < data.UnlockedFood.Count; i++)
+        {
+            if (data.UnlockedFood.ElementAt(i))
+                unlockedFoodObjects.Add(foodObjects[i]);
+        }
+        foreach (GameObject obj in unlockedFoodObjects)
+            obj.SetActive(false);
+        unlockedFoodObjects[Random.Range(0, unlockedFoodObjects.Count)].SetActive(true);
+    }
+    private void CreateEarnedMoneyLabel(int earnedMoney)
+    {
+        GameObject label = Instantiate(moneyEarnPrefab, canvas);
+        label.GetComponent<Text>().text = $"+{earnedMoney}$";
+        label.GetComponent<RectTransform>().position = Input.mousePosition;
+        label.GetComponent<RectTransform>().DOMove(Input.mousePosition + new Vector3(0, 300), 1f);
+        label.GetComponent<Text>().DOFade(0f, 1f).onComplete += () => Destroy(label);
     }
     private void ClickAnimation()
     {

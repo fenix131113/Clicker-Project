@@ -11,7 +11,7 @@ namespace Clicker.Core.Earnings
 
         public void AddOrUpdateHistoryEntry(int dayNum, string categoryName, int earnMoney, int expensesMoney = 0)
         {
-            if (CalendarManager.Day > dayNum)
+            if (CalendarManager.Day - 1 > dayNum)
             {
                 Debug.LogWarning("You trying to add earning into the past!");
                 return;

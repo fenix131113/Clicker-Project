@@ -1,3 +1,4 @@
+
 namespace Clicker.Core.Time
 {
     public static class CalendarManager
@@ -16,7 +17,11 @@ namespace Clicker.Core.Time
 
         public static void SetNextDay()
         {
-            _day++;
+            if (_day + 1 == 36)
+                _day = 1;
+            else
+                _day++;
+
             if ((int)GetDayType == 6)
                 _dayType = DayType.Monday;
             else

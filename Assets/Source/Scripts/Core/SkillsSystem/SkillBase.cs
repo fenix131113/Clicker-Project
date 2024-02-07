@@ -4,11 +4,11 @@ namespace Clicker.Core.SkillSystem
 {
 	public class SkillBase : MonoBehaviour
 	{
-		[SerializeField][HideInInspector] protected string skillName;
+		[SerializeField][HideInInspector] protected string skillName = "";
 		public string SkillName => skillName;
 
 
-        [SerializeField][HideInInspector] protected string description;
+        [SerializeField][HideInInspector] protected string description = "";
 		public string Description => description;
 
 

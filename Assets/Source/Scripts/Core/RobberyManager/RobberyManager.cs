@@ -15,7 +15,7 @@ public class RobberyManager
     /// <summary>
     /// Chance to robbery per hour
     /// </summary>
-    public void SetRobberChance(float count) => _robberyChance = count;
+    public void SetRobberyChance(float count) => _robberyChance = count;
 
     [SerializeField] private bool _allowRobbery = true;
     public bool AllowRobbery => _allowRobbery;

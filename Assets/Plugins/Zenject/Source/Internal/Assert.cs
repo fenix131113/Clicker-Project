@@ -68,7 +68,7 @@ namespace ModestTree
 #endif
         public static void IsType<T>(object obj, string message)
         {
-            if (!(obj is T))
+            if (obj is not T)
             {
                 throw CreateException("Assert Hit! {0}\nWrong type found. Expected '{1}' (left) but found '{2}' (right). ", message, typeof(T).PrettyName(), obj.GetType().PrettyName());
             }
@@ -135,8 +135,8 @@ namespace ModestTree
         {
             if (!object.Equals(left, right))
             {
-                left = left ?? "<NULL>";
-                right = right ?? "<NULL>";
+                left ??= "<NULL>";
+                right ??= "<NULL>";
                 throw CreateException("Assert Hit! {0}.  Expected '{1}' (left) but found '{2}' (right). ", messageGenerator(), left, right);
             }
         }
@@ -162,8 +162,8 @@ namespace ModestTree
         {
             if (!object.Equals(left, right))
             {
-                left = left ?? "<NULL>";
-                right = right ?? "<NULL>";
+                left ??= "<NULL>";
+                right ??= "<NULL>";
                 throw CreateException("Assert Hit! {0}\nExpected '{1}' (left) but found '{2}' (right). ", message, left, right);
             }
         }
@@ -185,8 +185,8 @@ namespace ModestTree
         {
             if(object.Equals(left, right))
             {
-                left = left ?? "<NULL>";
-                right = right ?? "<NULL>";
+                left ??= "<NULL>";
+                right ??= "<NULL>";
                 throw CreateException("Assert Hit! {0}.  Expected '{1}' (left) to differ from '{2}' (right). ", messageGenerator(), left, right);
             }
         }
@@ -291,10 +291,9 @@ namespace ModestTree
 #endif
         public static void IsNotEqual(object left, object right, string message)
         {
-            if (object.Equals(left, right))
+            if (Equals(left, right))
             {
-                left = left ?? "<NULL>";
-                right = right ?? "<NULL>";
+                left ??= "<NULL>";
                 throw CreateException("Assert Hit! {0}. Unexpected value found '{1}'. ", message, left);
             }
         }
