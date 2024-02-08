@@ -32,8 +32,9 @@ public class PlayerData
 
 
 
-    [JsonProperty][SerializeField]private int _money;
-    [JsonIgnore] public int Money
+    [JsonProperty][SerializeField] private int _money;
+    [JsonIgnore]
+    public int Money
     {
         get { return _money; }
         set
@@ -106,13 +107,13 @@ public class PlayerData
         _skillSaveManager = skillSaveManager;
         skillSaveManager.SetData(this);
 
-        LoadData();
+        if (PlayerPrefs.HasKey("data"))
+            LoadData();
     }
 
     public void SaveData()
     {
         string dataSave = JsonConvert.SerializeObject(this);
-        Debug.Log(dataSave);
         PlayerPrefs.SetString("data", dataSave);
     }
 

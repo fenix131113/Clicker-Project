@@ -24,7 +24,7 @@ public class Test : MonoBehaviour
 
     void Start()
     {
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
         
     }
 }
