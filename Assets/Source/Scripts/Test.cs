@@ -24,6 +24,7 @@ public class Test : MonoBehaviour
 
     void Start()
     {
-        TimeManager.onNewMinute += (int minute) => timeText.text = $"Δενό {CalendarManager.Day} | {timeManager.GetFormattedHours()}:{timeManager.GetFormattedMinutes()} | {CalendarManager.GetDayType}";
+        //PlayerPrefs.DeleteAll();
+        
     }
 }
