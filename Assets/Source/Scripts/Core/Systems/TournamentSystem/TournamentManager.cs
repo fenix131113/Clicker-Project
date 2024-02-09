@@ -26,8 +26,8 @@ namespace Clicker.Core.Tournament
         #endregion
 
         [JsonIgnore] private readonly int tournamentStartNeedProgressToWin = 20;
-        [JsonIgnore] private readonly int tournamentHoursTime = 24;
-        [JsonIgnore] private readonly int tournamentPeriod = 7;
+        [JsonIgnore] private readonly int tournamentHoursTime = 12;
+        [JsonIgnore] private readonly int tournamentPeriod = 3;
         [JsonIgnore] private GlobalObjectsContainer _objectsContainer;
         [JsonIgnore] private TimeManager _timeManager;
         [JsonIgnore] private PlayerData data;
