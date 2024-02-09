@@ -426,7 +426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162, y: 162}
+  m_AnchoredPosition: {x: -1153.9999, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &40810092
@@ -441,8 +441,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e457bf5852efa0b47ab51fbb92408ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
+    \u0433\u0435\u043D\u0438\u0439"
+  description: 40 -> 35
   level: 3
 --- !u!114 &40810093
 MonoBehaviour:
@@ -459,8 +460,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 1106504620, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   selectedIcon: {fileID: -1659611648, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   defaultIcon: {fileID: 598686723, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 881476793}
+  _moneyCost: 1000
   _skillPointsCost: 0
   _skill: {fileID: 40810092}
 --- !u!114 &40810094
@@ -671,7 +673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 326, y: -202}
+  m_AnchoredPosition: {x: -103.999756, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &67884317
@@ -689,9 +691,10 @@ MonoBehaviour:
   buyedIcon: {fileID: -374029288, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   selectedIcon: {fileID: -1548955922, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   defaultIcon: {fileID: 1541116756, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 521617019}
+  _moneyCost: 1
+  _skillPointsCost: 250
   _skill: {fileID: 67884320}
 --- !u!114 &67884318
 MonoBehaviour:
@@ -743,8 +746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081cd6ec27a86c64e9d9c91511e55097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
+  description: 100 -> 95
   level: 1
 --- !u!1 &68744246
 GameObject:
@@ -1105,9 +1108,9 @@ RectTransform:
   m_Father: {fileID: 407033014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: -10.599976}
-  m_SizeDelta: {x: 2, y: 20}
+  m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &160457603
 MonoBehaviour:
@@ -1152,8 +1155,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 801956960}
   m_HandleRect: {fileID: 801956959}
   m_Direction: 0
-  m_Value: 0.000000083535426
-  m_Size: 0.51854956
+  m_Value: 0.9454022
+  m_Size: 0.3014757
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1232,7 +1235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -498, y: 522.00006}
+  m_AnchoredPosition: {x: 2156.0002, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &163481370
@@ -1247,8 +1250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e70c35ec7f0c7d4c90ecaddfda7a2ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041D\u043E\u0430\u044B\u0439 \u043F\u043E\u0441\u0442\u0430\u0432\u0449\u0438\u043A"
+  description: 30 -> 25
   level: 5
 --- !u!114 &163481371
 MonoBehaviour:
@@ -1265,8 +1268,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 911193004, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
   selectedIcon: {fileID: 1930743061, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
   defaultIcon: {fileID: -18898213, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 715562620}
+  _moneyCost: 5000
   _skillPointsCost: 0
   _skill: {fileID: 163481370}
 --- !u!114 &163481372
@@ -1343,7 +1347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -498, y: 162}
+  m_AnchoredPosition: {x: 1256.0002, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &175150599
@@ -1358,8 +1362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e70c35ec7f0c7d4c90ecaddfda7a2ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041D\u043E\u0430\u044B\u0439 \u043F\u043E\u0441\u0442\u0430\u0432\u0449\u0438\u043A"
+  description: 40 -> 35
   level: 3
 --- !u!114 &175150600
 MonoBehaviour:
@@ -1376,8 +1380,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 1751546947, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
   selectedIcon: {fileID: 471137825, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
   defaultIcon: {fileID: -721538675, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1392858384}
+  _moneyCost: 3000
   _skillPointsCost: 0
   _skill: {fileID: 175150599}
 --- !u!114 &175150601
@@ -1454,7 +1459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.199951, y: 522.00006}
+  m_AnchoredPosition: {x: -1303.9999, y: -173}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181660153
@@ -1469,8 +1474,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e865156fff2249442b1ee3244e6454a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
+  description: "\u0412\u044B \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0430\u043B\u0438
+    \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439 \u0441\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439
+    \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442! \"\u0422\u0430\u043A
+    \u0430 \u0447\u0442\u043E \u043C\u044B \u0442\u0430\u043C \u0434\u043E\u0431\u0430\u0432\u043B\u044F\u0435\u043C?
+    \u0430 \u0442\u043E \u044F \u0447\u0442\u043E-\u0442\u043E \u043F\u043E\u0434\u0437\u0430\u0431\u044B\u043B..\"
+    \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
+    \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 16 -> 32"
   level: 5
 --- !u!114 &181660154
 MonoBehaviour:
@@ -1487,8 +1498,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -468397932, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   selectedIcon: {fileID: -1433375431, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   defaultIcon: {fileID: -420702994, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 2096087299}
+  _moneyCost: 10000
   _skillPointsCost: 0
   _skill: {fileID: 181660153}
 --- !u!114 &181660155
@@ -1661,7 +1673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1003, y: 162}
+  m_AnchoredPosition: {x: 956.00024, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &216324907
@@ -1694,8 +1706,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 168802340, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   selectedIcon: {fileID: -2017634629, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   defaultIcon: {fileID: -1958176592, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1251483658}
+  _moneyCost: 2500
   _skillPointsCost: 0
   _skill: {fileID: 216324907}
 --- !u!114 &216324909
@@ -2056,7 +2069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -667, y: 336}
+  m_AnchoredPosition: {x: 1556.0002, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &278906678
@@ -2071,7 +2084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8ffe4b8bfae0e418c95a14e8c27884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u0425\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A"
   description: 
   level: 4
 --- !u!114 &278906679
@@ -2089,8 +2102,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 1773537058, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
   selectedIcon: {fileID: -1674578348, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
   defaultIcon: {fileID: -2052824666, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1862674175}
+  _moneyCost: 3750
   _skillPointsCost: 0
   _skill: {fileID: 278906678}
 --- !u!114 &278906680
@@ -2556,7 +2570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1169, y: -22}
+  m_AnchoredPosition: {x: -553.9999, y: -173}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &354550216
@@ -2571,7 +2585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54d4d1504d9b104abb10f904ac310dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u041A\u0430\u0440\u0442\u043E\u0448\u043A\u0430 \u0444\u0440\u0438"
   description: 
   level: 2
 --- !u!114 &354550217
@@ -2589,9 +2603,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 2028171178, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   selectedIcon: {fileID: -1617767299, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   defaultIcon: {fileID: -1622129437, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 1926623136}
+  _moneyCost: 1
+  _skillPointsCost: 1000
   _skill: {fileID: 354550216}
 --- !u!114 &354550218
 MonoBehaviour:
@@ -3121,7 +3136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162, y: -22}
+  m_AnchoredPosition: {x: -703.9999, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &400321960
@@ -3136,8 +3151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e457bf5852efa0b47ab51fbb92408ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
+    \u0433\u0435\u043D\u0438\u0439"
+  description: 45 -> 40
   level: 2
 --- !u!114 &400321961
 MonoBehaviour:
@@ -3154,8 +3170,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -144585379, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   selectedIcon: {fileID: -547937972, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   defaultIcon: {fileID: 376113126, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1554496514}
+  _moneyCost: 600
   _skillPointsCost: 0
   _skill: {fileID: 400321960}
 --- !u!114 &400321962
@@ -3458,7 +3475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &409704302
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3585,7 +3602,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 655.9999, y: 162}
+  m_AnchoredPosition: {x: -1303.9999, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &454309205
@@ -3600,8 +3617,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35833b325e315704ba8cbae6a5429850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u0420\u0435\u043A\u043B\u0430\u043C\u0430"
+  description: 10 -> 15
   level: 3
 --- !u!114 &454309206
 MonoBehaviour:
@@ -3618,8 +3635,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 1456927209, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   selectedIcon: {fileID: -632898229, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   defaultIcon: {fileID: 1631443051, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 40810093}
+  _moneyCost: 1500
   _skillPointsCost: 0
   _skill: {fileID: 454309205}
 --- !u!114 &454309207
@@ -3906,7 +3924,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -329, y: 162}
+  m_AnchoredPosition: {x: -23.999756, y: -23}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &493883986
@@ -3921,8 +3939,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b269c21bfebbb84eaea9372fea2ca38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
+  description: "\"\u0411\u0443\u0440\u0433\u0435\u0440 \u0432 \u043E\u0434\u043D\u043E
+    \u0434\u0432\u0438\u0436\u0435\u043D\u0438\u0435? \u0414\u0430 \u0440\u0430\u0441\u043F\u043B\u044E\u043D\u0443\u0442\u044C!\"
+    \u0422\u0435\u043F\u0435\u0440\u044C \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430
+    \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435! 5->10"
   level: 3
 --- !u!114 &493883987
 MonoBehaviour:
@@ -3939,9 +3960,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 274230573, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   selectedIcon: {fileID: 1053545540, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   defaultIcon: {fileID: 447417393, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  needToBuyItems: []
+  needToBuyItems:
+  - {fileID: 1059457430}
   _moneyCost: 0
-  _skillPointsCost: 0
+  _skillPointsCost: 1
   _skill: {fileID: 493883986}
 --- !u!114 &493883988
 MonoBehaviour:
@@ -4017,7 +4039,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -329, y: 336}
+  m_AnchoredPosition: {x: -23.999756, y: 276.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &521617018
@@ -4032,8 +4054,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b269c21bfebbb84eaea9372fea2ca38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
+  description: "\u0411\u0443\u0440\u0433\u0435\u0440\u044B \u0440\u0430\u0437\u043B\u0435\u0442\u0430\u044E\u0442\u0441\u044F
+    \u043A\u043B\u0438\u0435\u043D\u0442\u0430\u043C! \u0412\u043E\u0442 \u0447\u0442\u043E
+    \u0437\u043D\u0430\u0447\u0438\u0442 \u043E\u043F\u044B\u0442! \u0422\u0435\u043F\u0435\u0440\u044C
+    \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
+    10->20"
   level: 4
 --- !u!114 &521617019
 MonoBehaviour:
@@ -4050,9 +4076,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 1302153883, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   selectedIcon: {fileID: -1766535320, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   defaultIcon: {fileID: -1873706565, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 493883987}
+  _moneyCost: 1
+  _skillPointsCost: 1
   _skill: {fileID: 521617018}
 --- !u!114 &521617020
 MonoBehaviour:
@@ -4128,7 +4155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1003, y: -202}
+  m_AnchoredPosition: {x: 56.000244, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544478119
@@ -4143,7 +4170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531a8f0f652a1e84597bbd276f00c8ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u0420\u0435\u043C\u043E\u043D\u0442"
   description: 
   level: 1
 --- !u!114 &544478120
@@ -4161,8 +4188,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 189282530, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   selectedIcon: {fileID: 410447694, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   defaultIcon: {fileID: -470897911, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 454309206}
+  _moneyCost: 500
   _skillPointsCost: 0
   _skill: {fileID: 544478119}
 --- !u!114 &544478121
@@ -4420,7 +4448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 326, y: 336}
+  m_AnchoredPosition: {x: -1453.9999, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &589032872
@@ -4435,8 +4463,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081cd6ec27a86c64e9d9c91511e55097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
+  description: 85 -> 80
   level: 4
 --- !u!114 &589032873
 MonoBehaviour:
@@ -4453,9 +4481,10 @@ MonoBehaviour:
   buyedIcon: {fileID: -1034898386, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   selectedIcon: {fileID: -1648002461, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   defaultIcon: {fileID: -120867327, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 454309206}
+  _moneyCost: 1
+  _skillPointsCost: 1000
   _skill: {fileID: 589032872}
 --- !u!114 &589032874
 MonoBehaviour:
@@ -4530,9 +4559,9 @@ RectTransform:
   m_Father: {fileID: 407033014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 20, y: 0}
-  m_SizeDelta: {x: 20, y: 2}
+  m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &590359020
 MonoBehaviour:
@@ -4577,8 +4606,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1284811668}
   m_HandleRect: {fileID: 1284811667}
   m_Direction: 2
-  m_Value: 0.49999985
-  m_Size: 0.51933885
+  m_Value: 0.500004
+  m_Size: 0.5193388
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4767,7 +4796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -833, y: -202}
+  m_AnchoredPosition: {x: -253.99976, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &684348100
@@ -4782,7 +4811,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a96847cd8aaaf46998f332870a43ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u042D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u044B\u0439
+    \u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A"
   description: 
   level: 1
 --- !u!114 &684348101
@@ -4800,9 +4830,10 @@ MonoBehaviour:
   buyedIcon: {fileID: -1476098091, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
   selectedIcon: {fileID: -750970070, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
   defaultIcon: {fileID: 421935163, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
-  needToBuyItems: []
+  needToBuyItems:
+  - {fileID: 1633417030}
   _moneyCost: 0
-  _skillPointsCost: 0
+  _skillPointsCost: 1
   _skill: {fileID: 684348100}
 --- !u!114 &684348102
 MonoBehaviour:
@@ -4878,7 +4909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: 162}
+  m_AnchoredPosition: {x: 356.00024, y: -473}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &700680024
@@ -4934,8 +4965,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 1732744378, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
   selectedIcon: {fileID: -1712288729, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
   defaultIcon: {fileID: -101374907, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1712106455}
+  _moneyCost: 500
   _skillPointsCost: 0
   _skill: {fileID: 700680027}
 --- !u!114 &700680027
@@ -4950,8 +4982,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5516473b89613874c8fb58f8ebbc4be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u0410\u043D\u0442\u0438\u0432\u043E\u0440"
+  description: "\u0412\u044B \u043A\u0443\u043F\u0438\u043B\u0438 \u043D\u043E\u0432\u044B\u0435
+    \u0437\u0430\u043C\u043A\u0438 \u0438 \u0443\u043A\u0440\u0435\u043F\u0438\u043B\u0438
+    \u0434\u0432\u0435\u0440\u0438! \u0428\u0430\u043D\u0441, \u0447\u0442\u043E
+    \u0432\u0430\u0441 \u043E\u0433\u0440\u0430\u0431\u044F\u0442 \u0432 4 \u0440\u0430\u0437\u0430
+    \u043C\u0435\u043D\u044C\u0448\u0435!"
   level: 3
 --- !u!1 &714204252
 GameObject:
@@ -4989,7 +5025,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 493.59998, y: 162}
+  m_AnchoredPosition: {x: -703.9999, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &714204255
@@ -5007,8 +5043,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 1035472510, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
   selectedIcon: {fileID: 613125665, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
   defaultIcon: {fileID: -2113275177, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1607011797}
+  _moneyCost: 500
   _skillPointsCost: 0
   _skill: {fileID: 714204258}
 --- !u!114 &714204256
@@ -5061,8 +5098,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e866c27e9b1284d8af322b049ae431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041D\u0430\u0439\u043C \u0440\u0430\u0431\u043E\u0447\u0438\u0445"
+  description: 2 -> 3
   level: 3
 --- !u!1 &715562617
 GameObject:
@@ -5100,7 +5137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -667, y: 522.00006}
+  m_AnchoredPosition: {x: 2006.0002, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &715562619
@@ -5115,7 +5152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8ffe4b8bfae0e418c95a14e8c27884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u0425\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A"
   description: 
   level: 5
 --- !u!114 &715562620
@@ -5133,8 +5170,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 921657982, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
   selectedIcon: {fileID: 1009674081, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
   defaultIcon: {fileID: 1626934555, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1742343121}
+  _moneyCost: 4750
   _skillPointsCost: 0
   _skill: {fileID: 715562619}
 --- !u!114 &715562621
@@ -5289,7 +5327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 493.59998, y: 336}
+  m_AnchoredPosition: {x: -1003.9999, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &752681145
@@ -5307,8 +5345,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -1858032411, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
   selectedIcon: {fileID: -108144008, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
   defaultIcon: {fileID: 1530400757, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1729890064}
+  _moneyCost: 750
   _skillPointsCost: 0
   _skill: {fileID: 752681148}
 --- !u!114 &752681146
@@ -5361,8 +5400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e866c27e9b1284d8af322b049ae431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041D\u0430\u0439\u043C \u0440\u0430\u0431\u043E\u0447\u0438\u0445"
+  description: 3 -> 4
   level: 4
 --- !u!1 &777425111
 GameObject:
@@ -5476,7 +5515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.199951, y: -202}
+  m_AnchoredPosition: {x: -103.999756, y: -173}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &788743527
@@ -5491,8 +5530,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e865156fff2249442b1ee3244e6454a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u0433\u043D\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
+  description: "\u0421\u043E\u0443\u0441\u0430 \u043C\u0430\u043B\u043E \u043D\u0435
+    \u0431\u044B\u0432\u0430\u0435\u0442! \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C
+    \u0437\u0430 \u0435\u0434\u0443 \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 1
+    -> 2"
   level: 1
 --- !u!114 &788743528
 MonoBehaviour:
@@ -5509,8 +5551,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -529378458, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   selectedIcon: {fileID: 874131755, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   defaultIcon: {fileID: 650946717, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1059457430}
+  _moneyCost: 100
   _skillPointsCost: 0
   _skill: {fileID: 788743527}
 --- !u!114 &788743529
@@ -5717,8 +5760,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1837691324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.00000004021817, y: 0}
-  m_AnchorMax: {x: 0.51854956, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6042,7 +6085,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.199951, y: 336}
+  m_AnchoredPosition: {x: -1003.9999, y: -173}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &862800178
@@ -6057,8 +6100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e865156fff2249442b1ee3244e6454a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
+  description: "\u041E\u0431\u0440\u0430\u0449\u0430\u0435\u043C \u0447\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0435
+    \u0432\u043D\u0438\u043C\u0430\u0435\u043D\u0438\u0435 \u043A \u043A\u0430\u0436\u0434\u043E\u0439
+    \u0447\u0430\u0441\u0442\u0438 \u043F\u043B\u044E\u0434\u0430! \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C
+    \u0437\u0430 \u0435\u0434\u0443 \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 8
+    -> 16"
   level: 4
 --- !u!114 &862800179
 MonoBehaviour:
@@ -6075,8 +6122,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 143546989, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   selectedIcon: {fileID: -1218283714, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   defaultIcon: {fileID: -1237851372, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1369827586}
+  _moneyCost: 3500
   _skillPointsCost: 0
   _skill: {fileID: 862800178}
 --- !u!114 &862800180
@@ -6153,7 +6201,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 326, y: 162}
+  m_AnchoredPosition: {x: -1003.9999, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &881476792
@@ -6168,8 +6216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081cd6ec27a86c64e9d9c91511e55097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
+  description: 90 -> 85
   level: 3
 --- !u!114 &881476793
 MonoBehaviour:
@@ -6186,9 +6234,10 @@ MonoBehaviour:
   buyedIcon: {fileID: -211240070, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   selectedIcon: {fileID: 1079981793, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   defaultIcon: {fileID: -113563940, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 953331088}
+  _moneyCost: 1
+  _skillPointsCost: 750
   _skill: {fileID: 881476792}
 --- !u!114 &881476794
 MonoBehaviour:
@@ -6631,7 +6680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162, y: 336}
+  m_AnchoredPosition: {x: -1603.9999, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &928150897
@@ -6647,7 +6696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 
-  description: 
+  description: 35 -> 30
   level: 4
 --- !u!114 &928150898
 MonoBehaviour:
@@ -6664,8 +6713,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -1411943241, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   selectedIcon: {fileID: 801304136, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   defaultIcon: {fileID: 1583186441, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 589032873}
+  _moneyCost: 1400
   _skillPointsCost: 0
   _skill: {fileID: 928150897}
 --- !u!114 &928150899
@@ -6742,7 +6792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 655.9999, y: -22}
+  m_AnchoredPosition: {x: -853.9999, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &953331087
@@ -6757,8 +6807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35833b325e315704ba8cbae6a5429850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u0420\u0435\u043A\u043B\u0430\u043C\u0430"
+  description: 5 -> 10
   level: 2
 --- !u!114 &953331088
 MonoBehaviour:
@@ -6775,8 +6825,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 1926545572, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   selectedIcon: {fileID: -1933986544, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   defaultIcon: {fileID: -1973290614, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 400321961}
+  _moneyCost: 1000
   _skillPointsCost: 0
   _skill: {fileID: 953331087}
 --- !u!114 &953331089
@@ -7043,7 +7094,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 326, y: 522.00006}
+  m_AnchoredPosition: {x: -1904, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004434690
@@ -7058,8 +7109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081cd6ec27a86c64e9d9c91511e55097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
+  description: 80 -> 75
   level: 5
 --- !u!114 &1004434691
 MonoBehaviour:
@@ -7076,9 +7127,10 @@ MonoBehaviour:
   buyedIcon: {fileID: -1270062692, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   selectedIcon: {fileID: -1283064511, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   defaultIcon: {fileID: 694308094, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 2104993484}
+  _moneyCost: 1
+  _skillPointsCost: 2000
   _skill: {fileID: 1004434690}
 --- !u!114 &1004434692
 MonoBehaviour:
@@ -7154,7 +7206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1169, y: 336}
+  m_AnchoredPosition: {x: -253.99976, y: -173}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1036375077
@@ -7169,7 +7221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54d4d1504d9b104abb10f904ac310dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u0413\u0430\u0437\u0438\u0440\u043E\u0432\u043A\u0430"
   description: 
   level: 4
 --- !u!114 &1036375078
@@ -7187,9 +7239,10 @@ MonoBehaviour:
   buyedIcon: {fileID: -1096321350, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   selectedIcon: {fileID: 489842284, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   defaultIcon: {fileID: 1285942453, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 788743528}
+  _moneyCost: 1
+  _skillPointsCost: 500
   _skill: {fileID: 1036375077}
 --- !u!114 &1036375079
 MonoBehaviour:
@@ -7265,7 +7318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -329, y: -22}
+  m_AnchoredPosition: {x: -23.999756, y: -323}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059457429
@@ -7280,8 +7333,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b269c21bfebbb84eaea9372fea2ca38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
+  description: "\u0412\u044B \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442\u0435
+    \u043F\u043E\u0437\u043D\u0430\u0432\u0430\u0442\u044C \u043A\u0443\u0445\u043D\u044E!
+    \u0422\u0435\u043F\u0435\u0440\u044C \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430
+    \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435! 2->5"
   level: 2
 --- !u!114 &1059457430
 MonoBehaviour:
@@ -7298,9 +7354,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 427189980, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   selectedIcon: {fileID: -2084066550, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   defaultIcon: {fileID: -1183221211, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  needToBuyItems: []
+  needToBuyItems:
+  - {fileID: 2057718991}
   _moneyCost: 0
-  _skillPointsCost: 0
+  _skillPointsCost: 1
   _skill: {fileID: 1059457429}
 --- !u!114 &1059457431
 MonoBehaviour:
@@ -7413,7 +7470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -833, y: 522.00006}
+  m_AnchoredPosition: {x: -1453.9999, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1144420443
@@ -7428,7 +7485,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a96847cd8aaaf46998f332870a43ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u042D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u044B\u0439
+    \u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A"
   description: 
   level: 5
 --- !u!114 &1144420444
@@ -7446,9 +7504,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 2028152236, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
   selectedIcon: {fileID: -1192529068, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
   defaultIcon: {fileID: -1755989571, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
-  needToBuyItems: []
+  needToBuyItems:
+  - {fileID: 1945166392}
   _moneyCost: 0
-  _skillPointsCost: 0
+  _skillPointsCost: 1
   _skill: {fileID: 1144420443}
 --- !u!114 &1144420445
 MonoBehaviour:
@@ -7652,7 +7711,7 @@ GameObject:
   - component: {fileID: 1220176678}
   - component: {fileID: 1220176677}
   m_Layer: 5
-  m_Name: FoodUpgradeHotDog (1)
+  m_Name: TheEndSkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7674,7 +7733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1341, y: -202}
+  m_AnchoredPosition: {x: -23.999756, y: 750}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1220176677
@@ -7692,7 +7751,13 @@ MonoBehaviour:
   buyedIcon: {fileID: -1878952952, guid: cffa078e11488a84c93732dfec3b05b5, type: 3}
   selectedIcon: {fileID: -421433336, guid: cffa078e11488a84c93732dfec3b05b5, type: 3}
   defaultIcon: {fileID: 1665842817, guid: cffa078e11488a84c93732dfec3b05b5, type: 3}
-  needToBuyItems: []
+  needToBuyItems:
+  - {fileID: 181660154}
+  - {fileID: 1722439201}
+  - {fileID: 1973974324}
+  - {fileID: 1465055432}
+  - {fileID: 1144420444}
+  - {fileID: 163481371}
   _moneyCost: 0
   _skillPointsCost: 0
   _skill: {fileID: 0}
@@ -7862,7 +7927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -498, y: -22}
+  m_AnchoredPosition: {x: 806.00024, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1251483657
@@ -7877,8 +7942,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e70c35ec7f0c7d4c90ecaddfda7a2ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041D\u043E\u0430\u044B\u0439 \u043F\u043E\u0441\u0442\u0430\u0432\u0449\u0438\u043A"
+  description: 45 -> 40
   level: 2
 --- !u!114 &1251483658
 MonoBehaviour:
@@ -7895,8 +7960,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 1765833219, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
   selectedIcon: {fileID: 1189399032, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
   defaultIcon: {fileID: -104118727, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1689638964}
+  _moneyCost: 2000
   _skillPointsCost: 0
   _skill: {fileID: 1251483657}
 --- !u!114 &1251483659
@@ -8103,8 +8169,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 840789422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.24033058}
-  m_AnchorMax: {x: 1, y: 0.7596694}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8182,7 +8248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: -202}
+  m_AnchoredPosition: {x: 56, y: -473}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1346091828
@@ -8235,8 +8301,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5516473b89613874c8fb58f8ebbc4be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 432
-  description: 43334
+  skillName: "\u0410\u043D\u0442\u0438\u0432\u043E\u0440"
+  description: "\u0412\u044B \u043F\u043E\u0432\u0435\u0441\u0438\u043B\u0438 \u043B\u0438\u0441\u0442\u043E\u0447\u0435\u043A
+    \u0441 \u043F\u0440\u0435\u0434\u0443\u043F\u0440\u0435\u0436\u0434\u0435\u043D\u0438\u0435\u043C
+    \u043E \u043D\u0430\u043B\u0438\u0447\u0438\u0438 \u043A\u0430\u043C\u0435\u0440!
+    \u041D\u0430 \u0443\u0434\u0438\u0432\u043B\u0435\u043D\u0438\u0435, \u044D\u0442\u043E
+    \u0441\u0440\u0430\u0431\u043E\u0442\u0430\u043B\u043E. \u0428\u0430\u043D\u0441
+    \u043E\u0433\u0440\u0430\u0431\u043B\u0435\u043D\u0438\u0435 \u0443\u043F\u0430\u043B
+    \u0432 2 \u0440\u0430\u0437\u0430!"
   level: 1
 --- !u!114 &1346091831
 MonoBehaviour:
@@ -8253,8 +8325,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -662793180, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
   selectedIcon: {fileID: 542614753, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
   defaultIcon: {fileID: 23010311, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 2057718991}
+  _moneyCost: 5
   _skillPointsCost: 0
   _skill: {fileID: 1346091830}
 --- !u!1 &1356675609
@@ -8369,7 +8442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1169, y: -202}
+  m_AnchoredPosition: {x: -853.9999, y: -173}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1369827586
@@ -8387,9 +8460,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 1395245271, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   selectedIcon: {fileID: -2008054745, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   defaultIcon: {fileID: -351680488, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 1938914892}
+  _moneyCost: 1
+  _skillPointsCost: 3000
   _skill: {fileID: 1369827589}
 --- !u!114 &1369827587
 MonoBehaviour:
@@ -8441,7 +8515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54d4d1504d9b104abb10f904ac310dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u0425\u043E\u0442 \u0434\u043E\u0433"
   description: 
   level: 1
 --- !u!1 &1376102252
@@ -8555,7 +8629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -667, y: -202}
+  m_AnchoredPosition: {x: 206.00024, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1392350940
@@ -8570,7 +8644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8ffe4b8bfae0e418c95a14e8c27884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u0425\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A"
   description: 
   level: 1
 --- !u!114 &1392350941
@@ -8588,8 +8662,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -291556999, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
   selectedIcon: {fileID: -1564188510, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
   defaultIcon: {fileID: -1174611748, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 544478120}
+  _moneyCost: 750
   _skillPointsCost: 0
   _skill: {fileID: 1392350940}
 --- !u!114 &1392350942
@@ -8666,7 +8741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -667, y: 162}
+  m_AnchoredPosition: {x: 1106.0002, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1392858383
@@ -8681,7 +8756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8ffe4b8bfae0e418c95a14e8c27884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u0425\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A"
   description: 
   level: 3
 --- !u!114 &1392858384
@@ -8699,8 +8774,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -441738877, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
   selectedIcon: {fileID: 1172041290, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
   defaultIcon: {fileID: -1980066160, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 216324908}
+  _moneyCost: 2750
   _skillPointsCost: 0
   _skill: {fileID: 1392858383}
 --- !u!114 &1392858385
@@ -8777,7 +8853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162, y: 522.00006}
+  m_AnchoredPosition: {x: -2054, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1426799048
@@ -8792,8 +8868,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e457bf5852efa0b47ab51fbb92408ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
+    \u0433\u0435\u043D\u0438\u0439"
+  description: 30 -> 20
   level: 5
 --- !u!114 &1426799049
 MonoBehaviour:
@@ -8810,8 +8887,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -658714203, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   selectedIcon: {fileID: 1584439380, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   defaultIcon: {fileID: -730420889, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1004434691}
+  _moneyCost: 2000
   _skillPointsCost: 0
   _skill: {fileID: 1426799048}
 --- !u!114 &1426799050
@@ -9038,7 +9116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 655.9999, y: 522.00006}
+  m_AnchoredPosition: {x: -2204, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1465055431
@@ -9053,8 +9131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35833b325e315704ba8cbae6a5429850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u0420\u0435\u043A\u043B\u0430\u043C\u0430"
+  description: 20 -> 25
   level: 5
 --- !u!114 &1465055432
 MonoBehaviour:
@@ -9071,8 +9149,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 847562535, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   selectedIcon: {fileID: -1330336663, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   defaultIcon: {fileID: -990049290, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1426799049}
+  _moneyCost: 3000
   _skillPointsCost: 0
   _skill: {fileID: 1465055431}
 --- !u!114 &1465055433
@@ -9149,7 +9228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162, y: -202}
+  m_AnchoredPosition: {x: -253.99976, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1478467162
@@ -9164,8 +9243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e457bf5852efa0b47ab51fbb92408ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
+    \u0433\u0435\u043D\u0438\u0439"
+  description: 50 -> 45
   level: 1
 --- !u!114 &1478467163
 MonoBehaviour:
@@ -9182,8 +9262,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 781024812, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   selectedIcon: {fileID: -1438956500, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   defaultIcon: {fileID: 1023879185, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 67884317}
+  _moneyCost: 200
   _skillPointsCost: 0
   _skill: {fileID: 1478467162}
 --- !u!114 &1478467164
@@ -9260,7 +9341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -498, y: -202}
+  m_AnchoredPosition: {x: 356.00024, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1493025915
@@ -9278,8 +9359,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 711663718, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
   selectedIcon: {fileID: -1742164900, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
   defaultIcon: {fileID: -809917299, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1392350941}
+  _moneyCost: 1000
   _skillPointsCost: 0
   _skill: {fileID: 1493025918}
 --- !u!114 &1493025916
@@ -9332,7 +9414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e70c35ec7f0c7d4c90ecaddfda7a2ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u041D\u043E\u0430\u044B\u0439 \u043F\u043E\u0441\u0442\u0430\u0432\u0449\u0438\u043A"
   description: 
   level: 1
 --- !u!1 &1513814383
@@ -9504,9 +9586,9 @@ RectTransform:
   m_Father: {fileID: 407033014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2, y: 2}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1527016440
 MonoBehaviour:
@@ -9593,7 +9675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -6}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1554496511
@@ -9632,7 +9714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 326, y: -22}
+  m_AnchoredPosition: {x: -553.9999, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554496513
@@ -9647,8 +9729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081cd6ec27a86c64e9d9c91511e55097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
+  description: 95 -> 90
   level: 2
 --- !u!114 &1554496514
 MonoBehaviour:
@@ -9665,9 +9747,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 2040610990, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   selectedIcon: {fileID: 1871161427, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   defaultIcon: {fileID: 1002176022, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 2092916719}
+  _moneyCost: 1
+  _skillPointsCost: 500
   _skill: {fileID: 1554496513}
 --- !u!114 &1554496515
 MonoBehaviour:
@@ -9743,7 +9826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -833, y: -22}
+  m_AnchoredPosition: {x: -553.9999, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1607011796
@@ -9758,7 +9841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a96847cd8aaaf46998f332870a43ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u042D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u044B\u0439
+    \u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A"
   description: 
   level: 2
 --- !u!114 &1607011797
@@ -9776,9 +9860,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 1400178431, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
   selectedIcon: {fileID: -1491486427, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
   defaultIcon: {fileID: -948856725, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
-  needToBuyItems: []
+  needToBuyItems:
+  - {fileID: 1924839944}
   _moneyCost: 0
-  _skillPointsCost: 0
+  _skillPointsCost: 1
   _skill: {fileID: 1607011796}
 --- !u!114 &1607011798
 MonoBehaviour:
@@ -9854,7 +9939,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: 336}
+  m_AnchoredPosition: {x: 506.00024, y: -473}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1615794597
@@ -9910,8 +9995,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 1211012430, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
   selectedIcon: {fileID: -788656098, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
   defaultIcon: {fileID: 1403019063, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 700680026}
+  _moneyCost: 1500
   _skillPointsCost: 0
   _skill: {fileID: 1615794600}
 --- !u!114 &1615794600
@@ -9926,8 +10012,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5516473b89613874c8fb58f8ebbc4be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 123
+  skillName: "\u0410\u043D\u0442\u0438\u0432\u043E\u0440"
+  description: "\u0412\u044B \u043A\u0443\u043F\u0438\u043B\u0438 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435
+    \u0440\u0435\u0448\u0435\u0442\u043A\u0438 \u043D\u0430 \u043E\u043A\u043D\u0430!
+    \u0423 \u0432\u043E\u0440\u043E\u0432 \u043D\u0435\u0442 \u0448\u0430\u043D\u0441\u043E\u0432.
+    \u0412\u043E\u0440\u044B \u043A\u0440\u0430\u0434\u0443\u0442 \u043C\u0435\u043D\u044C\u0448\u0435
+    \u0434\u0435\u043D\u0435\u0433"
   level: 4
 --- !u!1 &1622743671
 GameObject:
@@ -10013,16 +10103,16 @@ RectTransform:
   - {fileID: 1862674173}
   - {fileID: 1742343119}
   - {fileID: 1369827584}
-  - {fileID: 1220176675}
   - {fileID: 354550215}
   - {fileID: 2096087297}
   - {fileID: 1036375076}
+  - {fileID: 1220176675}
   m_Father: {fileID: 1527016439}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00007724762, y: 446.23358}
-  m_SizeDelta: {x: 1461.2999, y: 1856.7488}
+  m_AnchoredPosition: {x: -3310, y: 446.23}
+  m_SizeDelta: {x: 3501.1553, y: 1856.7488}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1633417027
 GameObject:
@@ -10060,7 +10150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 493.6, y: -202}
+  m_AnchoredPosition: {x: -103.999756, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1633417029
@@ -10075,8 +10165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e866c27e9b1284d8af322b049ae431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041D\u0430\u0439\u043C \u0440\u0430\u0431\u043E\u0447\u0438\u0445"
+  description: 0 -> 1
   level: 1
 --- !u!114 &1633417030
 MonoBehaviour:
@@ -10093,8 +10183,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 1204283656, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
   selectedIcon: {fileID: 661273702, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
   defaultIcon: {fileID: -1750424251, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 493883987}
+  _moneyCost: 100
   _skillPointsCost: 0
   _skill: {fileID: 1633417029}
 --- !u!114 &1633417031
@@ -10171,7 +10262,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1003, y: -22}
+  m_AnchoredPosition: {x: 506.00024, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1641438001
@@ -10204,8 +10295,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 2004594426, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   selectedIcon: {fileID: 1372470619, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   defaultIcon: {fileID: 1822752625, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1493025915}
+  _moneyCost: 1500
   _skillPointsCost: 0
   _skill: {fileID: 1641438001}
 --- !u!114 &1641438003
@@ -10491,7 +10583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -667, y: -22}
+  m_AnchoredPosition: {x: 656.00024, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1689638963
@@ -10506,7 +10598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8ffe4b8bfae0e418c95a14e8c27884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u0425\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A"
   description: 
   level: 2
 --- !u!114 &1689638964
@@ -10524,8 +10616,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -1543763502, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
   selectedIcon: {fileID: -1474074398, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
   defaultIcon: {fileID: -230054158, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1641438002}
+  _moneyCost: 1750
   _skillPointsCost: 0
   _skill: {fileID: 1689638963}
 --- !u!114 &1689638965
@@ -10602,7 +10695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: -21.999939}
+  m_AnchoredPosition: {x: 206.00024, y: -473}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1712106453
@@ -10658,8 +10751,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -1154234841, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
   selectedIcon: {fileID: -1831163699, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
   defaultIcon: {fileID: -66408746, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1346091831}
+  _moneyCost: 50
   _skillPointsCost: 0
   _skill: {fileID: 1712106456}
 --- !u!114 &1712106456
@@ -10674,8 +10768,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5516473b89613874c8fb58f8ebbc4be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: fdsdfsf
-  description: sdf434
+  skillName: "\u0410\u043D\u0442\u0438\u0432\u043E\u0440"
+  description: "\u0412\u044B \u043A\u0443\u043F\u0438\u043B\u0438 \u043D\u043E\u0432\u044B\u0435
+    \u043A\u0430\u0441\u0441\u044B! \u0422\u0435\u043F\u0435\u0440\u044C \u0432\u043E\u0440\u0430\u043C
+    \u0431\u0443\u0434\u0435\u0442 \u0442\u0435\u0436\u0435\u043B\u0435\u0435 \u0437\u0430\u0431\u0440\u0430\u0442\u044C
+    \u0434\u0435\u043D\u044C\u0433\u0438!"
   level: 2
 --- !u!1 &1722439198
 GameObject:
@@ -10713,7 +10810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -329, y: 522.00006}
+  m_AnchoredPosition: {x: -23.999756, y: 600}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1722439200
@@ -10728,8 +10825,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b269c21bfebbb84eaea9372fea2ca38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
+  description: "\u0412\u044B \u0441\u0442\u0430\u043B\u0438 \u0435\u0434\u0438\u043D\u044B
+    \u0441 \u043A\u0443\u0445\u043D\u0435\u0439! \u041C\u0430\u0441\u0442\u0435\u0440
+    \u043F\u043B\u0438\u0442\u044B \u0438 \u043A\u043E\u0442\u043B\u0435\u0442! \u0422\u0435\u043F\u0435\u0440\u044C
+    \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
+    20->40"
   level: 5
 --- !u!114 &1722439201
 MonoBehaviour:
@@ -10746,9 +10847,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 1793491442, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   selectedIcon: {fileID: -623504638, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   defaultIcon: {fileID: 772630879, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  needToBuyItems: []
+  needToBuyItems:
+  - {fileID: 521617019}
   _moneyCost: 0
-  _skillPointsCost: 0
+  _skillPointsCost: 1
   _skill: {fileID: 1722439200}
 --- !u!114 &1722439202
 MonoBehaviour:
@@ -10824,7 +10926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -833, y: 162}
+  m_AnchoredPosition: {x: -853.9999, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1729890063
@@ -10839,7 +10941,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a96847cd8aaaf46998f332870a43ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u042D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u044B\u0439
+    \u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A"
   description: 
   level: 3
 --- !u!114 &1729890064
@@ -10857,9 +10960,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 884507621, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
   selectedIcon: {fileID: -962808445, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
   defaultIcon: {fileID: -1729692457, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
-  needToBuyItems: []
+  needToBuyItems:
+  - {fileID: 714204255}
   _moneyCost: 0
-  _skillPointsCost: 0
+  _skillPointsCost: 1
   _skill: {fileID: 1729890063}
 --- !u!114 &1729890065
 MonoBehaviour:
@@ -11026,7 +11130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -833, y: 336}
+  m_AnchoredPosition: {x: -1153.9999, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1740583793
@@ -11041,7 +11145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a96847cd8aaaf46998f332870a43ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u042D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u044B\u0439
+    \u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A"
   description: 
   level: 4
 --- !u!114 &1740583794
@@ -11059,9 +11164,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 575558584, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
   selectedIcon: {fileID: 419592917, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
   defaultIcon: {fileID: 262481939, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 752681145}
+  _moneyCost: 3750
+  _skillPointsCost: 1
   _skill: {fileID: 1740583793}
 --- !u!114 &1740583795
 MonoBehaviour:
@@ -11137,7 +11243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1003, y: 522.00006}
+  m_AnchoredPosition: {x: 1856.0002, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742343120
@@ -11152,7 +11258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531a8f0f652a1e84597bbd276f00c8ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u0420\u0435\u043C\u043E\u043D\u0442"
   description: 
   level: 5
 --- !u!114 &1742343121
@@ -11170,8 +11276,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 439149495, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   selectedIcon: {fileID: 1500672991, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   defaultIcon: {fileID: -1854040080, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1992265557}
+  _moneyCost: 4500
   _skillPointsCost: 0
   _skill: {fileID: 1742343120}
 --- !u!114 &1742343122
@@ -11376,7 +11483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1003, y: 336}
+  m_AnchoredPosition: {x: 1406.0002, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1862674174
@@ -11391,7 +11498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531a8f0f652a1e84597bbd276f00c8ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u0420\u0435\u043C\u043E\u043D\u0442"
   description: 
   level: 4
 --- !u!114 &1862674175
@@ -11409,8 +11516,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -886059899, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   selectedIcon: {fileID: 1517824097, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   defaultIcon: {fileID: 1228777232, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 175150600}
+  _moneyCost: 3500
   _skillPointsCost: 0
   _skill: {fileID: 1862674174}
 --- !u!114 &1862674176
@@ -11621,7 +11729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 493.59998, y: -22}
+  m_AnchoredPosition: {x: -404, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1924839944
@@ -11639,8 +11747,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -1496701073, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
   selectedIcon: {fileID: -1322561645, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
   defaultIcon: {fileID: 1839010626, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 684348101}
+  _moneyCost: 250
   _skillPointsCost: 0
   _skill: {fileID: 1924839947}
 --- !u!114 &1924839945
@@ -11693,8 +11802,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e866c27e9b1284d8af322b049ae431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041D\u0430\u0439\u043C \u0440\u0430\u0431\u043E\u0447\u0438\u0445"
+  description: 1 -> 2
   level: 2
 --- !u!1 &1926623133
 GameObject:
@@ -11732,7 +11841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.199951, y: -22}
+  m_AnchoredPosition: {x: -404, y: -173}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1926623135
@@ -11747,8 +11856,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e865156fff2249442b1ee3244e6454a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
+  description: "\u0410\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u043E\u0441\u0442\u044C
+    \u0438 \u0442\u043E\u043B\u044C\u043A\u043E \u0410\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u043E\u0441\u0442\u044C!
+    \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
+    \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 2 -> 4"
   level: 2
 --- !u!114 &1926623136
 MonoBehaviour:
@@ -11765,8 +11877,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -564946950, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   selectedIcon: {fileID: -1881905008, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   defaultIcon: {fileID: -1619832882, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1036375078}
+  _moneyCost: 500
   _skillPointsCost: 0
   _skill: {fileID: 1926623135}
 --- !u!114 &1926623137
@@ -11843,7 +11956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.199951, y: 162}
+  m_AnchoredPosition: {x: -703.9999, y: -173}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938914891
@@ -11858,8 +11971,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e865156fff2249442b1ee3244e6454a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
+  description: "\u0413\u043B\u0430\u0432\u043D\u043E\u0435 \u044D\u0442\u043E \u041B\u044E\u0431\u043E\u0432\u044C!
+    \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
+    \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 4 -> 8"
   level: 3
 --- !u!114 &1938914892
 MonoBehaviour:
@@ -11876,9 +11991,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 230987775, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   selectedIcon: {fileID: 560268235, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   defaultIcon: {fileID: -284108622, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 354550217}
+  _moneyCost: 1500
+  _skillPointsCost: 1500
   _skill: {fileID: 1938914891}
 --- !u!114 &1938914893
 MonoBehaviour:
@@ -12029,7 +12145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 493.59998, y: 522.00006}
+  m_AnchoredPosition: {x: -1303.9999, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1945166391
@@ -12044,8 +12160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e866c27e9b1284d8af322b049ae431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041D\u0430\u0439\u043C \u0440\u0430\u0431\u043E\u0447\u0438\u0445"
+  description: 4 -> 5
   level: 5
 --- !u!114 &1945166392
 MonoBehaviour:
@@ -12062,8 +12178,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -345280042, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
   selectedIcon: {fileID: -1499417321, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
   defaultIcon: {fileID: -972567473, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 1740583794}
+  _moneyCost: 1000
   _skillPointsCost: 0
   _skill: {fileID: 1945166391}
 --- !u!114 &1945166393
@@ -12140,7 +12257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: 522}
+  m_AnchoredPosition: {x: 656.00024, y: -473}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1973974322
@@ -12196,8 +12313,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 16862213, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
   selectedIcon: {fileID: -51319673, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
   defaultIcon: {fileID: -416759053, guid: f72add19c5adb3f499e28ebf2253390d, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 589032873}
+  _moneyCost: 3000
   _skillPointsCost: 0
   _skill: {fileID: 1973974325}
 --- !u!114 &1973974325
@@ -12212,9 +12330,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5516473b89613874c8fb58f8ebbc4be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
-  level: 1
+  skillName: "\u0410\u043D\u0442\u0438\u0432\u043E\u0440"
+  description: "\u0412\u044B \u0443\u043A\u0440\u0435\u043F\u0438\u043B\u0438 \u0434\u0432\u0435\u0440\u0438,
+    \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u043B\u0438 \u043A\u0430\u043C\u0435\u0440\u044B
+    \u0438 \u0432\u0441\u0442\u0430\u0432\u0438\u043B\u0438 \u043F\u0443\u043B\u0435\u043D\u0435\u043F\u0440\u043E\u0431\u0438\u0432\u0430\u0435\u043C\u044B
+    \u0441\u0442\u0451\u043A\u043B\u0430! \u0412\u0430\u0448\u0435 \u043A\u0430\u0444\u0435
+    - \u044D\u0442\u043E \u043D\u0435\u043F\u0440\u0438\u0441\u0442\u0443\u043F\u043D\u0430\u044F
+    \u043A\u0440\u0435\u043F\u043E\u0441\u0442\u044C! \u0412\u043E\u0440\u044B \u0432\u0430\u0441
+    \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0435 \u043F\u043E\u0442\u0440\u044F\u0432\u043E\u0436\u0430\u0442"
+  level: 5
 --- !u!1 &1992265554
 GameObject:
   m_ObjectHideFlags: 0
@@ -12251,7 +12375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -498, y: 336}
+  m_AnchoredPosition: {x: 1705.9998, y: 126.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1992265556
@@ -12266,8 +12390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e70c35ec7f0c7d4c90ecaddfda7a2ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041D\u043E\u0430\u044B\u0439 \u043F\u043E\u0441\u0442\u0430\u0432\u0449\u0438\u043A"
+  description: 35 -> 30
   level: 4
 --- !u!114 &1992265557
 MonoBehaviour:
@@ -12284,8 +12408,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -331620265, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
   selectedIcon: {fileID: -692915011, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
   defaultIcon: {fileID: -325385899, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 278906679}
+  _moneyCost: 4000
   _skillPointsCost: 0
   _skill: {fileID: 1992265556}
 --- !u!114 &1992265558
@@ -12572,7 +12697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -329, y: -202}
+  m_AnchoredPosition: {x: -23.999756, y: -623}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2057718990
@@ -12587,8 +12712,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b269c21bfebbb84eaea9372fea2ca38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
+  description: "\u0412\u044B \u0441\u043E\u0432\u0435\u0440\u0448\u0435\u043D\u0441\u0442\u0432\u0443\u0435\u0442\u0435
+    \u0441\u0432\u043E\u0438 \u043D\u0430\u0432\u044B\u043A\u0438! \u0422\u0435\u043F\u0435\u0440\u044C
+    \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
+    1->2"
   level: 1
 --- !u!114 &2057718991
 MonoBehaviour:
@@ -12607,7 +12735,7 @@ MonoBehaviour:
   defaultIcon: {fileID: -1163698406, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   needToBuyItems: []
   _moneyCost: 0
-  _skillPointsCost: 0
+  _skillPointsCost: 1
   _skill: {fileID: 2057718990}
 --- !u!114 &2057718992
 MonoBehaviour:
@@ -12683,7 +12811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 656, y: -202}
+  m_AnchoredPosition: {x: -404, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2092916718
@@ -12698,8 +12826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35833b325e315704ba8cbae6a5429850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u0420\u0435\u043A\u043B\u0430\u043C\u0430"
+  description: 0 -> 5
   level: 1
 --- !u!114 &2092916719
 MonoBehaviour:
@@ -12716,9 +12844,10 @@ MonoBehaviour:
   buyedIcon: {fileID: -1604172117, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   selectedIcon: {fileID: -1206635110, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   defaultIcon: {fileID: 1139794413, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 1478467163}
+  _moneyCost: 500
+  _skillPointsCost: 500
   _skill: {fileID: 2092916718}
 --- !u!114 &2092916720
 MonoBehaviour:
@@ -12794,7 +12923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1169, y: 162}
+  m_AnchoredPosition: {x: -1153.9999, y: -173}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2096087298
@@ -12809,7 +12938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54d4d1504d9b104abb10f904ac310dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\u041C\u043E\u0440\u043E\u0436\u043D\u043E\u0435"
   description: 
   level: 3
 --- !u!114 &2096087299
@@ -12827,9 +12956,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 2128986808, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   selectedIcon: {fileID: 1084212197, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   defaultIcon: {fileID: -1879302381, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
-  _skillPointsCost: 0
+  needToBuyItems:
+  - {fileID: 862800179}
+  _moneyCost: 1
+  _skillPointsCost: 7000
   _skill: {fileID: 2096087298}
 --- !u!114 &2096087300
 MonoBehaviour:
@@ -12978,7 +13108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 655.9999, y: 336}
+  m_AnchoredPosition: {x: -1753.9999, y: 426.99994}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2104993483
@@ -12993,8 +13123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35833b325e315704ba8cbae6a5429850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: "\u0420\u0435\u043A\u043B\u0430\u043C\u0430"
+  description: 15 -> 20
   level: 4
 --- !u!114 &2104993484
 MonoBehaviour:
@@ -13011,8 +13141,9 @@ MonoBehaviour:
   buyedIcon: {fileID: -1508646634, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   selectedIcon: {fileID: -1970412475, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   defaultIcon: {fileID: 1848301489, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
-  needToBuyItems: []
-  _moneyCost: 0
+  needToBuyItems:
+  - {fileID: 928150898}
+  _moneyCost: 2000
   _skillPointsCost: 0
   _skill: {fileID: 2104993483}
 --- !u!114 &2104993485
