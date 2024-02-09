@@ -40,5 +40,21 @@ namespace Clicker.Core.Earnings
 
             return null;
         }
+
+        public int GetProfitForDay(int dayIndex)
+        {
+            EarningDayHistory history = GetEarnDayHistoryByDayIndex(dayIndex);
+            if (history == null)
+                return 0;
+            int profit = 0;
+
+            foreach (EarningsHistoryCategory catergory in history.Catigories)
+            {
+                profit += catergory.EarningMoney;
+                profit -= catergory.ExpensesMoney;
+            }
+
+            return profit;
+        }
     }
 }
