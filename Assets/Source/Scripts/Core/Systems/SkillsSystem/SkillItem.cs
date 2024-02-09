@@ -63,14 +63,11 @@ namespace Clicker.Core.SkillSystem
         private PlayerData data;
         private Image img;
 
-        private SkillSaveManager skillSaver;
-
         [Inject]
-        public void Init(PlayerData data, GlobalObjectsContainer objectsContainer, SkillSaveManager skillSaver)
+        public void Init(PlayerData data, GlobalObjectsContainer objectsContainer)
         {
             this.data = data;
             this.objectsContainer = objectsContainer;
-            this.skillSaver = skillSaver;
         }
 
         public void Buy()
@@ -90,7 +87,6 @@ namespace Clicker.Core.SkillSystem
                         data.Money -= _moneyCost;
                         data.RemoveSkillPoints(SkillPointsCost);
                         _isBuyed = true;
-                        skillSaver.SaveSkillsData();
                     }
                     break;
                 case SkillCostType.MONEY:
@@ -98,7 +94,6 @@ namespace Clicker.Core.SkillSystem
                     {
                         data.Money -= _moneyCost;
                         _isBuyed = true;
-                        skillSaver.SaveSkillsData();
                     }
                     break;
                 case SkillCostType.SKILL_POINTS:
@@ -106,7 +101,6 @@ namespace Clicker.Core.SkillSystem
                     {
                         data.RemoveSkillPoints(SkillPointsCost);
                         _isBuyed = true;
-                        skillSaver.SaveSkillsData();
                     }
                     break;
             }

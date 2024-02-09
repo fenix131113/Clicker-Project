@@ -1,3 +1,5 @@
+using Clicker.Core.Earnings;
+using Clicker.Core.Time;
 using DG.Tweening;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,15 +20,17 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
     private Vector3 _progressBarStartPos;
     private Vector3 _cameraStartPos;
     private PlayerData data;
+    private EarningsManager earningsManager;
     private RectTransform _rect;
 
     public delegate void OnFoodCooked(int moneyEarned);
     public OnFoodCooked onFoodCooked;
 
     [Inject]
-    private void Init(PlayerData data)
+    private void Init(PlayerData data, EarningsManager earningsManager)
     {
         this.data = data;
+        this.earningsManager = earningsManager;
         _rect = GetComponent<RectTransform>();
         _progressBarStartPos = clickProgressBarBack.rectTransform.position;
         _clickerStartScale = _rect.localScale;
@@ -57,6 +61,7 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
     private void FoodCooked(int earnedMoney)
     {
         CreateEarnedMoneyLabel(earnedMoney);
+        earningsManager.AddOrUpdateHistoryEntry(CalendarManager.Day, "Кликер", earnedMoney);
 
         List<GameObject> unlockedFoodObjects = new();
 

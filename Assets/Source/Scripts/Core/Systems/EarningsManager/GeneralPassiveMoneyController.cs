@@ -1,8 +1,6 @@
 using Clicker.Core.Earnings;
 using Clicker.Core.Time;
 using Newtonsoft.Json;
-using System;
-using UnityEngine;
 
 public class GeneralPassiveMoneyController
 {

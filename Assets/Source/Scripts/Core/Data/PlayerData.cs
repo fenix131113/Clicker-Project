@@ -3,8 +3,9 @@ using Clicker.Core.Tournament;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
-using System;
 using Zenject;
+using Clicker.Core.Time;
+using UnityEngine.SceneManagement;
 
 // All data in this script will save in database
 public class PlayerData
@@ -32,20 +33,20 @@ public class PlayerData
 
 
 
-    [JsonProperty][SerializeField]private int _money;
-    [JsonIgnore] public int Money
+    [JsonProperty][SerializeField] private int _money = 0;
+    [JsonIgnore]
+    public int Money
     {
         get { return _money; }
         set
         {
             _money = value;
             if (value < 0)
-                Debug.Log("Вы обанкротились " + _money);
-            //Loose game
+                LooseGame("Вы обанкротились!");
         }
     }
 
-    [JsonProperty][SerializeField] private int _skillPoints;
+    [JsonProperty][SerializeField] private int _skillPoints = 1;
     [JsonIgnore] public int SkillPoints => _skillPoints;
     public void AddSkillPoints(int count) => _skillPoints += count;
     public void RemoveSkillPoints(int count) => _skillPoints -= count;
@@ -64,6 +65,9 @@ public class PlayerData
     [JsonProperty][SerializeField] private bool[] _buyedSkills = new bool[0];
     [JsonIgnore] public IReadOnlyCollection<bool> BuyedSkills => _buyedSkills;
     public void SetBuyedSkillsArray(bool[] array) => _buyedSkills = array;
+
+
+    [JsonProperty][SerializeField] private int _day;
 
 
     private int _clickPower = 1;
@@ -106,27 +110,58 @@ public class PlayerData
         _skillSaveManager = skillSaveManager;
         skillSaveManager.SetData(this);
 
-        LoadData();
+        CalendarManager.onNewDay += (int day, DayType dayType) =>
+        {
+            if (day % 7 == 0)
+                SaveData();
+        };
+        if (PlayerPrefs.HasKey("data"))
+            LoadData();
     }
 
     public void SaveData()
     {
+        if (PlayerPrefs.HasKey("data"))
+            PlayerPrefs.SetString("backup", PlayerPrefs.GetString("data"));
+
+        _skillSaveManager.SaveSkillsData();
+        _day = CalendarManager.Day;
         string dataSave = JsonConvert.SerializeObject(this);
-        Debug.Log(dataSave);
         PlayerPrefs.SetString("data", dataSave);
     }
 
     public void LoadData()
     {
-        PlayerData loadedData = JsonConvert.DeserializeObject<PlayerData>(PlayerPrefs.GetString("data"));
+        string dataKey = "data";
+
+        if (PlayerPrefs.HasKey("died") && PlayerPrefs.GetInt("died") == 1 && PlayerPrefs.HasKey("data") && !PlayerPrefs.HasKey("backup"))
+            return;
+
+        if (PlayerPrefs.HasKey("died") && PlayerPrefs.GetInt("died") == 1 && !PlayerPrefs.HasKey("backup"))
+            return;
+        else if (PlayerPrefs.HasKey("died") && PlayerPrefs.GetInt("died") == 1)
+        {
+            dataKey = "backup";
+            PlayerPrefs.SetString("data", PlayerPrefs.GetString("backup"));
+            PlayerPrefs.SetInt("died", 0);
+        }
+
+        PlayerData loadedData = JsonConvert.DeserializeObject<PlayerData>(PlayerPrefs.GetString(dataKey));
         _mafiaManager.LoadSavedData(loadedData._mafiaManager);
         _tournamentManager.LoadSavedData(loadedData._tournamentManager);
 
+        CalendarManager.SetDay(loadedData._day);
         _money = loadedData._money;
         _skillPoints = loadedData._skillPoints;
         _unlockedFood = loadedData._unlockedFood;
         _currentClickerProgress = loadedData._currentClickerProgress;
         _buyedSkills = loadedData._buyedSkills;
         _skillSaveManager.LoadSkillsData(_buyedSkills);
+    }
+
+    public void LooseGame(string looseMessage)
+    {
+        PlayerPrefs.SetInt("died", 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

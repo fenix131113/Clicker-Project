@@ -15,6 +15,27 @@ namespace Clicker.Core.Time
         #endregion
 
 
+        public static string GetRuDayType(DayType dayType)
+        {
+            switch (dayType)
+            {
+                case DayType.Monday:
+                    return "Понедельник";
+                case DayType.Tuesday:
+                    return "Вторник";
+                case DayType.Wednesday:
+                    return "Среда";
+                case DayType.Thursday:
+                    return "Четверг";
+                case DayType.Friday:
+                    return "Пятница";
+                case DayType.Saturday:
+                    return "Суббота";
+                case DayType.Sunday:
+                    return "Воскресенье";
+            }
+            return null;
+        }
         public static void SetNextDay()
         {
             _day++;
@@ -24,6 +45,11 @@ namespace Clicker.Core.Time
             else
                 _dayType = (DayType)(int)GetDayType + 1;
             onNewDay?.Invoke(Day, GetDayType);
+        }
+
+        public static void SetDay(int day)
+        {
+            _day = day;
         }
     }
 }

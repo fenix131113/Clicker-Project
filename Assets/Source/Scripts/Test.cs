@@ -3,6 +3,7 @@ using UnityEngine;
 using Zenject;
 using TMPro;
 using Clicker.Core.Time;
+using UnityEditor;
 
 public class Test : MonoBehaviour
 {
@@ -21,10 +22,13 @@ public class Test : MonoBehaviour
         this.timeManager = timeManager;
         this.notifications = notifications;
     }
+}
 
-    void Start()
+public class TestEditor
+{
+    [MenuItem("test/ClearPrefs")]
+    public static void ClearPrefs()
     {
-        //PlayerPrefs.DeleteAll();
-        
+        PlayerPrefs.DeleteAll();
     }
 }

@@ -17,7 +17,6 @@ public class SkillSaveManager : MonoBehaviour
             buyedSkills.Add(item.IsBuyed);
 
         data.SetBuyedSkillsArray(buyedSkills.ToArray());
-        data.SaveData();
     }
     public void LoadSkillsData(bool[] skillsData)
     {

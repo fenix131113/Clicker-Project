@@ -2,6 +2,7 @@ using Clicker.Core.Time;
 using Zenject;
 using UnityEngine;
 using Newtonsoft.Json;
+using Clicker.Core.Earnings;
 
 public class MafiaManager
 {
@@ -11,7 +12,7 @@ public class MafiaManager
     #endregion
 
 
-    [JsonIgnore] private int _mafiaPayExpiredCount;
+    [JsonProperty][SerializeField] private int _mafiaPayExpiredCount = 0;
     [JsonIgnore] public int MafiaPayExpiredCount => _mafiaPayExpiredCount;
 
 
@@ -22,6 +23,7 @@ public class MafiaManager
     [JsonIgnore] private GlobalObjectsContainer objectsContainer;
     [JsonIgnore] private TimeManager timeManager;
     [JsonIgnore] private PlayerData data;
+    [JsonIgnore] private EarningsManager earningsManager;
 
     public void SetData(PlayerData data) => this.data = data;
     [Inject]
@@ -30,13 +32,14 @@ public class MafiaManager
         _isWaitForPayment = mafiaManager.IsWaitForPayment;
     }
     [Inject]
-    public void Init(GlobalObjectsContainer objectsContainer, TimeManager timeManager)
+    public void Init(GlobalObjectsContainer objectsContainer, TimeManager timeManager, EarningsManager earningsManager)
     {
         this.objectsContainer = objectsContainer;
         this.timeManager = timeManager;
+        this.earningsManager = earningsManager;
         CalendarManager.onNewDay += CheckMafia;
-        objectsContainer.AcceptPaymentToMafiaButton.onClick.AddListener(DoPayment);
-        objectsContainer.DenyPaymentToMafiaButton.onClick.AddListener(DenyPayment);
+        objectsContainer.AcceptPaymentToMafiaButton.onHoldComplete += DoPayment;
+        objectsContainer.DenyPaymentToMafiaButton.onHoldComplete += DenyPayment;
         if (IsWaitForPayment)
         {
             timeManager.IsTimePaused = true;
@@ -46,7 +49,7 @@ public class MafiaManager
 
     private void CheckMafia(int day, DayType dayType)
     {
-        if (day % 35 == 0)
+        if (day % 31 == 0)
         {
             _isWaitForPayment = true;
             timeManager.IsTimePaused = true;
@@ -70,6 +73,7 @@ public class MafiaManager
             timeManager.IsTimePaused = false;
             _isWaitForPayment = false;
             objectsContainer.MafiaTakeMoneyAskPanel.SetActive(false);
+            earningsManager.AddOrUpdateHistoryEntry(CalendarManager.Day, "Мафия", 0, TakeMoneyCount);
         }
     }
 
@@ -78,7 +82,7 @@ public class MafiaManager
         if (MafiaPayExpiredCount >= 3)
         {
             timeManager.IsTimePaused = true;
-            Debug.Log("You Loose");
+            data.LooseGame("Вы 3 раза не отдали долг мафии и были убиты!");
         }
     }
 }

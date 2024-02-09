@@ -26,8 +26,8 @@ namespace Clicker.Core.Tournament
         #endregion
 
         [JsonIgnore] private readonly int tournamentStartNeedProgressToWin = 20;
-        [JsonIgnore] private readonly int tournamentHoursTime = 12;
-        [JsonIgnore] private readonly int tournamentPeriod = 14;
+        [JsonIgnore] private readonly int tournamentHoursTime = 24;
+        [JsonIgnore] private readonly int tournamentPeriod = 7;
         [JsonIgnore] private GlobalObjectsContainer _objectsContainer;
         [JsonIgnore] private TimeManager _timeManager;
         [JsonIgnore] private PlayerData data;
@@ -57,8 +57,8 @@ namespace Clicker.Core.Tournament
             {
                 _timeManager.IsTimePaused = true;
                 _objectsContainer.AskForTournamentPanel.SetActive(true);
-                _objectsContainer.AcceptTournamentButton.onClick.AddListener(StartTournament);
-                _objectsContainer.DenyTournamentButton.onClick.AddListener(DenyTournament);
+                _objectsContainer.AcceptTournamentButton.onHoldComplete += StartTournament;
+                _objectsContainer.DenyTournamentButton.onHoldComplete += DenyTournament;
             }
         }
         private void StartTournament()
@@ -75,7 +75,7 @@ namespace Clicker.Core.Tournament
             TimeManager.onNewHour += NewHourCheck;
             _objectsContainer.ClickerScript.onFoodCooked += NewFoodCookedAction;
 
-            _objectsContainer.TournamentProgressFiller.transform.parent.gameObject.SetActive(true);
+            _objectsContainer.TournamentProgressFiller.transform.parent.parent.gameObject.SetActive(true);
         }
 
         private void DenyTournament()
@@ -89,7 +89,7 @@ namespace Clicker.Core.Tournament
             notifications.CreatNewNotification("Вы проиграли в турнире");
             TimeManager.onNewHour -= NewHourCheck;
             _objectsContainer.ClickerScript.onFoodCooked -= NewFoodCookedAction;
-            _objectsContainer.TournamentProgressFiller.transform.parent.gameObject.SetActive(false);
+            _objectsContainer.TournamentProgressFiller.transform.parent.parent.gameObject.SetActive(false);
         }
         private void NewHourCheck(int hour)
         {
@@ -105,12 +105,11 @@ namespace Clicker.Core.Tournament
 
             TimeManager.onNewHour -= NewHourCheck;
             _objectsContainer.ClickerScript.onFoodCooked -= NewFoodCookedAction;
-            _objectsContainer.TournamentProgressFiller.transform.parent.gameObject.SetActive(false);
+            _objectsContainer.TournamentProgressFiller.transform.parent.parent.gameObject.SetActive(false);
         }
         private void NewFoodCookedAction(int earnedMoney)
         {
             _currentTournamentProgress++;
-            Debug.Log(_currentTournamentProgress);
             _objectsContainer.TournamentProgressFiller.DOFillAmount((float)_currentTournamentProgress / NeedProgressToWin, 0.5f);
             _objectsContainer.TournamentProgressText.text = $"{_currentTournamentProgress}/{NeedProgressToWin}  {RemainingHours}ч. осталось";
 
