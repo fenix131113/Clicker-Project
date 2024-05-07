@@ -12,19 +12,20 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private GameObject[] foodObjects;
     [SerializeField] private float clickAnimDuration;
-    [SerializeField] private Image clickProgressBarBack;
     [SerializeField] private Image clickProgressFiller;
     [SerializeField] private Transform canvas;
     [SerializeField] private GameObject moneyEarnPrefab;
+    [SerializeField] private GameObject craftedFoodPrefab;
     private Vector3 _clickerStartScale;
     private Vector3 _progressBarStartPos;
     private Vector3 _cameraStartPos;
     private PlayerData data;
     private EarningsManager earningsManager;
     private RectTransform _rect;
+    private GameObject currentFoodObject;
 
     public delegate void OnFoodCooked(int moneyEarned);
-    public OnFoodCooked onFoodCooked;
+    public event OnFoodCooked onFoodCooked;
 
     [Inject]
     private void Init(PlayerData data, EarningsManager earningsManager)
@@ -32,10 +33,10 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
         this.data = data;
         this.earningsManager = earningsManager;
         _rect = GetComponent<RectTransform>();
-        _progressBarStartPos = clickProgressBarBack.rectTransform.position;
         _clickerStartScale = _rect.localScale;
         _cameraStartPos = Camera.main.transform.position;
         onFoodCooked += FoodCooked;
+        currentFoodObject = foodObjects.FirstOrDefault();
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -50,6 +51,14 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
 
         if (data.CurrentClickerProgress >= data.MaxProgressBarClicks)
         {
+            GameObject craftedItem = Instantiate(craftedFoodPrefab, transform.position, Quaternion.identity, transform);
+            craftedItem.GetComponent<Image>().sprite = currentFoodObject.GetComponent<Image>().sprite;
+            Sequence craftedItemAnims = DOTween.Sequence();
+            craftedItemAnims.Insert(0, craftedItem.transform.DOScaleY(0.6f, 0.1f).SetEase(Ease.OutSine));
+            craftedItemAnims.Insert(0.1f, craftedItem.transform.DOScaleY(1f, 0.1f).SetEase(Ease.InSine));
+            craftedItemAnims.Insert(0, craftedItem.transform.DOLocalMoveX(1500, 0.5f));
+            //craftedItemAnims.Insert(0, craftedItem.transform.DOLocalRotate(new Vector3(0, 0, Random.Range(0, 361)), 1f));
+            craftedItemAnims.onComplete += () => Destroy(craftedItem);
             data.Money += data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks);
             onFoodCooked?.Invoke(data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks));
             data.SetCurrentClickerProgress(data.CurrentClickerProgress % data.MaxProgressBarClicks);
@@ -72,7 +81,9 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
         }
         foreach (GameObject obj in unlockedFoodObjects)
             obj.SetActive(false);
-        unlockedFoodObjects[Random.Range(0, unlockedFoodObjects.Count)].SetActive(true);
+        currentFoodObject = unlockedFoodObjects[Random.Range(0, unlockedFoodObjects.Count)];
+        clickProgressFiller.GetComponent<Image>().sprite = currentFoodObject.GetComponent<Image>().sprite;
+        currentFoodObject.SetActive(true);
     }
     private void CreateEarnedMoneyLabel(int earnedMoney)
     {
@@ -85,13 +96,11 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
     private void ClickAnimation()
     {
         Sequence clickAnim = DOTween.Sequence();
-        clickAnim.Insert(0, clickProgressBarBack.rectTransform.DOShakePosition(clickAnimDuration, 3f, 1, 90));
         clickAnim.Insert(0, _rect.DOShakeScale(clickAnimDuration, .1f, 1, 0));
         clickAnim.Insert(0, Camera.main.DOShakePosition(clickAnimDuration, .1f, 1, 0));
         clickAnim.onComplete += () =>
         {
             _rect.DOScale(_clickerStartScale, clickAnimDuration);
-            clickProgressBarBack.rectTransform.DOMove(_progressBarStartPos, clickAnimDuration);
             Camera.main.transform.DOMove(_cameraStartPos, clickAnimDuration);
         };
     }

@@ -33,6 +33,9 @@ namespace Clicker.Core.Tournament
         [JsonIgnore] private PlayerData data;
         [JsonIgnore] private NoticeSystem notifications;
 
+        [JsonIgnore] public int TournamentHoursTime => tournamentHoursTime;
+        [JsonIgnore] public int TournamentPeriod => tournamentPeriod;
+
         public void LoadSavedData(TournamentManager tournamentManager)
         {
             _isTournamentProccess = tournamentManager.IsTournamentProcess;
@@ -48,18 +51,14 @@ namespace Clicker.Core.Tournament
             _objectsContainer = objectsContainer;
             _timeManager = timeManager;
             this.notifications = notifications;
-            CalendarManager.onNewDay += AskForTournament;
         }
 
-        private void AskForTournament(int day, DayType dayType)
+        public void AskForTournament()
         {
-            if (day % tournamentPeriod == 0)
-            {
-                _timeManager.IsTimePaused = true;
-                _objectsContainer.AskForTournamentPanel.SetActive(true);
-                _objectsContainer.AcceptTournamentButton.onHoldComplete += StartTournament;
-                _objectsContainer.DenyTournamentButton.onHoldComplete += DenyTournament;
-            }
+            _timeManager.IsTimePaused = true;
+            _objectsContainer.AskForTournamentPanel.SetActive(true);
+            _objectsContainer.AcceptTournamentButton.onHoldComplete += StartTournament;
+            _objectsContainer.DenyTournamentButton.onHoldComplete += DenyTournament;
         }
         private void StartTournament()
         {

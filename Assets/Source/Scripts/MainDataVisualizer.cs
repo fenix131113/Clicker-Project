@@ -27,7 +27,7 @@ public class MainDataVisualizer : MonoBehaviour
 
     private void EveryMinuteAction(int minute)
     {
-        TimeManager.onNewMinute += (int minute) => dateAndTimeText.text = $"Δενό {CalendarManager.Day} | {CalendarManager.GetRuDayType(CalendarManager.GetDayType)}\n{_timeManager.GetFormattedHours()}:{_timeManager.GetFormattedMinutes()}";
+        dateAndTimeText.text = $"Δενό {CalendarManager.Day} | {CalendarManager.GetRuDayType(CalendarManager.GetDayType)}\n{_timeManager.GetFormattedHours()}:{_timeManager.GetFormattedMinutes()}";
     }
 
     private void Update()

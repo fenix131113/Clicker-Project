@@ -87,11 +87,12 @@ public class PlayerData
 
     private SkillSaveManager _skillSaveManager;
     private GlobalObjectsContainer _objectsContainer;
+    private TimeManager _timeManager;
 
     [Inject]
     public void Init(RobberyManager robberyManager, WorkersManager workersManager,
         GeneralPassiveMoneyController passiveMoneyController, TournamentManager tournamentManager,
-        SkillSaveManager skillSaveManager, MafiaManager mafiaManager, GlobalObjectsContainer objectsContainer)
+        SkillSaveManager skillSaveManager, MafiaManager mafiaManager, GlobalObjectsContainer objectsContainer, TimeManager timeManager)
     {
         _robberyManager = robberyManager;
         robberyManager.SetData(this);
@@ -112,6 +113,8 @@ public class PlayerData
         skillSaveManager.SetData(this);
 
         _objectsContainer = objectsContainer;
+
+        _timeManager = timeManager;
 
         CalendarManager.onNewDay += (int day, DayType dayType) =>
         {
@@ -164,6 +167,7 @@ public class PlayerData
 
     public void LooseGame(string looseMessage)
     {
+        _timeManager.IsTimePaused = true;
         _objectsContainer.LoosePanText.text = looseMessage + " Вы начнёте с прошлой недели.";
         _objectsContainer.LoosePanBlocker.SetActive(true);
     }
