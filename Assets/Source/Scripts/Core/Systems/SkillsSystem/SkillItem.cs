@@ -15,36 +15,14 @@ namespace Clicker.Core.SkillSystem
 
         [SerializeField] private int _moneyCost;
         public int MoneyCost => _moneyCost;
-#if UNITY_EDITOR
-        public int MoneyCostEditor
-        {
-            get { return _moneyCost; }
-            set { _moneyCost = value; }
-        }
-#endif
 
 
         [SerializeField] private int _skillPointsCost;
         public int SkillPointsCost => _skillPointsCost;
 
-#if UNITY_EDITOR
-        public int SkillPointsCostEditor
-        {
-            get { return _skillPointsCost; }
-            set { _skillPointsCost = value; }
-        }
-#endif
-
 
         private SkillCostType _skillCostType;
         public SkillCostType SkillCostType => _skillCostType;
-#if UNITY_EDITOR
-        public SkillCostType SkillCostTypeEditor
-        {
-            get { return _skillCostType; }
-            set { _skillCostType = value; }
-        }
-#endif
 
 
         [SerializeField] private SkillBase _skill;
