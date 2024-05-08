@@ -62,4 +62,12 @@ public class GlobalObjectsContainer : MonoBehaviour
 
     [SerializeField] private SideHighLighter leftSideHighLighter;
     public SideHighLighter LeftSideHighLighter => leftSideHighLighter;
+
+
+    [SerializeField] private TMP_Text loosePanText;
+    public TMP_Text LoosePanText => loosePanText;
+
+
+    [SerializeField] private GameObject loosePanBlocker;
+    public GameObject LoosePanBlocker => loosePanBlocker;
 }

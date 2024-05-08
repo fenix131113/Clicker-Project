@@ -36,6 +36,6 @@ public class SideHighLighter : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerExit(PointerEventData eventData)
     {
         glowRect.DOMoveX(xStart, 0.3f);
-        _isInClickZone = true;
+        _isInClickZone = false;
     }
 }

@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using Zenject;
 
 namespace Clicker.Core.SkillSystem.Skills
@@ -14,7 +15,7 @@ namespace Clicker.Core.SkillSystem.Skills
             switch (level)
             {
                 case 1:
-                    
+                    SceneManager.LoadScene("EndGame");
                     break;
             }
         }

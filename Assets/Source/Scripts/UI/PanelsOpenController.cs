@@ -73,10 +73,8 @@ public class PanelsOpenController : MonoBehaviour
 
     public void UpdateVisualEarning()
     {
-        Debug.Log("Hmm");
         foreach (EarningDayHistory historyDay in earningsManager.EarningsList)
         {
-            Debug.Log("Inside");
 
             TMP_Text dayBlockText = Instantiate(dayBlock, earningsContainerTransform).GetComponent<TMP_Text>();
             dayBlockText.text = $"----------------------Δενό {historyDay.Day}----------------------";

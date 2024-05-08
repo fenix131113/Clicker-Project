@@ -19,14 +19,20 @@ namespace Clicker.Core.Time
         }
 
         public delegate void OnNewHour(int hour);
-        public static OnNewHour onNewHour;
+        public static event OnNewHour onNewHour;
 
         public delegate void OnNewMinute(int minute);
-        public static OnNewMinute onNewMinute;
+        public static event OnNewMinute onNewMinute;
 
 
         // Во сколько раз время идёт быстрее реального
         public const int TimeMultiplayer = 200000;
+
+
+        public TimeManager()
+        {
+            CalendarManager.Init(this);
+        }
 
         private void Update()
         {
@@ -43,8 +49,8 @@ namespace Clicker.Core.Time
             {
                 _minutes = 0;
                 _hour++;
-                if(_hour != 24)
-                onNewHour?.Invoke(_hour);
+                if (_hour != 24)
+                    onNewHour?.Invoke(_hour);
             }
             if (_hour == 24)
             {
@@ -55,6 +61,7 @@ namespace Clicker.Core.Time
             #endregion
         }
 
+        #region Formatted Time
         /// <returns>
         /// Time Formatted Like "XX:XX:XX"
         /// </returns>
@@ -74,5 +81,26 @@ namespace Clicker.Core.Time
         /// Seconds Formatted Like "XX"
         /// </returns>
         public string GetFormattedSeconds() { return Seconds < 10 ? $"0{Seconds}" : Seconds.ToString(); }
+
+        /// <returns>
+        /// Time Formatted Like "XX:XX:XX"
+        /// </returns>
+        public string GetFormattedTime(int hours, int minutes, int seconds) { return $"{GetFormattedHours(hours)}:{GetFormattedMinutes(minutes)}:{GetFormattedSeconds(seconds)}"; }
+
+        /// <returns>
+        /// Hours Formatted Like "XX"
+        /// </returns>
+        public string GetFormattedHours(int hours) { return hours < 10 ? $"0{hours}" : hours.ToString(); }
+
+        /// <returns>
+        /// Minutes Formatted Like "XX"
+        /// </returns>
+        public string GetFormattedMinutes(int minutes) { return minutes < 10 ? $"0{minutes}" : minutes.ToString(); }
+
+        /// <returns>
+        /// Seconds Formatted Like "XX"
+        /// </returns>
+        public string GetFormattedSeconds(int seconds) { return seconds < 10 ? $"0{seconds}" : seconds.ToString(); }
+        #endregion
     }
 }
