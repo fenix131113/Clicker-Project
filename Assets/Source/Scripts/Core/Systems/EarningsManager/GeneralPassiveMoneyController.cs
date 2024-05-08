@@ -1,8 +1,6 @@
 using Clicker.Core.Earnings;
 using Clicker.Core.Time;
 using Newtonsoft.Json;
-using System;
-using UnityEngine;
 
 public class GeneralPassiveMoneyController
 {
@@ -27,24 +25,19 @@ public class GeneralPassiveMoneyController
     public void SetData(PlayerData data) => this.data = data;
     public GeneralPassiveMoneyController(EarningsManager earningsManager)
     {
-        CalendarManager.onNewDay += OnNewDay;
         this.earningsManager = earningsManager;
     }
-
-    private void OnNewDay(int dayIndex, DayType dayType)
+    public void UtilitiesPayment()
     {
-        if(dayIndex % 7 == 0)
-        {
-            //Utility service
-            data.Money -= UtilityServiceCost;
-            earningsManager.AddOrUpdateHistoryEntry(dayIndex, "Коммунальные услуги", 0, UtilityServiceCost);
-        }
+        //Utility service payment
+        data.Money -= UtilityServiceCost;
+        earningsManager.AddOrUpdateHistoryEntry(CalendarManager.Day - 1, "Коммунальные услуги", 0, UtilityServiceCost);
+    }
 
-        if (dayIndex % ConsumablesPayPeriod == 0)
-        {
-            //Consumables paying
-            data.Money -= ConsumablesCost;
-            earningsManager.AddOrUpdateHistoryEntry(dayIndex, "Расходы", 0, ConsumablesCost);
-        }
+    public void ConsumablePayment()
+    {
+        //Consumables payment
+        data.Money -= ConsumablesCost;
+        earningsManager.AddOrUpdateHistoryEntry(CalendarManager.Day - 1, "Расходы", 0, ConsumablesCost);
     }
 }

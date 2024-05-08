@@ -24,15 +24,18 @@ public class RobberyManager
 
     [JsonIgnore] private PlayerData data;
     [JsonIgnore] private readonly EarningsManager earningsManager;
+    [JsonIgnore] private readonly NoticeSystem notifications;
 
         
     [JsonIgnore] private int timeout = 0;
 
     public void SetData(PlayerData data) => this.data = data;
-    public RobberyManager(EarningsManager earningsManager)
+    public RobberyManager(EarningsManager earningsManager, NoticeSystem notifications)
     {
         this.earningsManager = earningsManager;
         TimeManager.onNewHour += TryRobbery;
+
+        this.notifications = notifications;
     }
     private void TryRobbery(int hour)
     {
@@ -52,6 +55,7 @@ public class RobberyManager
     {
         //take money percentMoney
         earningsManager.AddOrUpdateHistoryEntry(CalendarManager.Day, "Ограбление", 0, (int)(data.Money * (_robberyMoneyPercent * 0.01f)));
+        notifications.CreatNewNotification($"Вас обокрали на {(int)(data.Money * (_robberyMoneyPercent * 0.01f))}$");
         data.Money -= (int)(data.Money * (_robberyMoneyPercent * 0.01f));
         timeout = 48;
     }

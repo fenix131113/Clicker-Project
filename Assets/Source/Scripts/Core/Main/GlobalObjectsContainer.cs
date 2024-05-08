@@ -12,12 +12,12 @@ public class GlobalObjectsContainer : MonoBehaviour
     public RectTransform SkillInfoPanelRectTransform => skillInfoPanel;
 
 
-    [SerializeField] private Button acceptPaymentToMafiaButton;
-    public Button AcceptPaymentToMafiaButton => acceptPaymentToMafiaButton;
+    [SerializeField] private HoldButton acceptPaymentToMafiaButton;
+    public HoldButton AcceptPaymentToMafiaButton => acceptPaymentToMafiaButton;
 
 
-    [SerializeField] private Button denyPaymentToMafiaButton;
-    public Button DenyPaymentToMafiaButton => denyPaymentToMafiaButton;
+    [SerializeField] private HoldButton denyPaymentToMafiaButton;
+    public HoldButton DenyPaymentToMafiaButton => denyPaymentToMafiaButton;
 
 
     [SerializeField] private GameObject noticePanelPrefab;
@@ -36,12 +36,12 @@ public class GlobalObjectsContainer : MonoBehaviour
     public GameObject AskForTournamentPanel => askForTournamentPanel;
 
 
-    [SerializeField] private Button acceptTournamentButton;
-    public Button AcceptTournamentButton => acceptTournamentButton;
+    [SerializeField] private HoldButton acceptTournamentButton;
+    public HoldButton AcceptTournamentButton => acceptTournamentButton;
 
 
-    [SerializeField] private Button denyTournamentButton;
-    public Button DenyTournamentButton => denyTournamentButton;
+    [SerializeField] private HoldButton denyTournamentButton;
+    public HoldButton DenyTournamentButton => denyTournamentButton;
 
 
     [SerializeField] private Image tournamentProgressFiller;
@@ -50,4 +50,24 @@ public class GlobalObjectsContainer : MonoBehaviour
 
     [SerializeField] private TMP_Text tournamentProgressText;
     public TMP_Text TournamentProgressText => tournamentProgressText;
+
+
+    [SerializeField] private Image holdButtonFiller;
+    public Image HoldButtonFiller => holdButtonFiller;
+
+
+    [SerializeField] private SideHighLighter rightSideHighLighter;
+    public SideHighLighter RightSideHighLighter => rightSideHighLighter;
+
+
+    [SerializeField] private SideHighLighter leftSideHighLighter;
+    public SideHighLighter LeftSideHighLighter => leftSideHighLighter;
+
+
+    [SerializeField] private TMP_Text loosePanText;
+    public TMP_Text LoosePanText => loosePanText;
+
+
+    [SerializeField] private GameObject loosePanBlocker;
+    public GameObject LoosePanBlocker => loosePanBlocker;
 }

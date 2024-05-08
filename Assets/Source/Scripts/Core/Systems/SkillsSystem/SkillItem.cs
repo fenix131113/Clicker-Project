@@ -15,36 +15,14 @@ namespace Clicker.Core.SkillSystem
 
         [SerializeField] private int _moneyCost;
         public int MoneyCost => _moneyCost;
-#if UNITY_EDITOR
-        public int MoneyCostEditor
-        {
-            get { return _moneyCost; }
-            set { _moneyCost = value; }
-        }
-#endif
 
 
         [SerializeField] private int _skillPointsCost;
         public int SkillPointsCost => _skillPointsCost;
 
-#if UNITY_EDITOR
-        public int SkillPointsCostEditor
-        {
-            get { return _skillPointsCost; }
-            set { _skillPointsCost = value; }
-        }
-#endif
-
 
         private SkillCostType _skillCostType;
         public SkillCostType SkillCostType => _skillCostType;
-#if UNITY_EDITOR
-        public SkillCostType SkillCostTypeEditor
-        {
-            get { return _skillCostType; }
-            set { _skillCostType = value; }
-        }
-#endif
 
 
         [SerializeField] private SkillBase _skill;
@@ -63,14 +41,11 @@ namespace Clicker.Core.SkillSystem
         private PlayerData data;
         private Image img;
 
-        private SkillSaveManager skillSaver;
-
         [Inject]
-        public void Init(PlayerData data, GlobalObjectsContainer objectsContainer, SkillSaveManager skillSaver)
+        public void Init(PlayerData data, GlobalObjectsContainer objectsContainer)
         {
             this.data = data;
             this.objectsContainer = objectsContainer;
-            this.skillSaver = skillSaver;
         }
 
         public void Buy()
@@ -90,7 +65,6 @@ namespace Clicker.Core.SkillSystem
                         data.Money -= _moneyCost;
                         data.RemoveSkillPoints(SkillPointsCost);
                         _isBuyed = true;
-                        skillSaver.SaveSkillsData();
                     }
                     break;
                 case SkillCostType.MONEY:
@@ -98,7 +72,6 @@ namespace Clicker.Core.SkillSystem
                     {
                         data.Money -= _moneyCost;
                         _isBuyed = true;
-                        skillSaver.SaveSkillsData();
                     }
                     break;
                 case SkillCostType.SKILL_POINTS:
@@ -106,7 +79,6 @@ namespace Clicker.Core.SkillSystem
                     {
                         data.RemoveSkillPoints(SkillPointsCost);
                         _isBuyed = true;
-                        skillSaver.SaveSkillsData();
                     }
                     break;
             }
