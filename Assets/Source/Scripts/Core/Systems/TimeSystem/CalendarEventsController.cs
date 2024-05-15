@@ -13,7 +13,6 @@ namespace Clicker.Core.Time
         [SerializeField] private Transform _dayEventsContentTransform;
         [SerializeField] private GameObject _dayEventPrefab;
         [SerializeField] private GameObject _emptyDayEventsTextObject;
-        [SerializeField] private TMP_Text _dayInfoNumText;
 
         private List<CalendarEvent>[] _daysEvents = new List<CalendarEvent>[31];
         private List<CalendarEvent> _allEvents = new();
@@ -22,18 +21,16 @@ namespace Clicker.Core.Time
         private TimeManager _timeManager;
         private TournamentManager _tournaments;
         private MafiaManager _mafiaManager;
-        private EarningsManager _earningsManager;
         private PlayerData _data;
 
-        public int SelectedDayIndex => _selectedDayIndex;
+        public int SelectedDayIndex { get { return _selectedDayIndex; } set { _selectedDayIndex = value; } }
 
         [Inject]
-        private void Init(TimeManager timeManager, TournamentManager tournaments, MafiaManager mafiaManager, EarningsManager earningsManager, PlayerData data)
+        private void Init(TimeManager timeManager, TournamentManager tournaments, MafiaManager mafiaManager, PlayerData data)
         {
             _timeManager = timeManager;
             _tournaments = tournaments;
             _mafiaManager = mafiaManager;
-            _earningsManager = earningsManager;
             _data = data;
         }
 
@@ -43,8 +40,6 @@ namespace Clicker.Core.Time
 
             TimeManager.onNewMinute += CheckEventsData;
             CalendarManager.onNewDay += OnNewDay;
-            // DELETE IN FUTURE
-            SelectDay(0);
         }
 
         private void OnNewDay(int dayNum, DayType dayType)
@@ -147,8 +142,6 @@ namespace Clicker.Core.Time
         {
             IReadOnlyCollection<CalendarEvent> dayEvents = GetDayEventsByCell(GetCalendarCellByIndex(dayIndex));
 
-            _dayInfoNumText.text = "Δενό " + (dayIndex + 1).ToString();
-
             if (dayEvents.Count == 0)
             {
                 _emptyDayEventsTextObject.SetActive(true);
@@ -172,8 +165,19 @@ namespace Clicker.Core.Time
                 return;
 
             ClearDayEventsObjects();
+
+            if (_selectedDayIndex >= 0)
+                _calendarCells[_selectedDayIndex].DeactivateSelection();
+
             _selectedDayIndex = dayIndex;
+            _calendarCells[_selectedDayIndex].ActivateSelection();
             DrawDayEventsInfoByIndex(_selectedDayIndex);
+        }
+
+        public void DeactivateCurrentCalendarSelection()
+        {
+            if (SelectedDayIndex >= 0)
+                _calendarCells[SelectedDayIndex].DeactivateSelection();
         }
     }
 }

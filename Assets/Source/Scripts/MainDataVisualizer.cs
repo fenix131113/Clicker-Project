@@ -1,4 +1,3 @@
-using Clicker.Core.Earnings;
 using Clicker.Core.Time;
 using TMPro;
 using UnityEngine;
@@ -7,20 +6,17 @@ using Zenject;
 public class MainDataVisualizer : MonoBehaviour
 {
     [SerializeField] private TMP_Text dateAndTimeText;
-    [SerializeField] private TMP_Text resourcesInfoText;
-    [SerializeField] private TMP_Text shortInfoText;
+    [SerializeField] private TMP_Text moneyText;
+    [SerializeField] private TMP_Text skillPointsText;
 
     private TimeManager _timeManager;
     private PlayerData _data;
-    private EarningsManager _earningsManager;
 
     [Inject]
-    private void Init(PlayerData data, TimeManager timeManager, EarningsManager earningManager)
+    private void Init(PlayerData data, TimeManager timeManager)
     {
         _timeManager = timeManager;
         TimeManager.onNewMinute += EveryMinuteAction;
-
-        _earningsManager = earningManager;
 
         _data = data;
     }
@@ -32,7 +28,7 @@ public class MainDataVisualizer : MonoBehaviour
 
     private void Update()
     {
-        resourcesInfoText.text = $"Деньги: {_data.Money}$\nОчки навыков: {_data.SkillPoints}";
-        shortInfoText.text = $"За день: {_earningsManager.GetProfitForDay(CalendarManager.Day)}$";
+        moneyText.text = $"Деньги: {_data.Money}$";
+        skillPointsText.text = $"Очки навыков: {_data.SkillPoints}";
     }
 }

@@ -56,14 +56,6 @@ public class GlobalObjectsContainer : MonoBehaviour
     public Image HoldButtonFiller => holdButtonFiller;
 
 
-    [SerializeField] private SideHighLighter rightSideHighLighter;
-    public SideHighLighter RightSideHighLighter => rightSideHighLighter;
-
-
-    [SerializeField] private SideHighLighter leftSideHighLighter;
-    public SideHighLighter LeftSideHighLighter => leftSideHighLighter;
-
-
     [SerializeField] private TMP_Text loosePanText;
     public TMP_Text LoosePanText => loosePanText;
 
