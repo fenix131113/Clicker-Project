@@ -16,4 +16,16 @@ public class MoneyPointsAdd : MonoBehaviour
         _data.Money += 50000;
         _data.AddSkillPoints(500);
     }
+
+    [MenuItem("Clicker/ Set Money 0")]
+    public static void SetMoneyToZero()
+    {
+        _data.Money = 0;
+    }
+
+    [MenuItem("Clicker/ Set Money -500")]
+    public static void SetMoneyToMinus()
+    {
+        _data.Money = -500;
+    }
 }

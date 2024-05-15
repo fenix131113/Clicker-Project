@@ -1,11 +1,10 @@
-using Clicker.Core.Workers;
+using Clicker.Core.Time;
 using Clicker.Core.Tournament;
+using Clicker.Core.Workers;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using UnityEngine;
-using Newtonsoft.Json;
 using Zenject;
-using Clicker.Core.Time;
-using UnityEngine.SceneManagement;
 
 // All data in this script will save in database
 public class PlayerData
@@ -121,7 +120,7 @@ public class PlayerData
             if (day % 7 == 0)
                 SaveData();
         };
-        if (PlayerPrefs.HasKey("data"))
+        if (PlayerPrefs.HasKey("data") || PlayerPrefs.HasKey("backup"))
             LoadData();
     }
 
@@ -140,17 +139,22 @@ public class PlayerData
     {
         string dataKey = "data";
 
+        if (PlayerPrefs.HasKey("data") && !PlayerPrefs.HasKey("backup"))
+            return;
+
         if (PlayerPrefs.HasKey("died") && PlayerPrefs.GetInt("died") == 1 && PlayerPrefs.HasKey("data") && !PlayerPrefs.HasKey("backup"))
             return;
 
         if (PlayerPrefs.HasKey("died") && PlayerPrefs.GetInt("died") == 1 && !PlayerPrefs.HasKey("backup"))
             return;
+
         else if (PlayerPrefs.HasKey("died") && PlayerPrefs.GetInt("died") == 1)
         {
-            dataKey = "backup";
             PlayerPrefs.SetString("data", PlayerPrefs.GetString("backup"));
-            PlayerPrefs.SetInt("died", 0);
+            //PlayerPrefs.DeleteKey("backup");
+            PlayerPrefs.DeleteKey("died");
         }
+        Debug.Log("LoadData");
 
         PlayerData loadedData = JsonConvert.DeserializeObject<PlayerData>(PlayerPrefs.GetString(dataKey));
         _mafiaManager.LoadSavedData(loadedData._mafiaManager);
@@ -168,7 +172,14 @@ public class PlayerData
     public void LooseGame(string looseMessage)
     {
         _timeManager.IsTimePaused = true;
-        _objectsContainer.LoosePanText.text = looseMessage + " Вы начнёте с прошлой недели.";
+        _objectsContainer.LoosePanText.text = looseMessage;
         _objectsContainer.LoosePanBlocker.SetActive(true);
+        PlayerPrefs.SetInt("died", 1);
+        Object.Destroy(_objectsContainer.GameInitializer.gameObject);
+        if (PlayerPrefs.HasKey("data") && !PlayerPrefs.HasKey("backup"))
+        {
+            PlayerPrefs.DeleteKey("data");
+            PlayerPrefs.DeleteKey("died");
+        }
     }
 }

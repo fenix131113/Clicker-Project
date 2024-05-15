@@ -95,7 +95,6 @@ namespace Clicker.Core.Time
             ResetDaysEvents();
 
             int lowestMonthDay = CalendarManager.Day > 31 ? CalendarManager.Day / 31 * 31 + 1 : 1;
-            Debug.Log(lowestMonthDay);
             // Place events in "days events array" by they index
             foreach (CalendarEvent e in _allEvents)
             {
@@ -112,7 +111,6 @@ namespace Clicker.Core.Time
             }
             foreach (CalendarCell cell in _calendarCells)
                 CheckEventCellIndicator(cell);
-            Debug.Log("events generated and placed");
         }
 
         // If event exsit in this day, indicator will turn on
