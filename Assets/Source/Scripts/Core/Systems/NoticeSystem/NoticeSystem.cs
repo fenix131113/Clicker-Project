@@ -5,14 +5,14 @@ using Zenject;
 
 public class NoticeSystem
 {
-    private GlobalObjectsContainer objectsContainer;
+    private GlobalObjectsContainer _objectsContainer;
 
     [Inject]
-    private void Init(GlobalObjectsContainer objectsContainer) => this.objectsContainer = objectsContainer;
+    private void Init(GlobalObjectsContainer objectsContainer) => _objectsContainer = objectsContainer;
 
-    public void CreatNewNotification(string message)
+    public void CreateNewNotification(string message)
     {
-        GameObject notification = Object.Instantiate(objectsContainer.NoticePanelPrefab, objectsContainer.NotificationsContainer);
+        GameObject notification = Object.Instantiate(_objectsContainer.NoticePanelPrefab, _objectsContainer.NotificationsContainer);
         notification.transform.GetChild(0).GetComponent<TMP_Text>().text = message;
         notification.GetComponent<RectTransform>().DOMoveY(notification.GetComponent<RectTransform>().position.y + notification.GetComponent<RectTransform>().sizeDelta.y, 0.5f).onComplete += () =>
         {

@@ -9,9 +9,16 @@ namespace Clicker.Core.Earnings
         public readonly List<EarningDayHistory> _earningsList = new();
         public IReadOnlyCollection<EarningDayHistory> EarningsList => _earningsList;
 
+        private CalendarManager _calendarManager;
+
+        public void SetCalendar(CalendarManager calendarManager)
+        {
+            _calendarManager = calendarManager;
+        }
+
         public void AddOrUpdateHistoryEntry(int dayNum, string categoryName, int earnMoney, int expensesMoney = 0)
         {
-            if (CalendarManager.Day - 1 > dayNum)
+            if (_calendarManager.Day - 1 > dayNum)
             {
                 Debug.LogWarning("You trying to add earning into the past!");
                 return;

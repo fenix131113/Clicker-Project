@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f72add19c5adb3f499e28ebf2253390d
+guid: 2b95fb20ab4b160418b2125e7949121e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1da1e0faf8d157043b5a7d602880ccab
-      internalID: 23010311
+      spriteID: e9633bd0a58ab194497b424a767e3c2b
+      internalID: 1367052223
       vertices: []
       indices: 
       edges: []
@@ -171,8 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 330c1d6bfa889774bb9035056e9388d1
-      internalID: 542614753
+      spriteID: 468898883c0fb8046a01166543665806
+      internalID: 1699874781
       vertices: []
       indices: 
       edges: []
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b47b9636750fe9438ddd29057c243c4
-      internalID: -662793180
+      spriteID: 62454dc9649972a4089e4a5b797e9dc5
+      internalID: 1025641983
       vertices: []
       indices: 
       edges: []
@@ -213,8 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15ff9673d4660634baff51f09a0c6f1e
-      internalID: -66408746
+      spriteID: 2e560a4123ac2de428fc94feaf367f82
+      internalID: 1246693336
       vertices: []
       indices: 
       edges: []
@@ -234,8 +234,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e77ca949c53202448b3dbba785b7f13
-      internalID: -1831163699
+      spriteID: cda6f5db7c7671549a539f781a903e9f
+      internalID: 1302913455
       vertices: []
       indices: 
       edges: []
@@ -255,8 +255,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b55049500a4db942b3f5bdb751966df
-      internalID: -1154234841
+      spriteID: 90247135980da904fb5b8a0e85e7cf40
+      internalID: 1962205327
       vertices: []
       indices: 
       edges: []
@@ -276,8 +276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d9d70c1686b1844faa8f09a1b368c9f
-      internalID: -101374907
+      spriteID: 43b1cfffa98c33e4c9eda051c83138ea
+      internalID: -1720306946
       vertices: []
       indices: 
       edges: []
@@ -297,8 +297,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb028edec039c2548a0230988f5c0bf1
-      internalID: -1712288729
+      spriteID: e789fa944fc40ec498fb3be800349eff
+      internalID: -309556985
       vertices: []
       indices: 
       edges: []
@@ -318,8 +318,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60a38ae2bf4395642aebcdb9dca6acda
-      internalID: 1732744378
+      spriteID: d7464c139dcff6840923742c92f8b348
+      internalID: -239053447
       vertices: []
       indices: 
       edges: []
@@ -339,8 +339,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d28dd81458e6e5a4abaa1dee91336522
-      internalID: 1403019063
+      spriteID: dc06cccfdc94e434a80797d770cf0985
+      internalID: 906779841
       vertices: []
       indices: 
       edges: []
@@ -360,8 +360,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c3dc2fd34d35c24891b4af64425994e
-      internalID: -788656098
+      spriteID: 5e81b51e18237fd47a4913b1eb514de5
+      internalID: -1353055259
       vertices: []
       indices: 
       edges: []
@@ -381,8 +381,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d48aad60c5650c43a16288482c118aa
-      internalID: 1211012430
+      spriteID: 4f9d4ed66262c6a4292f5b1bbdefa1ff
+      internalID: -1144191501
       vertices: []
       indices: 
       edges: []
@@ -402,8 +402,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86520e4b8de1b5f46b5b2448d5882279
-      internalID: -416759053
+      spriteID: ac2d9e117269e9741ae71c1c191d4d59
+      internalID: -635140463
       vertices: []
       indices: 
       edges: []
@@ -423,8 +423,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e52552837c137184aad13f8ccfe28e40
-      internalID: -51319673
+      spriteID: 11b1c9850063c06409001aab5caa8254
+      internalID: 217536464
       vertices: []
       indices: 
       edges: []
@@ -444,8 +444,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ebdd39cc625df34db53676a2c0a7204
-      internalID: 16862213
+      spriteID: 31d80b34990bdb342bf5b88794b12b93
+      internalID: -809405155
       vertices: []
       indices: 
       edges: []
@@ -461,21 +461,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RoberryPerksIcons_0: 23010311
-      RoberryPerksIcons_1: 542614753
-      RoberryPerksIcons_10: -788656098
-      RoberryPerksIcons_11: 1211012430
-      RoberryPerksIcons_12: -416759053
-      RoberryPerksIcons_13: -51319673
-      RoberryPerksIcons_14: 16862213
-      RoberryPerksIcons_2: -662793180
-      RoberryPerksIcons_3: -66408746
-      RoberryPerksIcons_4: -1831163699
-      RoberryPerksIcons_5: -1154234841
-      RoberryPerksIcons_6: -101374907
-      RoberryPerksIcons_7: -1712288729
-      RoberryPerksIcons_8: 1732744378
-      RoberryPerksIcons_9: 1403019063
+      RoberryPerksIcons_0: 1367052223
+      RoberryPerksIcons_1: 1699874781
+      RoberryPerksIcons_10: -1353055259
+      RoberryPerksIcons_11: -1144191501
+      RoberryPerksIcons_12: -635140463
+      RoberryPerksIcons_13: 217536464
+      RoberryPerksIcons_14: -809405155
+      RoberryPerksIcons_2: 1025641983
+      RoberryPerksIcons_3: 1246693336
+      RoberryPerksIcons_4: 1302913455
+      RoberryPerksIcons_5: 1962205327
+      RoberryPerksIcons_6: -1720306946
+      RoberryPerksIcons_7: -309556985
+      RoberryPerksIcons_8: -239053447
+      RoberryPerksIcons_9: 906779841
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -63,6 +63,11 @@ public class GlobalObjectsContainer : MonoBehaviour
     [SerializeField] private GameObject loosePanBlocker;
     public GameObject LoosePanBlocker => loosePanBlocker;
 
+
     [SerializeField] private GameInitializer gameInitializer;
     public GameInitializer GameInitializer => gameInitializer;
+
+
+    [SerializeField] private AudioClip annoncmentSound;
+    public AudioClip AnnouncmentSound => annoncmentSound;
 }

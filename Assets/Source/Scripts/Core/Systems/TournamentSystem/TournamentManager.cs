@@ -85,7 +85,7 @@ namespace Clicker.Core.Tournament
 
         private void LooseTournament()
         {
-            notifications.CreatNewNotification("Вы проиграли в турнире");
+            notifications.CreateNewNotification("Вы проиграли в турнире");
             TimeManager.onNewHour -= NewHourCheck;
             _objectsContainer.ClickerScript.onFoodCooked -= NewFoodCookedAction;
             _objectsContainer.TournamentProgressFiller.transform.parent.parent.gameObject.SetActive(false);
@@ -99,7 +99,7 @@ namespace Clicker.Core.Tournament
         }
         private void WinTournament()
         {
-            notifications.CreatNewNotification("Вы выиграли в турнире и получили 1 очко навыков");
+            notifications.CreateNewNotification("Вы выиграли в турнире и получили 1 очко навыков");
             data.AddSkillPoints(1);
 
             TimeManager.onNewHour -= NewHourCheck;

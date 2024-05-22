@@ -12,6 +12,7 @@ public class GameInitializer : MonoInstaller
     public override void InstallBindings()
     {
         Container.Bind<GlobalObjectsContainer>().FromComponentOn(generalContainer).AsSingle();
+        Container.Bind<AudioController>().FromComponentOn(generalContainer).AsSingle();
         Container.Bind<SkillSaveManager>().FromComponentOn(generalContainer).AsSingle();
         Container.Bind<MafiaManager>().FromNew().AsSingle().NonLazy();
         Container.Bind<RobberyManager>().FromNew().AsSingle().NonLazy();
@@ -20,6 +21,7 @@ public class GameInitializer : MonoInstaller
         Container.Bind<NoticeSystem>().FromNew().AsSingle().NonLazy();
         Container.Bind<GeneralPassiveMoneyController>().FromNew().AsSingle().NonLazy();
         Container.Bind<PlayerData>().FromNew().AsSingle().NonLazy();
+        Container.Bind<CalendarManager>().FromNew().AsSingle().NonLazy();
         Container.Bind<TimeManager>().FromComponentOn(generalContainer).AsSingle();
         Container.Bind<EarningsManager>().FromNew().AsSingle().NonLazy();
     }

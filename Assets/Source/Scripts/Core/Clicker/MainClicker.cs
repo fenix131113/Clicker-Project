@@ -21,6 +21,7 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
     private Vector3 _cameraStartPos;
     private PlayerData data;
     private EarningsManager earningsManager;
+    private CalendarManager calendarManager;
     private RectTransform _rect;
     private GameObject currentFoodObject;
 
@@ -28,10 +29,11 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
     public event OnFoodCooked onFoodCooked;
 
     [Inject]
-    private void Init(PlayerData data, EarningsManager earningsManager)
+    private void Init(PlayerData data, EarningsManager earningsManager, CalendarManager calendarManager)
     {
         this.data = data;
         this.earningsManager = earningsManager;
+        this.calendarManager = calendarManager;
         _rect = GetComponent<RectTransform>();
         _clickerStartScale = _rect.localScale;
         _cameraStartPos = Camera.main.transform.position;
@@ -70,7 +72,7 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
     private void FoodCooked(int earnedMoney)
     {
         CreateEarnedMoneyLabel(earnedMoney);
-        earningsManager.AddOrUpdateHistoryEntry(CalendarManager.Day, "Кликер", earnedMoney);
+        earningsManager.AddOrUpdateHistoryEntry(calendarManager.Day, "Кликер", earnedMoney);
 
         List<GameObject> unlockedFoodObjects = new();
 

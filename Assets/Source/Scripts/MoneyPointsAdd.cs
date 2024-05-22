@@ -5,10 +5,17 @@ using Zenject;
 public class MoneyPointsAdd : MonoBehaviour
 {
     private static PlayerData _data;
+    private NoticeSystem _notices;
     [Inject]
-    private void Init(PlayerData data)
+    private void Init(PlayerData data, NoticeSystem notices)
     {
         _data = data;
+        _notices = notices;
+    }
+    [ContextMenu("Notice")]
+    public void CreateEditorNotification()
+    {
+        _notices.CreateNewNotification("Yes i am a notififcation what do you think about me?");
     }
     [MenuItem("Clicker/ Add Money And Points")]
     public static void GiveMoneyAndPoints()

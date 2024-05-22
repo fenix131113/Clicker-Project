@@ -21,8 +21,13 @@ public class GeneralPassiveMoneyController
 
     [JsonIgnore] private PlayerData data;
     [JsonIgnore] private readonly EarningsManager earningsManager;
+    [JsonIgnore] private CalendarManager _calendarManager;
 
-    public void SetData(PlayerData data) => this.data = data;
+    public void SetData(PlayerData data, CalendarManager calendarManager)
+    {
+        this.data = data;
+        _calendarManager = calendarManager;
+    }
     public GeneralPassiveMoneyController(EarningsManager earningsManager)
     {
         this.earningsManager = earningsManager;
@@ -31,13 +36,13 @@ public class GeneralPassiveMoneyController
     {
         //Utility service payment
         data.Money -= UtilityServiceCost;
-        earningsManager.AddOrUpdateHistoryEntry(CalendarManager.Day - 1, "Коммунальные услуги", 0, UtilityServiceCost);
+        earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day - 1, "Коммунальные услуги", 0, UtilityServiceCost);
     }
 
     public void ConsumablePayment()
     {
         //Consumables payment
         data.Money -= ConsumablesCost;
-        earningsManager.AddOrUpdateHistoryEntry(CalendarManager.Day - 1, "Расходы", 0, ConsumablesCost);
+        earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day - 1, "Расходы", 0, ConsumablesCost);
     }
 }

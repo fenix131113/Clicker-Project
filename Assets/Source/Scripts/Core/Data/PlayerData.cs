@@ -1,3 +1,4 @@
+using Clicker.Core.Earnings;
 using Clicker.Core.Time;
 using Clicker.Core.Tournament;
 using Clicker.Core.Workers;
@@ -87,20 +88,22 @@ public class PlayerData
     private SkillSaveManager _skillSaveManager;
     private GlobalObjectsContainer _objectsContainer;
     private TimeManager _timeManager;
+    private CalendarManager _calendarManager;
 
     [Inject]
     public void Init(RobberyManager robberyManager, WorkersManager workersManager,
         GeneralPassiveMoneyController passiveMoneyController, TournamentManager tournamentManager,
-        SkillSaveManager skillSaveManager, MafiaManager mafiaManager, GlobalObjectsContainer objectsContainer, TimeManager timeManager)
+        SkillSaveManager skillSaveManager, MafiaManager mafiaManager, GlobalObjectsContainer objectsContainer,
+        TimeManager timeManager, CalendarManager calendarManager, EarningsManager earnings)
     {
         _robberyManager = robberyManager;
-        robberyManager.SetData(this);
+        robberyManager.SetData(this, calendarManager);
 
         _workersManager = workersManager;
         _workersManager.SetData(this);
 
         _passiveMoneyController = passiveMoneyController;
-        passiveMoneyController.SetData(this);
+        passiveMoneyController.SetData(this, calendarManager);
 
         _tournamentManager = tournamentManager;
         _tournamentManager.SetData(this);
@@ -112,6 +115,9 @@ public class PlayerData
         skillSaveManager.SetData(this);
 
         _objectsContainer = objectsContainer;
+
+        _calendarManager = calendarManager;
+        earnings.SetCalendar(_calendarManager);
 
         _timeManager = timeManager;
 
@@ -126,11 +132,8 @@ public class PlayerData
 
     public void SaveData()
     {
-        if (PlayerPrefs.HasKey("data"))
-            PlayerPrefs.SetString("backup", PlayerPrefs.GetString("data"));
-
         _skillSaveManager.SaveSkillsData();
-        _day = CalendarManager.Day;
+        _day = _calendarManager.Day;
         string dataSave = JsonConvert.SerializeObject(this);
         PlayerPrefs.SetString("data", dataSave);
     }
@@ -139,28 +142,15 @@ public class PlayerData
     {
         string dataKey = "data";
 
-        if (PlayerPrefs.HasKey("data") && !PlayerPrefs.HasKey("backup"))
+        if (!PlayerPrefs.HasKey(dataKey))
             return;
-
-        if (PlayerPrefs.HasKey("died") && PlayerPrefs.GetInt("died") == 1 && PlayerPrefs.HasKey("data") && !PlayerPrefs.HasKey("backup"))
-            return;
-
-        if (PlayerPrefs.HasKey("died") && PlayerPrefs.GetInt("died") == 1 && !PlayerPrefs.HasKey("backup"))
-            return;
-
-        else if (PlayerPrefs.HasKey("died") && PlayerPrefs.GetInt("died") == 1)
-        {
-            PlayerPrefs.SetString("data", PlayerPrefs.GetString("backup"));
-            //PlayerPrefs.DeleteKey("backup");
-            PlayerPrefs.DeleteKey("died");
-        }
         Debug.Log("LoadData");
 
         PlayerData loadedData = JsonConvert.DeserializeObject<PlayerData>(PlayerPrefs.GetString(dataKey));
         _mafiaManager.LoadSavedData(loadedData._mafiaManager);
         _tournamentManager.LoadSavedData(loadedData._tournamentManager);
 
-        CalendarManager.SetDay(loadedData._day);
+        _calendarManager.SetDay(loadedData._day);
         _money = loadedData._money;
         _skillPoints = loadedData._skillPoints;
         _unlockedFood = loadedData._unlockedFood;
@@ -174,12 +164,7 @@ public class PlayerData
         _timeManager.IsTimePaused = true;
         _objectsContainer.LoosePanText.text = looseMessage;
         _objectsContainer.LoosePanBlocker.SetActive(true);
-        PlayerPrefs.SetInt("died", 1);
-        Object.Destroy(_objectsContainer.GameInitializer.gameObject);
-        if (PlayerPrefs.HasKey("data") && !PlayerPrefs.HasKey("backup"))
-        {
+        if (PlayerPrefs.HasKey("data"))
             PlayerPrefs.DeleteKey("data");
-            PlayerPrefs.DeleteKey("died");
-        }
     }
 }

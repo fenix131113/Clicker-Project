@@ -15,12 +15,13 @@ public class MafiaManager
     [JsonProperty][SerializeField] private int _mafiaPayExpiredCount = 0;
 
     [JsonIgnore] private readonly int _mafiaVisitPeriod = 31;
-    [JsonIgnore] private readonly int _takeMoneyCount = 5000;
 
+    [JsonProperty] private int _takeMoneyCount = 5000;
     [JsonIgnore] private GlobalObjectsContainer objectsContainer;
     [JsonIgnore] private TimeManager timeManager;
     [JsonIgnore] private PlayerData data;
     [JsonIgnore] private EarningsManager earningsManager;
+    [JsonIgnore] private CalendarManager _calendarManager;
 
     [JsonIgnore] public int TakeMoneyCount => _takeMoneyCount;
     [JsonIgnore] public int MafiaPayExpiredCount => _mafiaPayExpiredCount;
@@ -33,11 +34,12 @@ public class MafiaManager
         _isWaitForPayment = mafiaManager.IsWaitForPayment;
     }
     [Inject]
-    public void Init(GlobalObjectsContainer objectsContainer, TimeManager timeManager, EarningsManager earningsManager)
+    public void Init(GlobalObjectsContainer objectsContainer, TimeManager timeManager, EarningsManager earningsManager, CalendarManager calendarManager)
     {
         this.objectsContainer = objectsContainer;
         this.timeManager = timeManager;
         this.earningsManager = earningsManager;
+        _calendarManager = calendarManager;
         objectsContainer.AcceptPaymentToMafiaButton.onHoldComplete += DoPayment;
         objectsContainer.DenyPaymentToMafiaButton.onHoldComplete += DenyPayment;
         if (IsWaitForPayment)
@@ -70,7 +72,8 @@ public class MafiaManager
             timeManager.IsTimePaused = false;
             _isWaitForPayment = false;
             objectsContainer.MafiaTakeMoneyAskPanel.SetActive(false);
-            earningsManager.AddOrUpdateHistoryEntry(CalendarManager.Day, "Мафия", 0, TakeMoneyCount);
+            earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day, "Мафия", 0, TakeMoneyCount);
+            _takeMoneyCount *= 2;
         }
     }
 

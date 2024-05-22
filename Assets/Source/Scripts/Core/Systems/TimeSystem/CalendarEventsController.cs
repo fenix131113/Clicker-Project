@@ -22,16 +22,18 @@ namespace Clicker.Core.Time
         private TournamentManager _tournaments;
         private MafiaManager _mafiaManager;
         private PlayerData _data;
+        private CalendarManager _calendarManager;
 
         public int SelectedDayIndex { get { return _selectedDayIndex; } set { _selectedDayIndex = value; } }
 
         [Inject]
-        private void Init(TimeManager timeManager, TournamentManager tournaments, MafiaManager mafiaManager, PlayerData data)
+        private void Init(TimeManager timeManager, TournamentManager tournaments, MafiaManager mafiaManager, PlayerData data, CalendarManager calendarManager)
         {
             _timeManager = timeManager;
             _tournaments = tournaments;
             _mafiaManager = mafiaManager;
             _data = data;
+            _calendarManager = calendarManager;
         }
 
         private void Awake()
@@ -56,7 +58,7 @@ namespace Clicker.Core.Time
         // Check every event data and compare with current data
         private void CheckEventsData(int currentMinute)
         {
-            foreach (CalendarEvent dayEvent in _daysEvents[CalendarManager.Day > 31 ? CalendarManager.Day % 31 : CalendarManager.Day - 1])
+            foreach (CalendarEvent dayEvent in _daysEvents[_calendarManager.Day > 31 ? _calendarManager.Day % 31 : _calendarManager.Day - 1])
             {
                 if (!dayEvent.EventComplete && dayEvent.Hour == _timeManager.Hour && currentMinute == 1)
                     dayEvent.EventAction();
@@ -89,7 +91,7 @@ namespace Clicker.Core.Time
         {
             ResetDaysEvents();
 
-            int lowestMonthDay = CalendarManager.Day > 31 ? CalendarManager.Day / 31 * 31 + 1 : 1;
+            int lowestMonthDay = _calendarManager.Day > 31 ? _calendarManager.Day / 31 * 31 + 1 : 1;
             // Place events in "days events array" by they index
             foreach (CalendarEvent e in _allEvents)
             {

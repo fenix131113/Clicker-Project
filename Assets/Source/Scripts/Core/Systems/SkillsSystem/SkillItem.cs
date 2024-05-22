@@ -37,15 +37,17 @@ namespace Clicker.Core.SkillSystem
         public bool IsEffectsApplyed => _effectsApplyed;
 
 
-        private GlobalObjectsContainer objectsContainer;
-        private PlayerData data;
-        private Image img;
+        private GlobalObjectsContainer _objectsContainer;
+        private AudioController _audioController;
+        private PlayerData _data;
+        private Image _img;
 
         [Inject]
-        public void Init(PlayerData data, GlobalObjectsContainer objectsContainer)
+        public void Init(PlayerData data, GlobalObjectsContainer objectsContainer, AudioController audioController)
         {
-            this.data = data;
-            this.objectsContainer = objectsContainer;
+            _data = data;
+            _audioController = audioController;
+            _objectsContainer = objectsContainer;
         }
 
         public void Buy()
@@ -60,32 +62,35 @@ namespace Clicker.Core.SkillSystem
             switch (_skillCostType)
             {
                 case SkillCostType.BOTH:
-                    if (data.Money >= _moneyCost && data.SkillPoints >= SkillPointsCost)
+                    if (_data.Money >= _moneyCost && _data.SkillPoints >= SkillPointsCost)
                     {
-                        data.Money -= _moneyCost;
-                        data.RemoveSkillPoints(SkillPointsCost);
+                        _data.Money -= _moneyCost;
+                        _data.RemoveSkillPoints(SkillPointsCost);
                         _isBuyed = true;
+                        _audioController.PlaySound(_objectsContainer.AnnouncmentSound);
                     }
                     break;
                 case SkillCostType.MONEY:
-                    if (data.Money >= _moneyCost)
+                    if (_data.Money >= _moneyCost)
                     {
-                        data.Money -= _moneyCost;
+                        _data.Money -= _moneyCost;
                         _isBuyed = true;
+                        _audioController.PlaySound(_objectsContainer.AnnouncmentSound);
                     }
                     break;
                 case SkillCostType.SKILL_POINTS:
-                    if (data.SkillPoints >= _skillPointsCost)
+                    if (_data.SkillPoints >= _skillPointsCost)
                     {
-                        data.RemoveSkillPoints(SkillPointsCost);
+                        _data.RemoveSkillPoints(SkillPointsCost);
                         _isBuyed = true;
+                        _audioController.PlaySound(_objectsContainer.AnnouncmentSound);
                     }
                     break;
             }
             CheckBuyedStatus();
         }
 
-        private void Start() => img = GetComponent<Image>();
+        private void Start() => _img = GetComponent<Image>();
 
         /// <summary>
         /// Update visual and data if skill is buyed
@@ -96,9 +101,9 @@ namespace Clicker.Core.SkillSystem
                 return;
 
             //Set buyed sprite if buyed
-            if (img == null)
-                img = GetComponent<Image>();
-            img.sprite = buyedIcon;
+            if (_img == null)
+                _img = GetComponent<Image>();
+            _img.sprite = buyedIcon;
 
             //Add skill effects
             Skill.BuyAction();
@@ -116,21 +121,32 @@ namespace Clicker.Core.SkillSystem
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            if (needToBuyItems.Length > 0)
+            // Include this code to hide skill info panel when skill !isBuyed
+
+            //if (needToBuyItems.Length > 0)
+            //    foreach (SkillItem item in needToBuyItems)
+            //        if (!item.IsBuyed)
+            //            return;
+            if (!_isBuyed && needToBuyItems.Length > 0)
+            {
                 foreach (SkillItem item in needToBuyItems)
                     if (!item.IsBuyed)
-                        return;
-            if (!_isBuyed)
-                img.sprite = selectedIcon;
-            objectsContainer.SkillInfoPanelRectTransform.GetComponent<SkillInfoPanel>().UpdateInfo(this);
-            objectsContainer.SkillInfoPanelRectTransform.gameObject.SetActive(true);
+                        break;
+                    else if (item == needToBuyItems[^1] && item.IsBuyed)
+                        _img.sprite = selectedIcon;
+            }
+            else if (needToBuyItems.Length == 0)
+                _img.sprite = selectedIcon;
+
+            _objectsContainer.SkillInfoPanelRectTransform.GetComponent<SkillInfoPanel>().UpdateInfo(this);
+            _objectsContainer.SkillInfoPanelRectTransform.gameObject.SetActive(true);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
             if (!_isBuyed)
-                img.sprite = defaultIcon;
-            objectsContainer.SkillInfoPanelRectTransform.gameObject.SetActive(false);
+                _img.sprite = defaultIcon;
+            _objectsContainer.SkillInfoPanelRectTransform.gameObject.SetActive(false);
         }
 
         public void OnPointerClick(PointerEventData eventData) => Buy();

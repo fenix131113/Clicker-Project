@@ -1,4 +1,5 @@
 using UnityEngine;
+using Zenject;
 
 namespace Clicker.Core.Time
 {
@@ -8,6 +9,7 @@ namespace Clicker.Core.Time
         private int _minutes;
         private float _seconds;
         private bool _isTimePaused;
+        private CalendarManager _calendarManager;
 
         public int Hour => _hour;
         public int Minutes => _minutes;
@@ -26,12 +28,19 @@ namespace Clicker.Core.Time
 
 
         // Во сколько раз время идёт быстрее реального
-        public const int TimeMultiplayer = 2000;
+        public const int TimeMultiplayer = 200000;
 
 
         public TimeManager()
         {
-            CalendarManager.Init(this);
+            onNewMinute = null;
+            onNewHour = null;
+        }
+        [Inject]
+        private void Init(CalendarManager calendarManager)
+        {
+            _calendarManager = calendarManager;
+            _calendarManager.Init(this);
         }
 
         private void Update()
@@ -56,7 +65,7 @@ namespace Clicker.Core.Time
             {
                 _hour = 0;
                 onNewHour?.Invoke(_hour);
-                CalendarManager.SetNextDay();
+                _calendarManager.SetNextDay();
             }
             #endregion
         }

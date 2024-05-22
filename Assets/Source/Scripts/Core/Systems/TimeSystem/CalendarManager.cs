@@ -1,25 +1,26 @@
 namespace Clicker.Core.Time
 {
-    public static class CalendarManager
+    public class CalendarManager
     {
-        private static int _day = 1;
-        private static DayType _dayType = DayType.Monday;
-        private static TimeManager _timeManager;
+        private int _day = 1;
+        private DayType _dayType = DayType.Monday;
+        private TimeManager _timeManager;
 
-        public static TimeManager timeManager => _timeManager;
-        public static int Day => _day;
-        public static DayType GetDayType => _dayType;
+        public TimeManager timeManager => _timeManager;
+        public int Day => _day;
+        public DayType GetDayType => _dayType;
 
         #region Events
         public delegate void OnNewDay(int dayNum, DayType dayType);
         public static OnNewDay onNewDay;
         #endregion
 
-        public static void Init(TimeManager timeManager)
+        public void Init(TimeManager timeManager)
         {
+            onNewDay = null;
             _timeManager = timeManager;
         }
-        public static string GetRuDayType(DayType dayType)
+        public string GetRuDayType(DayType dayType)
         {
             switch (dayType)
             {
@@ -40,7 +41,7 @@ namespace Clicker.Core.Time
             }
             return null;
         }
-        public static void SetNextDay()
+        public void SetNextDay()
         {
             _day++;
 
@@ -51,6 +52,6 @@ namespace Clicker.Core.Time
             onNewDay?.Invoke(Day, GetDayType);
         }
 
-        public static void SetDay(int day) => _day = day;
+        public void SetDay(int day) => _day = day;
     }
 }
