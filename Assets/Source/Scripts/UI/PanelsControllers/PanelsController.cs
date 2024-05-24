@@ -27,6 +27,10 @@ public class PanelsController : MonoBehaviour
     [SerializeField] private RectTransform calendarPanel;
     [SerializeField] private CalendarEventsController calendarEventController;
 
+    [Header("Settings")]
+    [SerializeField] private Image settingsBlocker;
+    [SerializeField] private RectTransform settingsPanel;
+
     private TimeManager timeManager;
     private EarningsManager earningsManager;
 
@@ -35,6 +39,26 @@ public class PanelsController : MonoBehaviour
     {
         this.timeManager = timeManager;
         this.earningsManager = earningsManager;
+    }
+
+    public void OpenSettings()
+    {
+        timeManager.IsTimePaused = true;
+
+        settingsBlocker.gameObject.SetActive(true);
+        settingsBlocker.DOFade(0.7f, 0.4f);
+
+
+        settingsPanel.DOMoveY(Screen.height / 2, 0.4f);
+    }
+
+    public void CloseSettings()
+    {
+        timeManager.IsTimePaused = false;
+
+        settingsBlocker.DOFade(0f, 0.4f).onComplete += () => settingsBlocker.gameObject.SetActive(false);
+
+        settingsPanel.DOMoveY(Screen.height * -1.5f, 0.4f);
     }
 
     public void OpenCalendar()

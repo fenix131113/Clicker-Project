@@ -28,7 +28,7 @@ namespace Clicker.Core.Time
 
 
         // Во сколько раз время идёт быстрее реального
-        public const int TimeMultiplayer = 200000;
+        public const int TimeMultiplayer = 2000;
 
 
         public TimeManager()

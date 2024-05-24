@@ -9,6 +9,6 @@ public class DataDeleter : MonoBehaviour
     }
     public void DeleteData()
     {
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("Data");
     }
 }
