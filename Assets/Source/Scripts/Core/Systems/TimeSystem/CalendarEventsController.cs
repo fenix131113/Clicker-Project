@@ -41,7 +41,7 @@ namespace Clicker.Core.Time
             ReloadCalendar();
 
             TimeManager.onNewMinute += CheckEventsData;
-            CalendarManager.onNewDay += OnNewDay;
+            _calendarManager.onNewDay += OnNewDay;
         }
 
         private void OnNewDay(int dayNum, DayType dayType)

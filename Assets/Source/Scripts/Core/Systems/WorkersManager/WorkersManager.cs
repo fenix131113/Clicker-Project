@@ -25,9 +25,9 @@ namespace Clicker.Core.Workers
         [JsonIgnore] private readonly EarningsManager earningsManager;
 
         public void SetData(PlayerData data) => this.data = data;
-        public WorkersManager(EarningsManager earningsManager)
+        public WorkersManager(EarningsManager earningsManager, CalendarManager calendarManager)
         {
-            CalendarManager.onNewDay += OnNewDay;
+            calendarManager.onNewDay += OnNewDay;
             this.earningsManager = earningsManager;
         }
 

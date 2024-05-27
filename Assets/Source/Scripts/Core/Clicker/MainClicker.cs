@@ -25,8 +25,11 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
     private RectTransform _rect;
     private GameObject currentFoodObject;
 
-    public delegate void OnFoodCooked(int moneyEarned);
-    public event OnFoodCooked onFoodCooked;
+    public delegate void IntegerParameterClickerEvent(int parameter1);
+    public delegate void NoParametersClickerEvent();
+
+    public event IntegerParameterClickerEvent onFoodCooked;
+    public event NoParametersClickerEvent onClick;
 
     [Inject]
     private void Init(PlayerData data, EarningsManager earningsManager, CalendarManager calendarManager)
@@ -39,10 +42,13 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
         _cameraStartPos = Camera.main.transform.position;
         onFoodCooked += FoodCooked;
         currentFoodObject = foodObjects.FirstOrDefault();
+        onClick += data.IncreaseClicks;
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        onClick?.Invoke();
+
         ClickLogic();
         ClickAnimation();
     }

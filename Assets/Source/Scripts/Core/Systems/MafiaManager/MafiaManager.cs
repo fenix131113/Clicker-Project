@@ -14,7 +14,8 @@ public class MafiaManager
 
     [JsonProperty][SerializeField] private int _mafiaPayExpiredCount = 0;
 
-    [JsonIgnore] private readonly int _mafiaVisitPeriod = 31;
+    [JsonIgnore] private readonly int _mafiaVisitPeriod = 14;
+    [JsonIgnore] private const int _takeMoneyMultiplier = 2;
 
     [JsonProperty] private int _takeMoneyCount = 5000;
     [JsonIgnore] private GlobalObjectsContainer objectsContainer;
@@ -73,7 +74,7 @@ public class MafiaManager
             _isWaitForPayment = false;
             objectsContainer.MafiaTakeMoneyAskPanel.SetActive(false);
             earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day, "Мафия", 0, TakeMoneyCount);
-            _takeMoneyCount *= 2;
+            _takeMoneyCount *= _takeMoneyMultiplier;
         }
     }
 
