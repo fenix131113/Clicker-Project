@@ -21,7 +21,7 @@ namespace Clicker.Core.SkillSystem
         public int SkillPointsCost => _skillPointsCost;
 
 
-        private SkillCostType _skillCostType;
+        [SerializeField] private SkillCostType _skillCostType;
         public SkillCostType SkillCostType => _skillCostType;
 
 
