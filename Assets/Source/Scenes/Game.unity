@@ -661,6 +661,7 @@ MonoBehaviour:
   - {fileID: 352451054}
   _moneyCost: 1000
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 53281269}
 --- !u!114 &53281269
 MonoBehaviour:
@@ -1021,6 +1022,7 @@ MonoBehaviour:
   - {fileID: 1315157956}
   _moneyCost: 250
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 65994505}
 --- !u!114 &65994505
 MonoBehaviour:
@@ -1376,6 +1378,7 @@ MonoBehaviour:
   - {fileID: 2033803184}
   _moneyCost: 3500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 73070912}
 --- !u!114 &73070912
 MonoBehaviour:
@@ -1627,6 +1630,7 @@ MonoBehaviour:
   - {fileID: 1269111600}
   _moneyCost: 500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 85243102}
 --- !u!114 &85243102
 MonoBehaviour:
@@ -1930,6 +1934,7 @@ MonoBehaviour:
   - {fileID: 248669947}
   _moneyCost: 1
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 102277910}
 --- !u!114 &102277910
 MonoBehaviour:
@@ -2123,6 +2128,7 @@ MonoBehaviour:
   - {fileID: 822696633}
   _moneyCost: 10000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 118649011}
 --- !u!114 &118649011
 MonoBehaviour:
@@ -2276,6 +2282,7 @@ MonoBehaviour:
   - {fileID: 469915063}
   _moneyCost: 500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 142686593}
 --- !u!114 &142686593
 MonoBehaviour:
@@ -2713,6 +2720,7 @@ MonoBehaviour:
   - {fileID: 260871844}
   _moneyCost: 0
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 248669948}
 --- !u!114 &248669948
 MonoBehaviour:
@@ -2903,6 +2911,7 @@ MonoBehaviour:
   - {fileID: 1495229773}
   _moneyCost: 0
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 260871845}
 --- !u!114 &260871845
 MonoBehaviour:
@@ -3641,6 +3650,7 @@ MonoBehaviour:
   - {fileID: 1976047065}
   _moneyCost: 1500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 283433275}
 --- !u!114 &283433275
 MonoBehaviour:
@@ -3927,6 +3937,7 @@ MonoBehaviour:
   - {fileID: 1049436639}
   _moneyCost: 3500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 299904342}
 --- !u!114 &299904342
 MonoBehaviour:
@@ -4039,6 +4050,7 @@ MonoBehaviour:
   - {fileID: 1378183814}
   _moneyCost: 500
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 300315608}
 --- !u!114 &300315608
 MonoBehaviour:
@@ -4446,6 +4458,7 @@ MonoBehaviour:
   - {fileID: 1002338227}
   _moneyCost: 1
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 343119415}
 --- !u!114 &343119413
 MonoBehaviour:
@@ -4674,6 +4687,7 @@ MonoBehaviour:
   - {fileID: 881161172}
   _moneyCost: 1500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 352451055}
 --- !u!114 &352451055
 MonoBehaviour:
@@ -5127,6 +5141,7 @@ MonoBehaviour:
   - {fileID: 1868031025}
   _moneyCost: 750
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 383769119}
 --- !u!114 &383769119
 MonoBehaviour:
@@ -6410,6 +6425,7 @@ MonoBehaviour:
   - {fileID: 1730482033}
   _moneyCost: 50
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 469915064}
 --- !u!114 &469915064
 MonoBehaviour:
@@ -7096,6 +7112,7 @@ MonoBehaviour:
   - {fileID: 1452983827}
   _moneyCost: 750
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 586685699}
 --- !u!114 &586685699
 MonoBehaviour:
@@ -7318,6 +7335,7 @@ MonoBehaviour:
   - {fileID: 102277909}
   _moneyCost: 250
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 613389216}
 --- !u!114 &613389216
 MonoBehaviour:
@@ -7505,6 +7523,7 @@ MonoBehaviour:
   - {fileID: 1186266691}
   _moneyCost: 3000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 643245384}
 --- !u!114 &643245384
 MonoBehaviour:
@@ -7968,6 +7987,7 @@ MonoBehaviour:
   - {fileID: 843327747}
   _moneyCost: 1500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 680554552}
 --- !u!114 &680554552
 MonoBehaviour:
@@ -8346,6 +8366,7 @@ MonoBehaviour:
   - {fileID: 991349043}
   _moneyCost: 4750
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 730646923}
 --- !u!114 &730646923
 MonoBehaviour:
@@ -8536,6 +8557,7 @@ MonoBehaviour:
   - {fileID: 880617277}
   _moneyCost: 2000
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 763183241}
 --- !u!114 &763183241
 MonoBehaviour:
@@ -8648,6 +8670,7 @@ MonoBehaviour:
   - {fileID: 1168632090}
   _moneyCost: 750
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 767609988}
 --- !u!114 &767609988
 MonoBehaviour:
@@ -9274,6 +9297,7 @@ MonoBehaviour:
   - {fileID: 73070911}
   _moneyCost: 7000
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 822696634}
 --- !u!114 &822696634
 MonoBehaviour:
@@ -9536,6 +9560,7 @@ MonoBehaviour:
   - {fileID: 767609987}
   _moneyCost: 1000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 843327748}
 --- !u!114 &843327748
 MonoBehaviour:
@@ -10031,6 +10056,7 @@ MonoBehaviour:
   - {fileID: 2055426067}
   _moneyCost: 2000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 880617278}
 --- !u!114 &880617278
 MonoBehaviour:
@@ -10143,6 +10169,7 @@ MonoBehaviour:
   - {fileID: 383769118}
   _moneyCost: 1000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 881161173}
 --- !u!114 &881161173
 MonoBehaviour:
@@ -10275,6 +10302,7 @@ MonoBehaviour:
   - {fileID: 142686592}
   _moneyCost: 1500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 887456734}
 --- !u!114 &887456734
 MonoBehaviour:
@@ -10858,6 +10886,7 @@ MonoBehaviour:
   - {fileID: 1824691878}
   _moneyCost: 4500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 991349044}
 --- !u!114 &991349044
 MonoBehaviour:
@@ -10970,6 +10999,7 @@ MonoBehaviour:
   - {fileID: 730646922}
   _moneyCost: 5000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1002338228}
 --- !u!114 &1002338228
 MonoBehaviour:
@@ -11160,6 +11190,7 @@ MonoBehaviour:
   - {fileID: 102277909}
   _moneyCost: 0
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 1022405859}
 --- !u!114 &1022405859
 MonoBehaviour:
@@ -11566,6 +11597,7 @@ MonoBehaviour:
   - {fileID: 1093615549}
   _moneyCost: 3000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1049436640}
 --- !u!114 &1049436640
 MonoBehaviour:
@@ -11814,6 +11846,7 @@ MonoBehaviour:
   - {fileID: 1788207897}
   _moneyCost: 2750
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1093615550}
 --- !u!114 &1093615550
 MonoBehaviour:
@@ -11926,6 +11959,7 @@ MonoBehaviour:
   - {fileID: 586685698}
   _moneyCost: 3750
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 1105659412}
 --- !u!114 &1105659412
 MonoBehaviour:
@@ -12039,6 +12073,7 @@ MonoBehaviour:
   - {fileID: 1574376404}
   _moneyCost: 500
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 1110794300}
 --- !u!114 &1110794300
 MonoBehaviour:
@@ -12281,6 +12316,7 @@ MonoBehaviour:
   - {fileID: 248669947}
   _moneyCost: 100
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1135716832}
 --- !u!114 &1135716832
 MonoBehaviour:
@@ -12518,6 +12554,7 @@ MonoBehaviour:
   - {fileID: 248669947}
   _moneyCost: 500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1168632091}
 --- !u!114 &1168632091
 MonoBehaviour:
@@ -12906,6 +12943,7 @@ MonoBehaviour:
   - {fileID: 763183240}
   _moneyCost: 2000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1186266692}
 --- !u!114 &1186266692
 MonoBehaviour:
@@ -13019,6 +13057,7 @@ MonoBehaviour:
   - {fileID: 300315607}
   _moneyCost: 600
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1227686169}
 --- !u!114 &1227686169
 MonoBehaviour:
@@ -13132,6 +13171,7 @@ MonoBehaviour:
   - {fileID: 65994504}
   _moneyCost: 0
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 1269111601}
 --- !u!114 &1269111601
 MonoBehaviour:
@@ -13454,6 +13494,7 @@ MonoBehaviour:
   - {fileID: 1110794299}
   _moneyCost: 500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1281765139}
 --- !u!114 &1281765139
 MonoBehaviour:
@@ -13716,6 +13757,7 @@ MonoBehaviour:
   - {fileID: 1135716831}
   _moneyCost: 0
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 1315157957}
 --- !u!114 &1315157957
 MonoBehaviour:
@@ -13829,6 +13871,7 @@ MonoBehaviour:
   - {fileID: 613389215}
   _moneyCost: 200
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1331507236}
 --- !u!114 &1331507236
 MonoBehaviour:
@@ -14169,6 +14212,7 @@ MonoBehaviour:
   - {fileID: 1331507235}
   _moneyCost: 500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1378183815}
 --- !u!114 &1378183815
 MonoBehaviour:
@@ -14281,6 +14325,7 @@ MonoBehaviour:
   - {fileID: 680554551}
   _moneyCost: 1750
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1384495902}
 --- !u!114 &1384495902
 MonoBehaviour:
@@ -14429,6 +14474,7 @@ MonoBehaviour:
   - {fileID: 299904341}
   _moneyCost: 3750
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1420329301}
 --- !u!114 &1420329301
 MonoBehaviour:
@@ -14892,6 +14938,7 @@ MonoBehaviour:
   - {fileID: 85243101}
   _moneyCost: 0
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 1452983828}
 --- !u!114 &1452983828
 MonoBehaviour:
@@ -15247,6 +15294,7 @@ MonoBehaviour:
   needToBuyItems: []
   _moneyCost: 0
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 1495229774}
 --- !u!114 &1495229774
 MonoBehaviour:
@@ -15945,6 +15993,7 @@ MonoBehaviour:
   - {fileID: 260871844}
   _moneyCost: 100
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1574376405}
 --- !u!114 &1574376405
 MonoBehaviour:
@@ -16455,6 +16504,7 @@ MonoBehaviour:
   - {fileID: 1643505831}
   _moneyCost: 0
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 1642006750}
 --- !u!114 &1642006750
 MonoBehaviour:
@@ -16568,6 +16618,7 @@ MonoBehaviour:
   - {fileID: 1105659411}
   _moneyCost: 1000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1643505832}
 --- !u!114 &1643505832
 MonoBehaviour:
@@ -17016,6 +17067,7 @@ MonoBehaviour:
   - {fileID: 1495229773}
   _moneyCost: 5
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1730482034}
 --- !u!114 &1730482034
 MonoBehaviour:
@@ -17346,6 +17398,7 @@ MonoBehaviour:
   - {fileID: 2039142675}
   _moneyCost: 2500
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1788207898}
 --- !u!114 &1788207898
 MonoBehaviour:
@@ -17854,6 +17907,7 @@ MonoBehaviour:
   - {fileID: 1420329300}
   _moneyCost: 4000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1824691879}
 --- !u!114 &1824691879
 MonoBehaviour:
@@ -18361,6 +18415,7 @@ MonoBehaviour:
   - {fileID: 1227686168}
   _moneyCost: 1000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 1868031026}
 --- !u!114 &1868031026
 MonoBehaviour:
@@ -19090,6 +19145,7 @@ MonoBehaviour:
   - {fileID: 1281765138}
   _moneyCost: 1000
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 1976047066}
 --- !u!114 &1976047066
 MonoBehaviour:
@@ -19547,6 +19603,7 @@ MonoBehaviour:
   - {fileID: 283433274}
   _moneyCost: 3000
   _skillPointsCost: 1
+  _skillCostType: 0
   _skill: {fileID: 2033803185}
 --- !u!114 &2033803185
 MonoBehaviour:
@@ -19659,6 +19716,7 @@ MonoBehaviour:
   - {fileID: 1384495901}
   _moneyCost: 2000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 2039142676}
 --- !u!114 &2039142676
 MonoBehaviour:
@@ -19861,6 +19919,7 @@ MonoBehaviour:
   - {fileID: 53281268}
   _moneyCost: 1400
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 2055426068}
 --- !u!114 &2055426068
 MonoBehaviour:
@@ -20049,6 +20108,7 @@ MonoBehaviour:
   - {fileID: 887456733}
   _moneyCost: 3000
   _skillPointsCost: 0
+  _skillCostType: 0
   _skill: {fileID: 2068750969}
 --- !u!114 &2068750969
 MonoBehaviour:

@@ -12,6 +12,7 @@ namespace Clicker.Core.SkillSystem.Skills
         {
             switch (level)
             {
+                // Default = 50
                 case 1:
                     data.PassiveMoneyController.SetConsumablesCost(data.PassiveMoneyController.ConsumablesCost - 5);
                     break;

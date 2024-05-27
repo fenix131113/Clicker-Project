@@ -13,6 +13,7 @@ namespace Clicker.Core.SkillSystem.Skills
         {
             switch (level)
             {
+                // Default = 100
                 case 1:
                     data.WorkersManager.SetSalaryPerWorker(data.WorkersManager.SalayPerWorker - 5);
                     break;
