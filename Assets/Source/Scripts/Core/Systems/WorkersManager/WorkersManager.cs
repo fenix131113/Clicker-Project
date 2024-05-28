@@ -11,7 +11,7 @@ namespace Clicker.Core.Workers
         public void AddWorkers(int count) => _workers += count;
 
 
-        [JsonIgnore] private int _salaryPerWorker = 100;
+        [JsonIgnore] private int _salaryPerWorker = 30;
         [JsonIgnore] public int SalayPerWorker => _salaryPerWorker;
         public void SetSalaryPerWorker(int count) => _salaryPerWorker = count;
 
@@ -25,7 +25,7 @@ namespace Clicker.Core.Workers
         [JsonIgnore] private readonly EarningsManager earningsManager;
 
         public void SetData(PlayerData data) => this.data = data;
-        public WorkersManager(EarningsManager earningsManager, CalendarManager calendarManager)
+        public WorkersManager(EarningsManager earningsManager,CalendarManager calendarManager)
         {
             calendarManager.onNewDay += OnNewDay;
             this.earningsManager = earningsManager;

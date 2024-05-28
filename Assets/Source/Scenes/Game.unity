@@ -633,8 +633,8 @@ GameObject:
   - component: {fileID: 53281272}
   - component: {fileID: 53281271}
   - component: {fileID: 53281270}
-  - component: {fileID: 53281268}
-  - component: {fileID: 53281269}
+  - component: {fileID: 53281274}
+  - component: {fileID: 53281273}
   m_Layer: 5
   m_Name: WorkersSalaryDownSkill4
   m_TagString: Untagged
@@ -642,42 +642,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &53281268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53281267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: -1034898386, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  selectedIcon: {fileID: -1648002461, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  defaultIcon: {fileID: -120867327, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 1000
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 53281269}
---- !u!114 &53281269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53281267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 081cd6ec27a86c64e9d9c91511e55097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
-  description: 85 -> 80
-  level: 4
 --- !u!114 &53281270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,6 +699,40 @@ RectTransform:
   m_AnchoredPosition: {x: 186.6, y: -1202.1}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &53281273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53281267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59314750660d3564fad3059625c7cdf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
+  description: 
+  level: 4
+  _counterGoal: 4
+  _skillItem: {fileID: 53281274}
+--- !u!114 &53281274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53281267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 53281270}
+  _openedIcon: {fileID: -1034898386, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _selectedIcon: {fileID: -1648002461, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _defaultIcon: {fileID: -120867327, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _passiveSkill: {fileID: 53281273}
 --- !u!1 &58363306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,8 +1350,8 @@ GameObject:
   - component: {fileID: 73070915}
   - component: {fileID: 73070914}
   - component: {fileID: 73070913}
-  - component: {fileID: 73070911}
-  - component: {fileID: 73070912}
+  - component: {fileID: 73070917}
+  - component: {fileID: 73070916}
   m_Layer: 5
   m_Name: FoodUpgradeSkill4
   m_TagString: Untagged
@@ -1361,46 +1359,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &73070911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73070910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: 143546989, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  selectedIcon: {fileID: -1218283714, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  defaultIcon: {fileID: -1237851372, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 3500
-  _skillPointsCost: 0
-  _skillCostType: 0
-  _skill: {fileID: 73070912}
---- !u!114 &73070912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73070910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e865156fff2249442b1ee3244e6454a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
-  description: "\u041E\u0431\u0440\u0430\u0449\u0430\u0435\u043C \u0447\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0435
-    \u0432\u043D\u0438\u043C\u0430\u0435\u043D\u0438\u0435 \u043A \u043A\u0430\u0436\u0434\u043E\u0439
-    \u0447\u0430\u0441\u0442\u0438 \u043F\u043B\u044E\u0434\u0430! \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C
-    \u0437\u0430 \u0435\u0434\u0443 \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 8
-    -> 16"
-  level: 4
 --- !u!114 &73070913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1458,6 +1416,44 @@ RectTransform:
   m_AnchoredPosition: {x: -771.09985, y: -1203.3}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &73070916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73070910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bc15127b1de5d4480fa2210d4279f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
+  description: "\u041E\u0431\u0440\u0430\u0449\u0430\u0435\u043C \u0447\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0435
+    \u0432\u043D\u0438\u043C\u0430\u0435\u043D\u0438\u0435 \u043A \u043A\u0430\u0436\u0434\u043E\u0439
+    \u0447\u0430\u0441\u0442\u0438 \u043F\u043B\u044E\u0434\u0430! \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C
+    \u0437\u0430 \u0435\u0434\u0443 \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 8
+    -> 16"
+  level: 4
+  _counterGoal: 14000
+  _skillItem: {fileID: 73070917}
+--- !u!114 &73070917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73070910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 73070913}
+  _openedIcon: {fileID: 143546989, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _selectedIcon: {fileID: -1218283714, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _defaultIcon: {fileID: -1237851372, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _passiveSkill: {fileID: 73070916}
 --- !u!1 &74325940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,7 +1628,7 @@ MonoBehaviour:
   - {fileID: 65994504}
   - {fileID: 142686592}
   needPassiveItems: []
-  _moneyCost: 500
+  _moneyCost: 1250
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 85243102}
@@ -1985,8 +1981,8 @@ GameObject:
   - component: {fileID: 102277913}
   - component: {fileID: 102277912}
   - component: {fileID: 102277911}
-  - component: {fileID: 102277909}
-  - component: {fileID: 102277910}
+  - component: {fileID: 102277915}
+  - component: {fileID: 102277914}
   m_Layer: 5
   m_Name: ClickPowerSkill4
   m_TagString: Untagged
@@ -1994,47 +1990,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &102277909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102277908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: 1302153883, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  selectedIcon: {fileID: -1766535320, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  defaultIcon: {fileID: -1873706565, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  needToBuyItems:
-  - {fileID: 352451054}
-  needPassiveItems: []
-  _moneyCost: 1
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 102277910}
---- !u!114 &102277910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102277908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b269c21bfebbb84eaea9372fea2ca38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
-  description: "\u0411\u0443\u0440\u0433\u0435\u0440\u044B \u0440\u0430\u0437\u043B\u0435\u0442\u0430\u044E\u0442\u0441\u044F
-    \u043A\u043B\u0438\u0435\u043D\u0442\u0430\u043C! \u0412\u043E\u0442 \u0447\u0442\u043E
-    \u0437\u043D\u0430\u0447\u0438\u0442 \u043E\u043F\u044B\u0442! \u0422\u0435\u043F\u0435\u0440\u044C
-    \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
-    10->20"
-  level: 4
 --- !u!114 &102277911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2092,6 +2047,44 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: 1384}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &102277914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102277908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0468016ce6a4744894ba828a7cbb070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
+  description: "\u0411\u0443\u0440\u0433\u0435\u0440\u044B \u0440\u0430\u0437\u043B\u0435\u0442\u0430\u044E\u0442\u0441\u044F
+    \u043A\u043B\u0438\u0435\u043D\u0442\u0430\u043C! \u0412\u043E\u0442 \u0447\u0442\u043E
+    \u0437\u043D\u0430\u0447\u0438\u0442 \u043E\u043F\u044B\u0442! \u0422\u0435\u043F\u0435\u0440\u044C
+    \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
+    10->20"
+  level: 4
+  _counterGoal: 6650
+  _skillItem: {fileID: 102277915}
+--- !u!114 &102277915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102277908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 102277911}
+  _openedIcon: {fileID: 1302153883, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _selectedIcon: {fileID: -1766535320, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _defaultIcon: {fileID: -1873706565, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _passiveSkill: {fileID: 102277914}
 --- !u!1 &115181484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,8 +2173,9 @@ GameObject:
   - component: {fileID: 118649014}
   - component: {fileID: 118649013}
   - component: {fileID: 118649012}
-  - component: {fileID: 118649010}
   - component: {fileID: 118649011}
+  - component: {fileID: 118649016}
+  - component: {fileID: 118649015}
   m_Layer: 5
   m_Name: FoodUpgradeSkill5
   m_TagString: Untagged
@@ -2189,27 +2183,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &118649010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118649009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: -468397932, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  selectedIcon: {fileID: -1433375431, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  defaultIcon: {fileID: -420702994, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 10000
-  _skillPointsCost: 0
-  _skillCostType: 0
-  _skill: {fileID: 118649011}
 --- !u!114 &118649011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2288,6 +2261,46 @@ RectTransform:
   m_AnchoredPosition: {x: -769.79987, y: -1362}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &118649015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118649009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bc15127b1de5d4480fa2210d4279f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
+  description: "\u0412\u044B \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0430\u043B\u0438
+    \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439 \u0441\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439
+    \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442! \"\u0422\u0430\u043A
+    \u0430 \u0447\u0442\u043E \u043C\u044B \u0442\u0430\u043C \u0434\u043E\u0431\u0430\u0432\u043B\u044F\u0435\u043C?
+    \u0430 \u0442\u043E \u044F \u0447\u0442\u043E-\u0442\u043E \u043F\u043E\u0434\u0437\u0430\u0431\u044B\u043B..\"
+    \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
+    \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 16 -> 32"
+  level: 5
+  _counterGoal: 20000
+  _skillItem: {fileID: 118649016}
+--- !u!114 &118649016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118649009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 118649012}
+  _openedIcon: {fileID: -468397932, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _selectedIcon: {fileID: -1433375431, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _defaultIcon: {fileID: -420702994, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _passiveSkill: {fileID: 118649015}
 --- !u!1 &134988719
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,9 +2507,9 @@ MonoBehaviour:
   defaultIcon: {fileID: -1720306946, guid: 2b95fb20ab4b160418b2125e7949121e, type: 3}
   needToBuyItems:
   - {fileID: 469915063}
-  - {fileID: 248669947}
-  needPassiveItems: []
-  _moneyCost: 500
+  needPassiveItems:
+  - {fileID: 248669953}
+  _moneyCost: 750
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 142686593}
@@ -3137,8 +3150,8 @@ GameObject:
   - component: {fileID: 248669951}
   - component: {fileID: 248669950}
   - component: {fileID: 248669949}
-  - component: {fileID: 248669947}
-  - component: {fileID: 248669948}
+  - component: {fileID: 248669953}
+  - component: {fileID: 248669952}
   m_Layer: 5
   m_Name: ClickPowerSkill3
   m_TagString: Untagged
@@ -3146,46 +3159,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &248669947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248669946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: 274230573, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  selectedIcon: {fileID: 1053545540, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  defaultIcon: {fileID: 447417393, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  needToBuyItems:
-  - {fileID: 1868031025}
-  needPassiveItems: []
-  _moneyCost: 0
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 248669948}
---- !u!114 &248669948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248669946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b269c21bfebbb84eaea9372fea2ca38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
-  description: "\"\u0411\u0443\u0440\u0433\u0435\u0440 \u0432 \u043E\u0434\u043D\u043E
-    \u0434\u0432\u0438\u0436\u0435\u043D\u0438\u0435? \u0414\u0430 \u0440\u0430\u0441\u043F\u043B\u044E\u043D\u0443\u0442\u044C!\"
-    \u0422\u0435\u043F\u0435\u0440\u044C \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430
-    \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435! 5->10"
-  level: 3
 --- !u!114 &248669949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3243,6 +3216,43 @@ RectTransform:
   m_AnchoredPosition: {x: 10.3, y: 704}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &248669952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248669946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0468016ce6a4744894ba828a7cbb070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
+  description: "\"\u0411\u0443\u0440\u0433\u0435\u0440 \u0432 \u043E\u0434\u043D\u043E
+    \u0434\u0432\u0438\u0436\u0435\u043D\u0438\u0435? \u0414\u0430 \u0440\u0430\u0441\u043F\u043B\u044E\u043D\u0443\u0442\u044C!\"
+    \u0422\u0435\u043F\u0435\u0440\u044C \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430
+    \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435! 5->10"
+  level: 3
+  _counterGoal: 2650
+  _skillItem: {fileID: 248669953}
+--- !u!114 &248669953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248669946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 248669949}
+  _openedIcon: {fileID: 274230573, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _selectedIcon: {fileID: 1053545540, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _defaultIcon: {fileID: 447417393, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _passiveSkill: {fileID: 248669952}
 --- !u!1 &252713051
 GameObject:
   m_ObjectHideFlags: 0
@@ -3277,7 +3287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -113.39966, y: 912.80005}
+  m_AnchoredPosition: {x: -113.399414, y: 912.80005}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &252713053
@@ -3404,8 +3414,8 @@ GameObject:
   - component: {fileID: 260871848}
   - component: {fileID: 260871847}
   - component: {fileID: 260871846}
-  - component: {fileID: 260871844}
-  - component: {fileID: 260871845}
+  - component: {fileID: 260871850}
+  - component: {fileID: 260871849}
   m_Layer: 5
   m_Name: ClickPowerSkill2
   m_TagString: Untagged
@@ -3413,46 +3423,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &260871844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260871843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: 427189980, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  selectedIcon: {fileID: -2084066550, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  defaultIcon: {fileID: -1183221211, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  needToBuyItems:
-  - {fileID: 1378183814}
-  needPassiveItems: []
-  _moneyCost: 0
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 260871845}
---- !u!114 &260871845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260871843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b269c21bfebbb84eaea9372fea2ca38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
-  description: "\u0412\u044B \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442\u0435
-    \u043F\u043E\u0437\u043D\u0430\u0432\u0430\u0442\u044C \u043A\u0443\u0445\u043D\u044E!
-    \u0422\u0435\u043F\u0435\u0440\u044C \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430
-    \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435! 2->5"
-  level: 2
 --- !u!114 &260871846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3510,6 +3480,43 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: 30}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &260871849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260871843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0468016ce6a4744894ba828a7cbb070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
+  description: "\u0412\u044B \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442\u0435
+    \u043F\u043E\u0437\u043D\u0430\u0432\u0430\u0442\u044C \u043A\u0443\u0445\u043D\u044E!
+    \u0422\u0435\u043F\u0435\u0440\u044C \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430
+    \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435! 2->5"
+  level: 2
+  _counterGoal: 500
+  _skillItem: {fileID: 260871850}
+--- !u!114 &260871850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260871843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 260871846}
+  _openedIcon: {fileID: 427189980, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _selectedIcon: {fileID: -2084066550, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _defaultIcon: {fileID: -1183221211, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _passiveSkill: {fileID: 260871849}
 --- !u!1001 &263641607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4127,8 +4134,8 @@ GameObject:
   - component: {fileID: 283433278}
   - component: {fileID: 283433277}
   - component: {fileID: 283433276}
-  - component: {fileID: 283433274}
-  - component: {fileID: 283433275}
+  - component: {fileID: 283433280}
+  - component: {fileID: 283433279}
   m_Layer: 5
   m_Name: FoodUpgradeSkill3
   m_TagString: Untagged
@@ -4136,44 +4143,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &283433274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283433273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: 230987775, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  selectedIcon: {fileID: 560268235, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  defaultIcon: {fileID: -284108622, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 1500
-  _skillPointsCost: 0
-  _skillCostType: 0
-  _skill: {fileID: 283433275}
---- !u!114 &283433275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283433273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e865156fff2249442b1ee3244e6454a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
-  description: "\u0413\u043B\u0430\u0432\u043D\u043E\u0435 \u044D\u0442\u043E \u041B\u044E\u0431\u043E\u0432\u044C!
-    \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
-    \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 4 -> 8"
-  level: 3
 --- !u!114 &283433276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4231,6 +4200,42 @@ RectTransform:
   m_AnchoredPosition: {x: -770.6999, y: -1045.8}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &283433279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283433273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bc15127b1de5d4480fa2210d4279f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
+  description: "\u0413\u043B\u0430\u0432\u043D\u043E\u0435 \u044D\u0442\u043E \u041B\u044E\u0431\u043E\u0432\u044C!
+    \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
+    \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 4 -> 8"
+  level: 3
+  _counterGoal: 5000
+  _skillItem: {fileID: 283433280}
+--- !u!114 &283433280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283433273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 283433276}
+  _openedIcon: {fileID: 230987775, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _selectedIcon: {fileID: 560268235, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _defaultIcon: {fileID: -284108622, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _passiveSkill: {fileID: 283433279}
 --- !u!1 &284326278
 GameObject:
   m_ObjectHideFlags: 0
@@ -4440,9 +4445,9 @@ MonoBehaviour:
   defaultIcon: {fileID: 1228777232, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   needToBuyItems:
   - {fileID: 1788207897}
-  - {fileID: 102277909}
-  needPassiveItems: []
-  _moneyCost: 3500
+  needPassiveItems:
+  - {fileID: 102277915}
+  _moneyCost: 2500
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 299904342}
@@ -4529,8 +4534,8 @@ GameObject:
   - component: {fileID: 300315611}
   - component: {fileID: 300315610}
   - component: {fileID: 300315609}
-  - component: {fileID: 300315607}
-  - component: {fileID: 300315608}
+  - component: {fileID: 300315613}
+  - component: {fileID: 300315612}
   m_Layer: 5
   m_Name: WorkersSalaryDownSkill2
   m_TagString: Untagged
@@ -4538,42 +4543,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &300315607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300315606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: 2040610990, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  selectedIcon: {fileID: 1871161427, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  defaultIcon: {fileID: 1002176022, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 500
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 300315608}
---- !u!114 &300315608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300315606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 081cd6ec27a86c64e9d9c91511e55097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
-  description: 95 -> 90
-  level: 2
 --- !u!114 &300315609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4631,6 +4600,40 @@ RectTransform:
   m_AnchoredPosition: {x: 186.6, y: -886.9}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &300315612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300315606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59314750660d3564fad3059625c7cdf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
+  description: 
+  level: 2
+  _counterGoal: 2
+  _skillItem: {fileID: 300315613}
+--- !u!114 &300315613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300315606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 300315609}
+  _openedIcon: {fileID: 2040610990, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _selectedIcon: {fileID: 1871161427, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _defaultIcon: {fileID: 1002176022, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _passiveSkill: {fileID: 300315612}
 --- !u!1 &316631990
 GameObject:
   m_ObjectHideFlags: 0
@@ -4936,7 +4939,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 133, y: 2274}
+  m_AnchoredPosition: {x: 132.99976, y: 2274}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339078338
@@ -5262,10 +5265,11 @@ MonoBehaviour:
   selectedIcon: {fileID: -632898229, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   defaultIcon: {fileID: 1631443051, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   needToBuyItems:
-  - {fileID: 248669947}
-  needPassiveItems: []
-  _moneyCost: 1500
-  _skillPointsCost: 0
+  - {fileID: 1868031025}
+  needPassiveItems:
+  - {fileID: 248669953}
+  _moneyCost: 2000
+  _skillPointsCost: 1
   _skillCostType: 0
   _skill: {fileID: 352451055}
 --- !u!114 &352451055
@@ -5692,8 +5696,8 @@ GameObject:
   - component: {fileID: 383769122}
   - component: {fileID: 383769121}
   - component: {fileID: 383769120}
-  - component: {fileID: 383769118}
-  - component: {fileID: 383769119}
+  - component: {fileID: 383769124}
+  - component: {fileID: 383769123}
   m_Layer: 5
   m_Name: WorkersSalaryDownSkill3
   m_TagString: Untagged
@@ -5701,42 +5705,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &383769118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383769117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: -211240070, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  selectedIcon: {fileID: 1079981793, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  defaultIcon: {fileID: -113563940, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 750
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 383769119}
---- !u!114 &383769119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383769117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 081cd6ec27a86c64e9d9c91511e55097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
-  description: 90 -> 85
-  level: 3
 --- !u!114 &383769120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5794,6 +5762,40 @@ RectTransform:
   m_AnchoredPosition: {x: 186.9, y: -1043.1}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &383769123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383769117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59314750660d3564fad3059625c7cdf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
+  description: 
+  level: 3
+  _counterGoal: 3
+  _skillItem: {fileID: 383769124}
+--- !u!114 &383769124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383769117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 383769120}
+  _openedIcon: {fileID: -211240070, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _selectedIcon: {fileID: 1079981793, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _defaultIcon: {fileID: -113563940, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _passiveSkill: {fileID: 383769123}
 --- !u!1 &388445849
 GameObject:
   m_ObjectHideFlags: 0
@@ -6411,7 +6413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &409704302
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7000,7 +7002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 134, y: 1595}
+  m_AnchoredPosition: {x: 133.99976, y: 1595}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &468249823
@@ -7154,9 +7156,9 @@ MonoBehaviour:
   defaultIcon: {fileID: 1246693336, guid: 2b95fb20ab4b160418b2125e7949121e, type: 3}
   needToBuyItems:
   - {fileID: 1730482033}
-  - {fileID: 260871844}
-  needPassiveItems: []
-  _moneyCost: 50
+  needPassiveItems:
+  - {fileID: 260871850}
+  _moneyCost: 350
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 469915064}
@@ -7836,6 +7838,7 @@ GameObject:
   - component: {fileID: 563905090}
   - component: {fileID: 563905091}
   - component: {fileID: 563905089}
+  - component: {fileID: 563905092}
   m_Layer: 0
   m_Name: -----GENERAL-----
   m_TagString: Untagged
@@ -7917,26 +7920,10 @@ MonoBehaviour:
   - {fileID: 142686592}
   - {fileID: 887456733}
   - {fileID: 2068750968}
-  - {fileID: 1495229773}
-  - {fileID: 260871844}
-  - {fileID: 248669947}
-  - {fileID: 102277909}
-  - {fileID: 1022405858}
-  - {fileID: 1574376404}
-  - {fileID: 1281765138}
-  - {fileID: 283433274}
-  - {fileID: 73070911}
-  - {fileID: 118649010}
-  - {fileID: 1331507235}
   - {fileID: 1227686168}
   - {fileID: 881161172}
   - {fileID: 2055426067}
   - {fileID: 1186266691}
-  - {fileID: 613389215}
-  - {fileID: 300315607}
-  - {fileID: 383769118}
-  - {fileID: 53281268}
-  - {fileID: 763183240}
   - {fileID: 1135716831}
   - {fileID: 65994504}
   - {fileID: 85243101}
@@ -7967,10 +7954,6 @@ MonoBehaviour:
   - {fileID: 1788207897}
   - {fileID: 299904341}
   - {fileID: 991349043}
-  - {fileID: 2033803184}
-  - {fileID: 1976047065}
-  - {fileID: 822696633}
-  - {fileID: 1110794299}
   - {fileID: 343119412}
 --- !u!114 &563905087
 MonoBehaviour:
@@ -8086,6 +8069,39 @@ MonoBehaviour:
   _masterVolumeSlider: {fileID: 1631490596}
   _soundsVolumeSlider: {fileID: 1599079902}
   _musicVolumeSlider: {fileID: 264419148}
+--- !u!114 &563905092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563905080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a71b0a977b9dcf4d9b6efaf2ca846e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _passiveSkills:
+  - {fileID: 1574376409}
+  - {fileID: 1574376409}
+  - {fileID: 1281765143}
+  - {fileID: 283433279}
+  - {fileID: 73070916}
+  - {fileID: 118649015}
+  - {fileID: 613389220}
+  - {fileID: 300315612}
+  - {fileID: 383769123}
+  - {fileID: 53281273}
+  - {fileID: 763183245}
+  - {fileID: 2033803189}
+  - {fileID: 1976047070}
+  - {fileID: 822696638}
+  - {fileID: 1110794304}
+  - {fileID: 1495229778}
+  - {fileID: 260871849}
+  - {fileID: 248669952}
+  - {fileID: 102277914}
+  - {fileID: 1022405863}
 --- !u!1 &586685697
 GameObject:
   m_ObjectHideFlags: 0
@@ -8125,7 +8141,7 @@ MonoBehaviour:
   - {fileID: 887456733}
   - {fileID: 85243101}
   needPassiveItems: []
-  _moneyCost: 750
+  _moneyCost: 1500
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 586685699}
@@ -8397,8 +8413,8 @@ GameObject:
   - component: {fileID: 613389219}
   - component: {fileID: 613389218}
   - component: {fileID: 613389217}
-  - component: {fileID: 613389215}
-  - component: {fileID: 613389216}
+  - component: {fileID: 613389221}
+  - component: {fileID: 613389220}
   m_Layer: 5
   m_Name: WorkersSalaryDownSkill1
   m_TagString: Untagged
@@ -8406,42 +8422,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &613389215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613389214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: -374029288, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  selectedIcon: {fileID: -1548955922, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  defaultIcon: {fileID: 1541116756, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 250
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 613389216}
---- !u!114 &613389216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613389214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 081cd6ec27a86c64e9d9c91511e55097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
-  description: 100 -> 95
-  level: 1
 --- !u!114 &613389217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8499,6 +8479,40 @@ RectTransform:
   m_AnchoredPosition: {x: 187.2, y: -727.7}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &613389220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613389214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59314750660d3564fad3059625c7cdf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
+  description: 
+  level: 1
+  _counterGoal: 1
+  _skillItem: {fileID: 613389221}
+--- !u!114 &613389221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613389214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 613389217}
+  _openedIcon: {fileID: -374029288, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _selectedIcon: {fileID: -1548955922, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _defaultIcon: {fileID: 1541116756, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _passiveSkill: {fileID: 613389220}
 --- !u!1 &624124145
 GameObject:
   m_ObjectHideFlags: 0
@@ -8610,10 +8624,11 @@ MonoBehaviour:
   selectedIcon: {fileID: -1330336663, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   defaultIcon: {fileID: -990049290, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   needToBuyItems:
-  - {fileID: 1022405858}
-  needPassiveItems: []
-  _moneyCost: 3000
-  _skillPointsCost: 0
+  - {fileID: 880617277}
+  needPassiveItems:
+  - {fileID: 1022405864}
+  _moneyCost: 5000
+  _skillPointsCost: 1
   _skillCostType: 0
   _skill: {fileID: 643245384}
 --- !u!114 &643245384
@@ -9075,10 +9090,10 @@ MonoBehaviour:
   selectedIcon: {fileID: 1372470619, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   defaultIcon: {fileID: 1822752625, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   needToBuyItems:
-  - {fileID: 260871844}
   - {fileID: 1168632090}
-  needPassiveItems: []
-  _moneyCost: 1500
+  needPassiveItems:
+  - {fileID: 260871850}
+  _moneyCost: 350
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 680554552}
@@ -9459,7 +9474,7 @@ MonoBehaviour:
   - {fileID: 991349043}
   - {fileID: 1420329300}
   needPassiveItems: []
-  _moneyCost: 4750
+  _moneyCost: 5000
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 730646923}
@@ -9624,8 +9639,8 @@ GameObject:
   - component: {fileID: 763183244}
   - component: {fileID: 763183243}
   - component: {fileID: 763183242}
-  - component: {fileID: 763183240}
-  - component: {fileID: 763183241}
+  - component: {fileID: 763183246}
+  - component: {fileID: 763183245}
   m_Layer: 5
   m_Name: WorkersSalaryDownSkill5
   m_TagString: Untagged
@@ -9633,42 +9648,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &763183240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763183239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: -1270062692, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  selectedIcon: {fileID: -1283064511, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  defaultIcon: {fileID: 694308094, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 2000
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 763183241}
---- !u!114 &763183241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763183239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 081cd6ec27a86c64e9d9c91511e55097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
-  description: 80 -> 75
-  level: 5
 --- !u!114 &763183242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9726,6 +9705,40 @@ RectTransform:
   m_AnchoredPosition: {x: 186.4, y: -1362.7}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &763183245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763183239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59314750660d3564fad3059625c7cdf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041C\u0435\u043D\u0435\u0434\u0436\u0435\u0440"
+  description: 
+  level: 5
+  _counterGoal: 5
+  _skillItem: {fileID: 763183246}
+--- !u!114 &763183246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763183239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 763183242}
+  _openedIcon: {fileID: -1270062692, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _selectedIcon: {fileID: -1283064511, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _defaultIcon: {fileID: 694308094, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
+  _passiveSkill: {fileID: 763183245}
 --- !u!1 &767609986
 GameObject:
   m_ObjectHideFlags: 0
@@ -9764,7 +9777,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 1168632090}
   needPassiveItems: []
-  _moneyCost: 750
+  _moneyCost: 150
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 767609988}
@@ -10590,8 +10603,8 @@ GameObject:
   - component: {fileID: 822696637}
   - component: {fileID: 822696636}
   - component: {fileID: 822696635}
-  - component: {fileID: 822696633}
-  - component: {fileID: 822696634}
+  - component: {fileID: 822696639}
+  - component: {fileID: 822696638}
   m_Layer: 5
   m_Name: FoodUpgradeIceCream
   m_TagString: Untagged
@@ -10599,42 +10612,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &822696633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822696632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: 2128986808, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  selectedIcon: {fileID: 1084212197, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  defaultIcon: {fileID: -1879302381, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 7000
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 822696634}
---- !u!114 &822696634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822696632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54d4d1504d9b104abb10f904ac310dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041C\u043E\u0440\u043E\u0436\u043D\u043E\u0435"
-  description: 
-  level: 3
 --- !u!114 &822696635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10692,6 +10669,40 @@ RectTransform:
   m_AnchoredPosition: {x: -533, y: -1046}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &822696638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822696632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3d90eecdc7716d49ba6f16d8cf1cd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041C\u043E\u0440\u043E\u0436\u043D\u043E\u0435"
+  description: 
+  level: 3
+  _counterGoal: 6
+  _skillItem: {fileID: 822696639}
+--- !u!114 &822696639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822696632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 822696635}
+  _openedIcon: {fileID: 2128986808, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
+  _selectedIcon: {fileID: 1084212197, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
+  _defaultIcon: {fileID: -1879302381, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
+  _passiveSkill: {fileID: 822696638}
 --- !u!1 &822899938
 GameObject:
   m_ObjectHideFlags: 0
@@ -10955,7 +10966,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 767609987}
   needPassiveItems: []
-  _moneyCost: 1000
+  _moneyCost: 250
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 843327748}
@@ -11525,10 +11536,11 @@ MonoBehaviour:
   selectedIcon: {fileID: -1970412475, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   defaultIcon: {fileID: 1848301489, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   needToBuyItems:
-  - {fileID: 102277909}
-  needPassiveItems: []
-  _moneyCost: 2000
-  _skillPointsCost: 0
+  - {fileID: 352451054}
+  needPassiveItems:
+  - {fileID: 102277915}
+  _moneyCost: 3000
+  _skillPointsCost: 1
   _skillCostType: 0
   _skill: {fileID: 880617278}
 --- !u!114 &880617278
@@ -11616,6 +11628,7 @@ GameObject:
   - component: {fileID: 881161174}
   - component: {fileID: 881161172}
   - component: {fileID: 881161173}
+  - component: {fileID: 881161177}
   m_Layer: 5
   m_Name: UtilityCostSkill3
   m_TagString: Untagged
@@ -11717,6 +11730,23 @@ RectTransform:
   m_AnchoredPosition: {x: -51.4, y: -1045}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &881161177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881161171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 0}
+  _openedIcon: {fileID: 0}
+  _selectedIcon: {fileID: 0}
+  _defaultIcon: {fileID: 0}
+  _passiveSkill: {fileID: 0}
 --- !u!1 &887456731
 GameObject:
   m_ObjectHideFlags: 0
@@ -11773,8 +11803,8 @@ MonoBehaviour:
   defaultIcon: {fileID: 906779841, guid: 2b95fb20ab4b160418b2125e7949121e, type: 3}
   needToBuyItems:
   - {fileID: 142686592}
-  - {fileID: 102277909}
-  needPassiveItems: []
+  needPassiveItems:
+  - {fileID: 102277915}
   _moneyCost: 1500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -11870,7 +11900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135, y: 236}
+  m_AnchoredPosition: {x: 134.99976, y: 236}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890044684
@@ -12734,8 +12764,8 @@ MonoBehaviour:
   defaultIcon: {fileID: -1854040080, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   needToBuyItems:
   - {fileID: 299904341}
-  - {fileID: 1022405858}
-  needPassiveItems: []
+  needPassiveItems:
+  - {fileID: 1022405864}
   _moneyCost: 4500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -12926,7 +12956,7 @@ MonoBehaviour:
   - {fileID: 730646922}
   - {fileID: 1824691878}
   needPassiveItems: []
-  _moneyCost: 5000
+  _moneyCost: 6500
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1002338228}
@@ -13091,8 +13121,8 @@ GameObject:
   - component: {fileID: 1022405862}
   - component: {fileID: 1022405861}
   - component: {fileID: 1022405860}
-  - component: {fileID: 1022405858}
-  - component: {fileID: 1022405859}
+  - component: {fileID: 1022405864}
+  - component: {fileID: 1022405863}
   m_Layer: 5
   m_Name: ClickPowerSkill5
   m_TagString: Untagged
@@ -13100,47 +13130,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1022405858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022405857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: 1793491442, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  selectedIcon: {fileID: -623504638, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  defaultIcon: {fileID: 772630879, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  needToBuyItems:
-  - {fileID: 880617277}
-  needPassiveItems: []
-  _moneyCost: 0
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 1022405859}
---- !u!114 &1022405859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022405857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b269c21bfebbb84eaea9372fea2ca38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
-  description: "\u0412\u044B \u0441\u0442\u0430\u043B\u0438 \u0435\u0434\u0438\u043D\u044B
-    \u0441 \u043A\u0443\u0445\u043D\u0435\u0439! \u041C\u0430\u0441\u0442\u0435\u0440
-    \u043F\u043B\u0438\u0442\u044B \u0438 \u043A\u043E\u0442\u043B\u0435\u0442! \u0422\u0435\u043F\u0435\u0440\u044C
-    \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
-    20->40"
-  level: 5
 --- !u!114 &1022405860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13198,6 +13187,44 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: 2064}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1022405863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022405857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0468016ce6a4744894ba828a7cbb070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
+  description: "\u0412\u044B \u0441\u0442\u0430\u043B\u0438 \u0435\u0434\u0438\u043D\u044B
+    \u0441 \u043A\u0443\u0445\u043D\u0435\u0439! \u041C\u0430\u0441\u0442\u0435\u0440
+    \u043F\u043B\u0438\u0442\u044B \u0438 \u043A\u043E\u0442\u043B\u0435\u0442! \u0422\u0435\u043F\u0435\u0440\u044C
+    \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
+    20->40"
+  level: 5
+  _counterGoal: 10000
+  _skillItem: {fileID: 1022405864}
+--- !u!114 &1022405864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022405857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 1022405860}
+  _openedIcon: {fileID: 1793491442, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _selectedIcon: {fileID: -623504638, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _defaultIcon: {fileID: 772630879, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _passiveSkill: {fileID: 1022405863}
 --- !u!1 &1024081484
 GameObject:
   m_ObjectHideFlags: 0
@@ -13527,7 +13554,7 @@ MonoBehaviour:
   - {fileID: 1093615549}
   - {fileID: 2039142675}
   needPassiveItems: []
-  _moneyCost: 3000
+  _moneyCost: 1750
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1049436640}
@@ -13778,7 +13805,7 @@ MonoBehaviour:
   - {fileID: 1788207897}
   - {fileID: 1384495901}
   needPassiveItems: []
-  _moneyCost: 2750
+  _moneyCost: 1250
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1093615550}
@@ -13893,7 +13920,7 @@ MonoBehaviour:
   - {fileID: 586685698}
   - {fileID: 1452983827}
   needPassiveItems: []
-  _moneyCost: 3750
+  _moneyCost: 3000
   _skillPointsCost: 1
   _skillCostType: 0
   _skill: {fileID: 1105659412}
@@ -13981,8 +14008,8 @@ GameObject:
   - component: {fileID: 1110794303}
   - component: {fileID: 1110794302}
   - component: {fileID: 1110794301}
-  - component: {fileID: 1110794299}
-  - component: {fileID: 1110794300}
+  - component: {fileID: 1110794305}
+  - component: {fileID: 1110794304}
   m_Layer: 5
   m_Name: FoodUpgradeCola
   m_TagString: Untagged
@@ -13990,42 +14017,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1110794299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110794298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: -1096321350, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  selectedIcon: {fileID: 489842284, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  defaultIcon: {fileID: 1285942453, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 500
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 1110794300}
---- !u!114 &1110794300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110794298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54d4d1504d9b104abb10f904ac310dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u0413\u0430\u0437\u0438\u0440\u043E\u0432\u043A\u0430"
-  description: 
-  level: 4
 --- !u!114 &1110794301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14083,6 +14074,40 @@ RectTransform:
   m_AnchoredPosition: {x: -533, y: -1203}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1110794304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110794298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3d90eecdc7716d49ba6f16d8cf1cd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u0413\u0430\u0437\u0438\u0440\u043E\u0432\u043A\u0430"
+  description: 
+  level: 4
+  _counterGoal: 8
+  _skillItem: {fileID: 1110794305}
+--- !u!114 &1110794305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110794298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 1110794301}
+  _openedIcon: {fileID: -1096321350, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
+  _selectedIcon: {fileID: 489842284, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
+  _defaultIcon: {fileID: 1285942453, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
+  _passiveSkill: {fileID: 1110794304}
 --- !u!1001 &1123400438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14326,7 +14351,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 1730482033}
   needPassiveItems: []
-  _moneyCost: 100
+  _moneyCost: 25
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1135716832}
@@ -14637,10 +14662,10 @@ MonoBehaviour:
   buyedIcon: {fileID: 189282530, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   selectedIcon: {fileID: 410447694, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   defaultIcon: {fileID: -470897911, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
-  needToBuyItems:
-  - {fileID: 1495229773}
-  needPassiveItems: []
-  _moneyCost: 500
+  needToBuyItems: []
+  needPassiveItems:
+  - {fileID: 1495229779}
+  _moneyCost: 100
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1168632091}
@@ -15080,6 +15105,7 @@ GameObject:
   - component: {fileID: 1186266693}
   - component: {fileID: 1186266691}
   - component: {fileID: 1186266692}
+  - component: {fileID: 1186266696}
   m_Layer: 5
   m_Name: UtilityCostSkill5
   m_TagString: Untagged
@@ -15103,7 +15129,7 @@ MonoBehaviour:
   selectedIcon: {fileID: 1584439380, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   defaultIcon: {fileID: -730420889, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   needToBuyItems:
-  - {fileID: 763183240}
+  - {fileID: 0}
   needPassiveItems: []
   _moneyCost: 2000
   _skillPointsCost: 0
@@ -15182,6 +15208,23 @@ RectTransform:
   m_AnchoredPosition: {x: -52.5, y: -1361.6}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1186266696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186266690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 0}
+  _openedIcon: {fileID: 0}
+  _selectedIcon: {fileID: 0}
+  _defaultIcon: {fileID: 0}
+  _passiveSkill: {fileID: 0}
 --- !u!1 &1188720008
 GameObject:
   m_ObjectHideFlags: 0
@@ -15270,6 +15313,7 @@ GameObject:
   - component: {fileID: 1227686170}
   - component: {fileID: 1227686168}
   - component: {fileID: 1227686169}
+  - component: {fileID: 1227686173}
   m_Layer: 5
   m_Name: UtilityCostSkill2
   m_TagString: Untagged
@@ -15371,6 +15415,23 @@ RectTransform:
   m_AnchoredPosition: {x: -51.6, y: -886.7}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1227686173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227686167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 0}
+  _openedIcon: {fileID: 0}
+  _selectedIcon: {fileID: 0}
+  _defaultIcon: {fileID: 0}
+  _passiveSkill: {fileID: 0}
 --- !u!1 &1269111599
 GameObject:
   m_ObjectHideFlags: 0
@@ -15410,8 +15471,8 @@ MonoBehaviour:
   - {fileID: 65994504}
   - {fileID: 1315157956}
   needPassiveItems: []
-  _moneyCost: 0
-  _skillPointsCost: 1
+  _moneyCost: 500
+  _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1269111601}
 --- !u!114 &1269111601
@@ -15707,8 +15768,8 @@ GameObject:
   - component: {fileID: 1281765142}
   - component: {fileID: 1281765141}
   - component: {fileID: 1281765140}
-  - component: {fileID: 1281765138}
-  - component: {fileID: 1281765139}
+  - component: {fileID: 1281765144}
+  - component: {fileID: 1281765143}
   m_Layer: 5
   m_Name: FoodUpgradeSkill2
   m_TagString: Untagged
@@ -15716,45 +15777,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1281765138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281765137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: -564946950, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  selectedIcon: {fileID: -1881905008, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  defaultIcon: {fileID: -1619832882, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 500
-  _skillPointsCost: 0
-  _skillCostType: 0
-  _skill: {fileID: 1281765139}
---- !u!114 &1281765139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281765137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e865156fff2249442b1ee3244e6454a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
-  description: "\u0410\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u043E\u0441\u0442\u044C
-    \u0438 \u0442\u043E\u043B\u044C\u043A\u043E \u0410\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u043E\u0441\u0442\u044C!
-    \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
-    \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 2 -> 4"
-  level: 2
 --- !u!114 &1281765140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15812,6 +15834,43 @@ RectTransform:
   m_AnchoredPosition: {x: -769.9999, y: -887.9}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1281765143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281765137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bc15127b1de5d4480fa2210d4279f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
+  description: "\u0410\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u043E\u0441\u0442\u044C
+    \u0438 \u0442\u043E\u043B\u044C\u043A\u043E \u0410\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u043E\u0441\u0442\u044C!
+    \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
+    \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 2 -> 4"
+  level: 2
+  _counterGoal: 1500
+  _skillItem: {fileID: 1281765144}
+--- !u!114 &1281765144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281765137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 1281765140}
+  _openedIcon: {fileID: -564946950, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _selectedIcon: {fileID: -1881905008, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _defaultIcon: {fileID: -1619832882, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _passiveSkill: {fileID: 1281765143}
 --- !u!1 &1283854706
 GameObject:
   m_ObjectHideFlags: 0
@@ -16072,8 +16131,8 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 1135716831}
   needPassiveItems: []
-  _moneyCost: 0
-  _skillPointsCost: 1
+  _moneyCost: 50
+  _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1315157957}
 --- !u!114 &1315157957
@@ -16160,8 +16219,8 @@ GameObject:
   - component: {fileID: 1331507239}
   - component: {fileID: 1331507238}
   - component: {fileID: 1331507237}
-  - component: {fileID: 1331507235}
   - component: {fileID: 1331507236}
+  - component: {fileID: 1331507240}
   m_Layer: 5
   m_Name: UtilityCostSkill1
   m_TagString: Untagged
@@ -16169,27 +16228,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1331507235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331507234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: 781024812, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  selectedIcon: {fileID: -1438956500, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  defaultIcon: {fileID: 1023879185, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 200
-  _skillPointsCost: 0
-  _skillCostType: 0
-  _skill: {fileID: 1331507236}
 --- !u!114 &1331507236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16263,6 +16301,23 @@ RectTransform:
   m_AnchoredPosition: {x: -51.8, y: -727.7}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1331507240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331507234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 0}
+  _openedIcon: {fileID: 0}
+  _selectedIcon: {fileID: 0}
+  _defaultIcon: {fileID: 0}
+  _passiveSkill: {fileID: 0}
 --- !u!1 &1348954969
 GameObject:
   m_ObjectHideFlags: 0
@@ -16675,11 +16730,11 @@ MonoBehaviour:
   buyedIcon: {fileID: -1604172117, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   selectedIcon: {fileID: -1206635110, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   defaultIcon: {fileID: 1139794413, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
-  needToBuyItems:
-  - {fileID: 1495229773}
-  needPassiveItems: []
-  _moneyCost: 500
-  _skillPointsCost: 0
+  needToBuyItems: []
+  needPassiveItems:
+  - {fileID: 1495229779}
+  _moneyCost: 100
+  _skillPointsCost: 1
   _skillCostType: 0
   _skill: {fileID: 1378183815}
 --- !u!114 &1378183815
@@ -16788,7 +16843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 133, y: -439}
+  m_AnchoredPosition: {x: 132.99976, y: -439}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1379349396
@@ -16868,7 +16923,7 @@ MonoBehaviour:
   - {fileID: 680554551}
   - {fileID: 767609987}
   needPassiveItems: []
-  _moneyCost: 1750
+  _moneyCost: 500
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1384495902}
@@ -17019,7 +17074,7 @@ MonoBehaviour:
   - {fileID: 299904341}
   - {fileID: 1093615549}
   needPassiveItems: []
-  _moneyCost: 3750
+  _moneyCost: 2750
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1420329301}
@@ -17485,8 +17540,8 @@ MonoBehaviour:
   - {fileID: 85243101}
   - {fileID: 1269111600}
   needPassiveItems: []
-  _moneyCost: 0
-  _skillPointsCost: 1
+  _moneyCost: 1750
+  _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1452983828}
 --- !u!114 &1452983828
@@ -17816,8 +17871,8 @@ GameObject:
   - component: {fileID: 1495229777}
   - component: {fileID: 1495229776}
   - component: {fileID: 1495229775}
-  - component: {fileID: 1495229773}
-  - component: {fileID: 1495229774}
+  - component: {fileID: 1495229779}
+  - component: {fileID: 1495229778}
   m_Layer: 5
   m_Name: ClickPowerSkill1
   m_TagString: Untagged
@@ -17825,45 +17880,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1495229773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495229772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: -1131677572, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  selectedIcon: {fileID: 83511870, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  defaultIcon: {fileID: -1163698406, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 0
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 1495229774}
---- !u!114 &1495229774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495229772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b269c21bfebbb84eaea9372fea2ca38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
-  description: "\u0412\u044B \u0441\u043E\u0432\u0435\u0440\u0448\u0435\u043D\u0441\u0442\u0432\u0443\u0435\u0442\u0435
-    \u0441\u0432\u043E\u0438 \u043D\u0430\u0432\u044B\u043A\u0438! \u0422\u0435\u043F\u0435\u0440\u044C
-    \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
-    1->2"
-  level: 1
 --- !u!114 &1495229775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17921,6 +17937,43 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: -650}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1495229778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495229772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0468016ce6a4744894ba828a7cbb070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041B\u043E\u0432\u043A\u0438\u0435 \u043F\u0430\u043B\u044C\u0446\u044B"
+  description: "\u0412\u044B \u0441\u043E\u0432\u0435\u0440\u0448\u0435\u043D\u0441\u0442\u0432\u0443\u0435\u0442\u0435
+    \u0441\u0432\u043E\u0438 \u043D\u0430\u0432\u044B\u043A\u0438! \u0422\u0435\u043F\u0435\u0440\u044C
+    \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
+    1->2"
+  level: 1
+  _counterGoal: 50
+  _skillItem: {fileID: 1495229779}
+--- !u!114 &1495229779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495229772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 1495229775}
+  _openedIcon: {fileID: -1131677572, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _selectedIcon: {fileID: 83511870, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _defaultIcon: {fileID: -1163698406, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
+  _passiveSkill: {fileID: 1495229778}
 --- !u!1 &1506684314
 GameObject:
   m_ObjectHideFlags: 0
@@ -18740,8 +18793,8 @@ GameObject:
   - component: {fileID: 1574376408}
   - component: {fileID: 1574376407}
   - component: {fileID: 1574376406}
-  - component: {fileID: 1574376404}
-  - component: {fileID: 1574376405}
+  - component: {fileID: 1574376410}
+  - component: {fileID: 1574376409}
   m_Layer: 5
   m_Name: FoodUpgradeSkill1
   m_TagString: Untagged
@@ -18749,45 +18802,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1574376404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574376403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: -529378458, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  selectedIcon: {fileID: 874131755, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  defaultIcon: {fileID: 650946717, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 100
-  _skillPointsCost: 0
-  _skillCostType: 0
-  _skill: {fileID: 1574376405}
---- !u!114 &1574376405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574376403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e865156fff2249442b1ee3244e6454a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u0433\u043D\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
-  description: "\u0421\u043E\u0443\u0441\u0430 \u043C\u0430\u043B\u043E \u043D\u0435
-    \u0431\u044B\u0432\u0430\u0435\u0442! \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C
-    \u0437\u0430 \u0435\u0434\u0443 \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 1
-    -> 2"
-  level: 1
 --- !u!114 &1574376406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18845,6 +18859,43 @@ RectTransform:
   m_AnchoredPosition: {x: -770, y: -729}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1574376409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574376403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bc15127b1de5d4480fa2210d4279f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0430\u0434\u0438\u0435\u043D\u0442"
+  description: "\u0421\u043E\u0443\u0441\u0430 \u043C\u0430\u043B\u043E \u043D\u0435
+    \u0431\u044B\u0432\u0430\u0435\u0442! \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C
+    \u0437\u0430 \u0435\u0434\u0443 \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 1
+    -> 2"
+  level: 1
+  _counterGoal: 100
+  _skillItem: {fileID: 1574376410}
+--- !u!114 &1574376410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574376403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 1574376406}
+  _openedIcon: {fileID: -529378458, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _selectedIcon: {fileID: 874131755, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _defaultIcon: {fileID: 650946717, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
+  _passiveSkill: {fileID: 1574376409}
 --- !u!1 &1574759599
 GameObject:
   m_ObjectHideFlags: 0
@@ -19579,8 +19630,8 @@ MonoBehaviour:
   - {fileID: 1643505831}
   - {fileID: 1105659411}
   needPassiveItems: []
-  _moneyCost: 0
-  _skillPointsCost: 1
+  _moneyCost: 5000
+  _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1642006750}
 --- !u!114 &1642006750
@@ -19695,7 +19746,7 @@ MonoBehaviour:
   - {fileID: 2068750968}
   - {fileID: 586685698}
   needPassiveItems: []
-  _moneyCost: 1000
+  _moneyCost: 3000
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1643505832}
@@ -20142,9 +20193,9 @@ MonoBehaviour:
   buyedIcon: {fileID: 1025641983, guid: 2b95fb20ab4b160418b2125e7949121e, type: 3}
   selectedIcon: {fileID: 1699874781, guid: 2b95fb20ab4b160418b2125e7949121e, type: 3}
   defaultIcon: {fileID: 1367052223, guid: 2b95fb20ab4b160418b2125e7949121e, type: 3}
-  needToBuyItems:
-  - {fileID: 1495229773}
-  needPassiveItems: []
+  needToBuyItems: []
+  needPassiveItems:
+  - {fileID: 1495229779}
   _moneyCost: 5
   _skillPointsCost: 0
   _skillCostType: 0
@@ -20476,9 +20527,9 @@ MonoBehaviour:
   defaultIcon: {fileID: -1958176592, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   needToBuyItems:
   - {fileID: 680554551}
-  - {fileID: 248669947}
-  needPassiveItems: []
-  _moneyCost: 2500
+  needPassiveItems:
+  - {fileID: 248669953}
+  _moneyCost: 1000
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1788207898}
@@ -21139,7 +21190,7 @@ MonoBehaviour:
   - {fileID: 1420329300}
   - {fileID: 1049436639}
   needPassiveItems: []
-  _moneyCost: 4000
+  _moneyCost: 3500
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1824691879}
@@ -21646,10 +21697,11 @@ MonoBehaviour:
   selectedIcon: {fileID: -1933986544, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   defaultIcon: {fileID: -1973290614, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   needToBuyItems:
-  - {fileID: 260871844}
-  needPassiveItems: []
+  - {fileID: 1378183814}
+  needPassiveItems:
+  - {fileID: 260871850}
   _moneyCost: 1000
-  _skillPointsCost: 0
+  _skillPointsCost: 1
   _skillCostType: 0
   _skill: {fileID: 1868031026}
 --- !u!114 &1868031026
@@ -22427,8 +22479,8 @@ GameObject:
   - component: {fileID: 1976047069}
   - component: {fileID: 1976047068}
   - component: {fileID: 1976047067}
-  - component: {fileID: 1976047065}
-  - component: {fileID: 1976047066}
+  - component: {fileID: 1976047071}
+  - component: {fileID: 1976047070}
   m_Layer: 5
   m_Name: FoodUpgradeFries
   m_TagString: Untagged
@@ -22436,42 +22488,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1976047065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976047064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: 2028171178, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  selectedIcon: {fileID: -1617767299, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  defaultIcon: {fileID: -1622129437, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 1000
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 1976047066}
---- !u!114 &1976047066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976047064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54d4d1504d9b104abb10f904ac310dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041A\u0430\u0440\u0442\u043E\u0448\u043A\u0430 \u0444\u0440\u0438"
-  description: 
-  level: 2
 --- !u!114 &1976047067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22529,6 +22545,40 @@ RectTransform:
   m_AnchoredPosition: {x: -533, y: -887}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1976047070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976047064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3d90eecdc7716d49ba6f16d8cf1cd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041A\u0430\u0440\u0442\u043E\u0448\u043A\u0430 \u0444\u0440\u0438"
+  description: 
+  level: 2
+  _counterGoal: 4
+  _skillItem: {fileID: 1976047071}
+--- !u!114 &1976047071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976047064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 1976047067}
+  _openedIcon: {fileID: 2028171178, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
+  _selectedIcon: {fileID: -1617767299, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
+  _defaultIcon: {fileID: -1622129437, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
+  _passiveSkill: {fileID: 1976047070}
 --- !u!1001 &1985853795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22960,8 +23010,9 @@ GameObject:
   - component: {fileID: 2033803188}
   - component: {fileID: 2033803187}
   - component: {fileID: 2033803186}
-  - component: {fileID: 2033803184}
   - component: {fileID: 2033803185}
+  - component: {fileID: 2033803190}
+  - component: {fileID: 2033803189}
   m_Layer: 5
   m_Name: FoodUpgradeHotDog
   m_TagString: Untagged
@@ -22969,27 +23020,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2033803184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033803183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: 1395245271, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  selectedIcon: {fileID: -2008054745, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  defaultIcon: {fileID: -351680488, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 3000
-  _skillPointsCost: 1
-  _skillCostType: 0
-  _skill: {fileID: 2033803185}
 --- !u!114 &2033803185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23062,6 +23092,40 @@ RectTransform:
   m_AnchoredPosition: {x: -532, y: -729}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2033803189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033803183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3d90eecdc7716d49ba6f16d8cf1cd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u0425\u043E\u0442 \u0434\u043E\u0433"
+  description: 
+  level: 1
+  _counterGoal: 2
+  _skillItem: {fileID: 2033803190}
+--- !u!114 &2033803190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033803183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 2033803186}
+  _openedIcon: {fileID: 1395245271, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
+  _selectedIcon: {fileID: -2008054745, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
+  _defaultIcon: {fileID: -351680488, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
+  _passiveSkill: {fileID: 2033803189}
 --- !u!1 &2039142674
 GameObject:
   m_ObjectHideFlags: 0
@@ -23101,7 +23165,7 @@ MonoBehaviour:
   - {fileID: 1384495901}
   - {fileID: 843327747}
   needPassiveItems: []
-  _moneyCost: 2000
+  _moneyCost: 750
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 2039142676}
@@ -23443,6 +23507,7 @@ GameObject:
   - component: {fileID: 2055426069}
   - component: {fileID: 2055426067}
   - component: {fileID: 2055426068}
+  - component: {fileID: 2055426072}
   m_Layer: 5
   m_Name: UtilityCostSkill4
   m_TagString: Untagged
@@ -23544,6 +23609,23 @@ RectTransform:
   m_AnchoredPosition: {x: -52.3, y: -1201.1}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2055426072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055426066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentImage: {fileID: 0}
+  _openedIcon: {fileID: 0}
+  _selectedIcon: {fileID: 0}
+  _defaultIcon: {fileID: 0}
+  _passiveSkill: {fileID: 0}
 --- !u!1 &2059452793
 GameObject:
   m_ObjectHideFlags: 0
@@ -23656,8 +23738,8 @@ MonoBehaviour:
   defaultIcon: {fileID: -635140463, guid: 2b95fb20ab4b160418b2125e7949121e, type: 3}
   needToBuyItems:
   - {fileID: 887456733}
-  - {fileID: 1022405858}
-  needPassiveItems: []
+  needPassiveItems:
+  - {fileID: 1022405864}
   _moneyCost: 3000
   _skillPointsCost: 0
   _skillCostType: 0
