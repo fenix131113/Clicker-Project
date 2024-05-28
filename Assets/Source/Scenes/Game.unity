@@ -616,6 +616,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 563905088}
+        m_TargetAssemblyTypeName: Clicker.Core.Time.CalendarEventsController, Assembly-CSharp
+        m_MethodName: GenerateEvents
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _rect: {fileID: 43730632}
   _clickAnimDuration: 0.1
   _clickAnimScaleModifire: 0.85
@@ -5853,7 +5865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &409704302
 RectTransform:
   m_ObjectHideFlags: 0

@@ -12,16 +12,19 @@ namespace Clicker.Core.SkillSystem
         protected GlobalObjectsContainer _objectsContainer;
         protected TournamentManager _tournamentManager;
         protected MainClicker _mainClicker;
+        protected MafiaManager _mafiaManager;
 
         public int CounterGoal => _counterGoal;
 
         [Inject]
-        private void Init(PlayerData data, GlobalObjectsContainer objectsContainer, TournamentManager tournamentManager)
+        private void Init(PlayerData data, GlobalObjectsContainer objectsContainer, TournamentManager tournamentManager, 
+            MafiaManager mafiaManager)
         {
             this.data = data;
             _tournamentManager = tournamentManager;
             _objectsContainer = objectsContainer;
             _mainClicker = _objectsContainer.ClickerScript;
+            _mafiaManager = mafiaManager;
 
             LoadDataIfExsist();
         }

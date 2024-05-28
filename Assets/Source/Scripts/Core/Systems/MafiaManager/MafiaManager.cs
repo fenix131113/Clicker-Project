@@ -28,7 +28,11 @@ public class MafiaManager
     [JsonIgnore] public int MafiaPayExpiredCount => _mafiaPayExpiredCount;
     [JsonIgnore] public int MafiaVisitPeriod => _mafiaVisitPeriod;
 
+    public delegate void MafiaNoParameterEventHandler();
+    public event MafiaNoParameterEventHandler onMafiaPayComplete;
+
     public void SetData(PlayerData data) => this.data = data;
+
     [Inject]
     public void LoadSavedData(MafiaManager mafiaManager)
     {
@@ -69,6 +73,7 @@ public class MafiaManager
     {
         if (data.Money >= TakeMoneyCount)
         {
+            onMafiaPayComplete?.Invoke();
             data.Money -= TakeMoneyCount;
             timeManager.IsTimePaused = false;
             _isWaitForPayment = false;

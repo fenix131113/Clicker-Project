@@ -46,9 +46,9 @@ namespace Clicker.Core.Time
 
         private void OnNewDay(int dayNum, DayType dayType)
         {
-            // Update calendar every new month
-            if (dayNum % 31 == 1)
-                GenerateEvents();
+            //// Update calendar every new month
+            //if (dayNum % 31 == 1)
+            //    GenerateEvents();
 
             // Clear all events complete status every day
             foreach (CalendarEvent c in _allEvents)
@@ -87,7 +87,7 @@ namespace Clicker.Core.Time
 
         // Need to call every month
         // Place event in days by their event period
-        private void GenerateEvents()
+        public void GenerateEvents()
         {
             ResetDaysEvents();
 

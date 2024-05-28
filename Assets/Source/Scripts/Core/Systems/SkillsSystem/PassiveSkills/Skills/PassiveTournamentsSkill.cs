@@ -1,36 +1,38 @@
-using Clicker.Core.SkillSystem;
-
-public class PassiveTournamentsSkill : PassiveSkillBase
+namespace Clicker.Core.SkillSystem
 {
-    public override void StartControllerCall()
+    public class PassiveTournamentsSkill : PassiveSkillBase
     {
-        _tournamentManager.onTournamentWin += CheckConditions;
-    }
-
-    public override int GetCurrentCounter()
-    {
-        return data.TournamentWins;
-    }
-
-    public override void BuyAction()
-    {
-        switch (level)
+        public override void StartControllerCall()
         {
-            case 1:
-                data.SetClickPower(2);
-                break;
-            case 2:
-                data.SetClickPower(5);
-                break;
-            case 3:
-                data.SetClickPower(10);
-                break;
-            case 4:
-                data.SetClickPower(20);
-                break;
-            case 5:
-                data.SetClickPower(40);
-                break;
+            _tournamentManager.onTournamentWin += CheckConditions;
+        }
+
+        public override int GetCurrentCounter()
+        {
+            return data.TournamentWins;
+        }
+
+        public override void BuyAction()
+        {
+            switch (level)
+            {
+                case 1:
+                    data.UnlockFood(1);
+                    data.WorkersManager.SetWorkerFoodPerDay(data.WorkersManager.WorkerFoodPerDay + 5);
+                    break;
+                case 2:
+                    data.UnlockFood(2);
+                    data.WorkersManager.SetWorkerFoodPerDay(data.WorkersManager.WorkerFoodPerDay + 5);
+                    break;
+                case 3:
+                    data.UnlockFood(3);
+                    data.WorkersManager.SetWorkerFoodPerDay(data.WorkersManager.WorkerFoodPerDay + 5);
+                    break;
+                case 4:
+                    data.UnlockFood(4);
+                    data.WorkersManager.SetWorkerFoodPerDay(data.WorkersManager.WorkerFoodPerDay + 5);
+                    break;
+            }
         }
     }
 }

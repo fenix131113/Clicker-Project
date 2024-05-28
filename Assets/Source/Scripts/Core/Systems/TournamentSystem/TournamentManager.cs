@@ -64,7 +64,7 @@ namespace Clicker.Core.Tournament
         }
         private void StartTournament()
         {
-            _objectsContainer.ClickerScript.onFoodCooked -= NewFoodCookedAction;
+            _objectsContainer.ClickerScript.onFoodCookedEarned -= NewFoodCookedAction;
             TimeManager.onNewHour -= NewHourCheck;
             _currentTournamentProgress = 0;
             _remainingHours = _tournamentHoursTime;
@@ -74,7 +74,7 @@ namespace Clicker.Core.Tournament
             _timeManager.IsTimePaused = false;
             _objectsContainer.AskForTournamentPanel.SetActive(false);
             TimeManager.onNewHour += NewHourCheck;
-            _objectsContainer.ClickerScript.onFoodCooked += NewFoodCookedAction;
+            _objectsContainer.ClickerScript.onFoodCookedEarned += NewFoodCookedAction;
 
             _objectsContainer.TournamentProgressFiller.transform.parent.parent.gameObject.SetActive(true);
         }
@@ -89,7 +89,7 @@ namespace Clicker.Core.Tournament
         {
             _notifications.CreateNewNotification("Вы проиграли в турнире");
             TimeManager.onNewHour -= NewHourCheck;
-            _objectsContainer.ClickerScript.onFoodCooked -= NewFoodCookedAction;
+            _objectsContainer.ClickerScript.onFoodCookedEarned -= NewFoodCookedAction;
             _objectsContainer.TournamentProgressFiller.transform.parent.parent.gameObject.SetActive(false);
         }
         private void NewHourCheck(int hour)
@@ -106,7 +106,7 @@ namespace Clicker.Core.Tournament
             _data.AddSkillPoints(1);
 
             TimeManager.onNewHour -= NewHourCheck;
-            _objectsContainer.ClickerScript.onFoodCooked -= NewFoodCookedAction;
+            _objectsContainer.ClickerScript.onFoodCookedEarned -= NewFoodCookedAction;
             _objectsContainer.TournamentProgressFiller.transform.parent.parent.gameObject.SetActive(false);
         }
         private void NewFoodCookedAction(int earnedMoney)
