@@ -21,13 +21,13 @@ namespace Clicker.Core.SkillSystem.Skills
 					data.SetMoneyPerFood(data.MoneyPerFood + 2);
 					break;
 				case 3:
-					data.SetMoneyPerFood(data.MoneyPerFood + 4);
+					data.SetMoneyPerFood(data.MoneyPerFood + 3);
 					break;
 				case 4:
-					data.SetMoneyPerFood(data.MoneyPerFood + 8);
+					data.SetMoneyPerFood(data.MoneyPerFood + 4);
 					break;
 				case 5:
-                    data.SetMoneyPerFood(data.MoneyPerFood + 16);
+                    data.SetMoneyPerFood(data.MoneyPerFood + 5);
                     break;
 			}
 		}

@@ -14,7 +14,8 @@ public class MafiaManager
 
     [JsonProperty][SerializeField] private int _mafiaPayExpiredCount = 0;
 
-    [JsonIgnore] private readonly int _mafiaVisitPeriod = 31;
+    [JsonIgnore] private readonly int _mafiaVisitPeriod = 14;
+    [JsonIgnore] private const int _takeMoneyMultiplier = 2;
 
     [JsonProperty] private int _takeMoneyCount = 5000;
     [JsonIgnore] private GlobalObjectsContainer objectsContainer;
@@ -27,7 +28,11 @@ public class MafiaManager
     [JsonIgnore] public int MafiaPayExpiredCount => _mafiaPayExpiredCount;
     [JsonIgnore] public int MafiaVisitPeriod => _mafiaVisitPeriod;
 
+    public delegate void MafiaNoParameterEventHandler();
+    public event MafiaNoParameterEventHandler onMafiaPayComplete;
+
     public void SetData(PlayerData data) => this.data = data;
+
     [Inject]
     public void LoadSavedData(MafiaManager mafiaManager)
     {
@@ -68,12 +73,13 @@ public class MafiaManager
     {
         if (data.Money >= TakeMoneyCount)
         {
+            onMafiaPayComplete?.Invoke();
             data.Money -= TakeMoneyCount;
             timeManager.IsTimePaused = false;
             _isWaitForPayment = false;
             objectsContainer.MafiaTakeMoneyAskPanel.SetActive(false);
             earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day, "Мафия", 0, TakeMoneyCount);
-            _takeMoneyCount *= 2;
+            _takeMoneyCount *= _takeMoneyMultiplier;
         }
     }
 

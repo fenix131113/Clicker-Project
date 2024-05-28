@@ -12,6 +12,7 @@ namespace Clicker.Core.SkillSystem
         [SerializeField] private Sprite selectedIcon;
         [SerializeField] private Sprite defaultIcon;
         [SerializeField] private SkillItem[] needToBuyItems;
+        [SerializeField] private PassiveSkillItem[] needPassiveItems;
 
         [SerializeField] private int _moneyCost;
         public int MoneyCost => _moneyCost;
@@ -57,6 +58,10 @@ namespace Clicker.Core.SkillSystem
             if (needToBuyItems.Length > 0)
                 foreach (SkillItem item in needToBuyItems)
                     if (!item.IsBuyed)
+                        return;
+            if (needPassiveItems.Length > 0)
+                foreach (var item in needPassiveItems)
+                    if (!item.IsOpened)
                         return;
 
             switch (_skillCostType)
@@ -127,19 +132,37 @@ namespace Clicker.Core.SkillSystem
             //    foreach (SkillItem item in needToBuyItems)
             //        if (!item.IsBuyed)
             //            return;
+            _objectsContainer.SkillInfoPanelRectTransform.GetComponent<SkillInfoPanel>().UpdateInfoCommonSkill(this);
+            _objectsContainer.SkillInfoPanelRectTransform.gameObject.SetActive(true);
+
+            bool commonSkillsBuyed = false;
+            bool passiveSkillsBuyed = false;
+
             if (!_isBuyed && needToBuyItems.Length > 0)
             {
                 foreach (SkillItem item in needToBuyItems)
                     if (!item.IsBuyed)
                         break;
-                    else if (item == needToBuyItems[^1] && item.IsBuyed)
-                        _img.sprite = selectedIcon;
+                    else if (item == needToBuyItems[^1])
+                        commonSkillsBuyed = true;
             }
-            else if (needToBuyItems.Length == 0)
-                _img.sprite = selectedIcon;
+            if (!_isBuyed && needPassiveItems.Length > 0)
+            {
+                foreach (var item in needPassiveItems)
+                    if (!item.IsOpened)
+                        break;
+                    else if (item == needPassiveItems[^1])
+                        passiveSkillsBuyed = true;
+            }
 
-            _objectsContainer.SkillInfoPanelRectTransform.GetComponent<SkillInfoPanel>().UpdateInfo(this);
-            _objectsContainer.SkillInfoPanelRectTransform.gameObject.SetActive(true);
+            if (!IsBuyed && commonSkillsBuyed && passiveSkillsBuyed && needPassiveItems.Length > 0 && needToBuyItems.Length > 0)
+                _img.sprite = selectedIcon;
+            else if (!IsBuyed && passiveSkillsBuyed && needPassiveItems.Length > 0 && needToBuyItems.Length == 0)
+                _img.sprite = selectedIcon;
+            else if (!IsBuyed && commonSkillsBuyed && needPassiveItems.Length == 0 && needToBuyItems.Length > 0)
+                _img.sprite = selectedIcon;
+            else if (!IsBuyed && needPassiveItems.Length == 0 && needToBuyItems.Length == 0)
+                _img.sprite = selectedIcon;
         }
 
         public void OnPointerExit(PointerEventData eventData)

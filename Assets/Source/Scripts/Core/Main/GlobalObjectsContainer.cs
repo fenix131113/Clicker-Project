@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class GlobalObjectsContainer : MonoBehaviour
 {
+
     [SerializeField] private GameObject mafiaTakeMoneyAskPanel;
     public GameObject MafiaTakeMoneyAskPanel => mafiaTakeMoneyAskPanel;
 

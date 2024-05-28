@@ -658,6 +658,7 @@ MonoBehaviour:
   selectedIcon: {fileID: -1648002461, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   defaultIcon: {fileID: -120867327, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 1000
   _skillPointsCost: 1
   _skillCostType: 0
@@ -1020,6 +1021,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 469915063}
   - {fileID: 1135716831}
+  needPassiveItems: []
   _moneyCost: 250
   _skillPointsCost: 0
   _skillCostType: 0
@@ -1375,6 +1377,7 @@ MonoBehaviour:
   selectedIcon: {fileID: -1218283714, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   defaultIcon: {fileID: -1237851372, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 3500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -1628,6 +1631,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 65994504}
   - {fileID: 142686592}
+  needPassiveItems: []
   _moneyCost: 500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -1907,7 +1911,7 @@ GameObject:
   - component: {fileID: 95843524}
   - component: {fileID: 95843523}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2007,6 +2011,7 @@ MonoBehaviour:
   defaultIcon: {fileID: -1873706565, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   needToBuyItems:
   - {fileID: 352451054}
+  needPassiveItems: []
   _moneyCost: 1
   _skillPointsCost: 1
   _skillCostType: 0
@@ -2200,6 +2205,7 @@ MonoBehaviour:
   selectedIcon: {fileID: -1433375431, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   defaultIcon: {fileID: -420702994, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 10000
   _skillPointsCost: 0
   _skillCostType: 0
@@ -2282,6 +2288,140 @@ RectTransform:
   m_AnchoredPosition: {x: -769.79987, y: -1362}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &134988719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 134988720}
+  - component: {fileID: 134988722}
+  - component: {fileID: 134988721}
+  m_Layer: 5
+  m_Name: FillerAmountText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &134988720
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134988719}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 441908531}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &134988721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134988719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 100 / 211
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8555d7ea5500ec54987076fae64d990b, type: 2}
+  m_sharedMaterial: {fileID: -4592900693216259282, guid: 8555d7ea5500ec54987076fae64d990b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &134988722
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134988719}
+  m_CullTransparentMesh: 1
 --- !u!1 &141655876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2355,6 +2495,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 469915063}
   - {fileID: 248669947}
+  needPassiveItems: []
   _moneyCost: 500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -2447,7 +2588,7 @@ GameObject:
   - component: {fileID: 155100529}
   - component: {fileID: 155100528}
   m_Layer: 5
-  m_Name: Image (38)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2659,6 +2800,7 @@ RectTransform:
   - {fileID: 1513814384}
   - {fileID: 492969839}
   - {fileID: 272385598}
+  - {fileID: 441908531}
   m_Father: {fileID: 928048166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2720,6 +2862,9 @@ MonoBehaviour:
   skillDescriptionText: {fileID: 1513814385}
   skillMoneyCostText: {fileID: 492969840}
   skillPointsCostText: {fileID: 272385599}
+  fillerAmountText: {fileID: 134988721}
+  Filler: {fileID: 920253345}
+  FillerObject: {fileID: 441908530}
 --- !u!1 &213269161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,7 +2988,7 @@ GameObject:
   - component: {fileID: 222242065}
   - component: {fileID: 222242064}
   m_Layer: 5
-  m_Name: Image (21)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2918,7 +3063,7 @@ GameObject:
   - component: {fileID: 241547402}
   - component: {fileID: 241547401}
   m_Layer: 5
-  m_Name: Image (11)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3018,6 +3163,7 @@ MonoBehaviour:
   defaultIcon: {fileID: 447417393, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   needToBuyItems:
   - {fileID: 1868031025}
+  needPassiveItems: []
   _moneyCost: 0
   _skillPointsCost: 1
   _skillCostType: 0
@@ -3109,7 +3255,7 @@ GameObject:
   - component: {fileID: 252713054}
   - component: {fileID: 252713053}
   m_Layer: 5
-  m_Name: Image (15)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3131,7 +3277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -113.399765, y: 912.80005}
+  m_AnchoredPosition: {x: -113.39966, y: 912.80005}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &252713053
@@ -3284,6 +3430,7 @@ MonoBehaviour:
   defaultIcon: {fileID: -1183221211, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   needToBuyItems:
   - {fileID: 1378183814}
+  needPassiveItems: []
   _moneyCost: 0
   _skillPointsCost: 1
   _skillCostType: 0
@@ -4005,6 +4152,7 @@ MonoBehaviour:
   selectedIcon: {fileID: 560268235, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   defaultIcon: {fileID: -284108622, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 1500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -4293,6 +4441,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 1788207897}
   - {fileID: 102277909}
+  needPassiveItems: []
   _moneyCost: 3500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -4405,6 +4554,7 @@ MonoBehaviour:
   selectedIcon: {fileID: 1871161427, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   defaultIcon: {fileID: 1002176022, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 500
   _skillPointsCost: 1
   _skillCostType: 0
@@ -4764,7 +4914,7 @@ GameObject:
   - component: {fileID: 339078339}
   - component: {fileID: 339078338}
   m_Layer: 5
-  m_Name: Image (18)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4883,6 +5033,7 @@ MonoBehaviour:
   defaultIcon: {fileID: 1665842817, guid: cffa078e11488a84c93732dfec3b05b5, type: 3}
   needToBuyItems:
   - {fileID: 643245383}
+  needPassiveItems: []
   _moneyCost: 1
   _skillPointsCost: 1
   _skillCostType: 0
@@ -5112,6 +5263,7 @@ MonoBehaviour:
   defaultIcon: {fileID: 1631443051, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   needToBuyItems:
   - {fileID: 248669947}
+  needPassiveItems: []
   _moneyCost: 1500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -5565,6 +5717,7 @@ MonoBehaviour:
   selectedIcon: {fileID: 1079981793, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   defaultIcon: {fileID: -113563940, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 750
   _skillPointsCost: 1
   _skillCostType: 0
@@ -6426,6 +6579,83 @@ MonoBehaviour:
   _clickAnimEase: 22
   _hoverOnSound: {fileID: 0}
   _clickSound: {fileID: 8300000, guid: 140f585f9c3227c4db1aadb8f9cef101, type: 3}
+--- !u!1 &441908530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441908531}
+  - component: {fileID: 441908533}
+  - component: {fileID: 441908532}
+  m_Layer: 5
+  m_Name: FillerBack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &441908531
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441908530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 920253344}
+  - {fileID: 134988720}
+  m_Father: {fileID: 204110456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 20.0261}
+  m_SizeDelta: {x: 0, y: 40.0524}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &441908532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441908530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.070398726, g: 0.09095766, b: 0.13207549, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b03523044b29a5d4086bf14515a9bca0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &441908533
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441908530}
+  m_CullTransparentMesh: 1
 --- !u!1 &449617112
 GameObject:
   m_ObjectHideFlags: 0
@@ -6748,7 +6978,7 @@ GameObject:
   - component: {fileID: 468249824}
   - component: {fileID: 468249823}
   m_Layer: 5
-  m_Name: Image (16)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6925,6 +7155,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 1730482033}
   - {fileID: 260871844}
+  needPassiveItems: []
   _moneyCost: 50
   _skillPointsCost: 0
   _skillCostType: 0
@@ -7016,7 +7247,7 @@ GameObject:
   - component: {fileID: 480163588}
   - component: {fileID: 480163587}
   m_Layer: 5
-  m_Name: Image (31)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7091,7 +7322,7 @@ GameObject:
   - component: {fileID: 485897404}
   - component: {fileID: 485897403}
   m_Layer: 5
-  m_Name: Image (36)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7893,6 +8124,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 887456733}
   - {fileID: 85243101}
+  needPassiveItems: []
   _moneyCost: 750
   _skillPointsCost: 0
   _skillCostType: 0
@@ -8091,7 +8323,7 @@ GameObject:
   - component: {fileID: 598087017}
   - component: {fileID: 598087016}
   m_Layer: 5
-  m_Name: Image (8)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8190,6 +8422,7 @@ MonoBehaviour:
   selectedIcon: {fileID: -1548955922, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   defaultIcon: {fileID: 1541116756, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 250
   _skillPointsCost: 1
   _skillCostType: 0
@@ -8378,6 +8611,7 @@ MonoBehaviour:
   defaultIcon: {fileID: -990049290, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   needToBuyItems:
   - {fileID: 1022405858}
+  needPassiveItems: []
   _moneyCost: 3000
   _skillPointsCost: 0
   _skillCostType: 0
@@ -8843,6 +9077,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 260871844}
   - {fileID: 1168632090}
+  needPassiveItems: []
   _moneyCost: 1500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -9223,6 +9458,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 991349043}
   - {fileID: 1420329300}
+  needPassiveItems: []
   _moneyCost: 4750
   _skillPointsCost: 0
   _skillCostType: 0
@@ -9413,6 +9649,7 @@ MonoBehaviour:
   selectedIcon: {fileID: -1283064511, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   defaultIcon: {fileID: 694308094, guid: abf61cfe99b85634abb41393e3ea20ee, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 2000
   _skillPointsCost: 1
   _skillCostType: 0
@@ -9526,6 +9763,7 @@ MonoBehaviour:
   defaultIcon: {fileID: -1174611748, guid: 531261f21259dbe4186cfb9f0e258525, type: 3}
   needToBuyItems:
   - {fileID: 1168632090}
+  needPassiveItems: []
   _moneyCost: 750
   _skillPointsCost: 0
   _skillCostType: 0
@@ -9660,7 +9898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a1f68d6d09d7a2044a6b59fc982b3fd6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdb12b839d25f9a44851b5534002564e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9690,7 +9928,7 @@ GameObject:
   - component: {fileID: 779451336}
   - component: {fileID: 779451335}
   m_Layer: 5
-  m_Name: Image (32)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9765,7 +10003,7 @@ GameObject:
   - component: {fileID: 782994976}
   - component: {fileID: 782994975}
   m_Layer: 5
-  m_Name: Image (26)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9840,7 +10078,7 @@ GameObject:
   - component: {fileID: 784143793}
   - component: {fileID: 784143792}
   m_Layer: 5
-  m_Name: Image (22)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10377,6 +10615,7 @@ MonoBehaviour:
   selectedIcon: {fileID: 1084212197, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   defaultIcon: {fileID: -1879302381, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 7000
   _skillPointsCost: 1
   _skillCostType: 0
@@ -10615,7 +10854,7 @@ GameObject:
   - component: {fileID: 831308693}
   - component: {fileID: 831308692}
   m_Layer: 5
-  m_Name: Image (30)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10715,6 +10954,7 @@ MonoBehaviour:
   defaultIcon: {fileID: -809917299, guid: 52c039e0430538d48a80a5659485a5e5, type: 3}
   needToBuyItems:
   - {fileID: 767609987}
+  needPassiveItems: []
   _moneyCost: 1000
   _skillPointsCost: 0
   _skillCostType: 0
@@ -10803,7 +11043,7 @@ GameObject:
   - component: {fileID: 845167627}
   - component: {fileID: 845167626}
   m_Layer: 5
-  m_Name: Image (9)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11286,6 +11526,7 @@ MonoBehaviour:
   defaultIcon: {fileID: 1848301489, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   needToBuyItems:
   - {fileID: 102277909}
+  needPassiveItems: []
   _moneyCost: 2000
   _skillPointsCost: 0
   _skillCostType: 0
@@ -11398,6 +11639,7 @@ MonoBehaviour:
   selectedIcon: {fileID: -1659611648, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   defaultIcon: {fileID: 598686723, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 1000
   _skillPointsCost: 0
   _skillCostType: 0
@@ -11532,6 +11774,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 142686592}
   - {fileID: 102277909}
+  needPassiveItems: []
   _moneyCost: 1500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -11605,7 +11848,7 @@ GameObject:
   - component: {fileID: 890044685}
   - component: {fileID: 890044684}
   m_Layer: 5
-  m_Name: Image (12)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11680,7 +11923,7 @@ GameObject:
   - component: {fileID: 899086496}
   - component: {fileID: 899086495}
   m_Layer: 5
-  m_Name: Image (14)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11755,7 +11998,7 @@ GameObject:
   - component: {fileID: 906332166}
   - component: {fileID: 906332165}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11841,7 +12084,7 @@ GameObject:
   - component: {fileID: 913454906}
   - component: {fileID: 913454905}
   m_Layer: 5
-  m_Name: Image (34)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12048,6 +12291,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919237111}
+  m_CullTransparentMesh: 1
+--- !u!1 &920253343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920253344}
+  - component: {fileID: 920253346}
+  - component: {fileID: 920253345}
+  m_Layer: 5
+  m_Name: Filler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &920253344
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920253343}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 441908531}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 20.026}
+  m_SizeDelta: {x: 0, y: 40.052}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &920253345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920253343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.12259701, g: 0.17292634, b: 0.2735849, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b03523044b29a5d4086bf14515a9bca0, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 0.332
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &920253346
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920253343}
   m_CullTransparentMesh: 1
 --- !u!1 &927170286
 GameObject:
@@ -12417,6 +12735,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 299904341}
   - {fileID: 1022405858}
+  needPassiveItems: []
   _moneyCost: 4500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -12505,7 +12824,7 @@ GameObject:
   - component: {fileID: 991590245}
   - component: {fileID: 991590244}
   m_Layer: 5
-  m_Name: Image (37)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12606,6 +12925,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 730646922}
   - {fileID: 1824691878}
+  needPassiveItems: []
   _moneyCost: 5000
   _skillPointsCost: 0
   _skillCostType: 0
@@ -12797,6 +13117,7 @@ MonoBehaviour:
   defaultIcon: {fileID: 772630879, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   needToBuyItems:
   - {fileID: 880617277}
+  needPassiveItems: []
   _moneyCost: 0
   _skillPointsCost: 1
   _skillCostType: 0
@@ -13205,6 +13526,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 1093615549}
   - {fileID: 2039142675}
+  needPassiveItems: []
   _moneyCost: 3000
   _skillPointsCost: 0
   _skillCostType: 0
@@ -13455,6 +13777,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 1788207897}
   - {fileID: 1384495901}
+  needPassiveItems: []
   _moneyCost: 2750
   _skillPointsCost: 0
   _skillCostType: 0
@@ -13569,6 +13892,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 586685698}
   - {fileID: 1452983827}
+  needPassiveItems: []
   _moneyCost: 3750
   _skillPointsCost: 1
   _skillCostType: 0
@@ -13682,6 +14006,7 @@ MonoBehaviour:
   selectedIcon: {fileID: 489842284, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   defaultIcon: {fileID: 1285942453, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 500
   _skillPointsCost: 1
   _skillCostType: 0
@@ -13884,7 +14209,7 @@ GameObject:
   - component: {fileID: 1126529243}
   - component: {fileID: 1126529242}
   m_Layer: 5
-  m_Name: Image (29)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14000,6 +14325,7 @@ MonoBehaviour:
   defaultIcon: {fileID: -1750424251, guid: e7d87c66c60bbf3428d650fd148f47da, type: 3}
   needToBuyItems:
   - {fileID: 1730482033}
+  needPassiveItems: []
   _moneyCost: 100
   _skillPointsCost: 0
   _skillCostType: 0
@@ -14213,7 +14539,7 @@ GameObject:
   - component: {fileID: 1165822027}
   - component: {fileID: 1165822026}
   m_Layer: 5
-  m_Name: Image (27)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14313,6 +14639,7 @@ MonoBehaviour:
   defaultIcon: {fileID: -470897911, guid: 83037acfc17ff6742b9468bdcf086f5f, type: 3}
   needToBuyItems:
   - {fileID: 1495229773}
+  needPassiveItems: []
   _moneyCost: 500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -14602,7 +14929,7 @@ GameObject:
   - component: {fileID: 1178384401}
   - component: {fileID: 1178384400}
   m_Layer: 5
-  m_Name: Image (28)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14777,6 +15104,7 @@ MonoBehaviour:
   defaultIcon: {fileID: -730420889, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   needToBuyItems:
   - {fileID: 763183240}
+  needPassiveItems: []
   _moneyCost: 2000
   _skillPointsCost: 0
   _skillCostType: 0
@@ -14866,7 +15194,7 @@ GameObject:
   - component: {fileID: 1188720011}
   - component: {fileID: 1188720010}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14965,6 +15293,7 @@ MonoBehaviour:
   selectedIcon: {fileID: -547937972, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   defaultIcon: {fileID: 376113126, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 600
   _skillPointsCost: 0
   _skillCostType: 0
@@ -15080,6 +15409,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 65994504}
   - {fileID: 1315157956}
+  needPassiveItems: []
   _moneyCost: 0
   _skillPointsCost: 1
   _skillCostType: 0
@@ -15402,6 +15732,7 @@ MonoBehaviour:
   selectedIcon: {fileID: -1881905008, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   defaultIcon: {fileID: -1619832882, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -15493,7 +15824,7 @@ GameObject:
   - component: {fileID: 1283854709}
   - component: {fileID: 1283854708}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15740,6 +16071,7 @@ MonoBehaviour:
   defaultIcon: {fileID: 421935163, guid: 731e73a5dfea7774b8ec73f0979f6381, type: 3}
   needToBuyItems:
   - {fileID: 1135716831}
+  needPassiveItems: []
   _moneyCost: 0
   _skillPointsCost: 1
   _skillCostType: 0
@@ -15853,6 +16185,7 @@ MonoBehaviour:
   selectedIcon: {fileID: -1438956500, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   defaultIcon: {fileID: 1023879185, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 200
   _skillPointsCost: 0
   _skillCostType: 0
@@ -15942,7 +16275,7 @@ GameObject:
   - component: {fileID: 1348954972}
   - component: {fileID: 1348954971}
   m_Layer: 5
-  m_Name: Image (23)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16244,7 +16577,7 @@ GameObject:
   - component: {fileID: 1377612096}
   - component: {fileID: 1377612095}
   m_Layer: 5
-  m_Name: Image (33)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16344,6 +16677,7 @@ MonoBehaviour:
   defaultIcon: {fileID: 1139794413, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   needToBuyItems:
   - {fileID: 1495229773}
+  needPassiveItems: []
   _moneyCost: 500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -16432,7 +16766,7 @@ GameObject:
   - component: {fileID: 1379349397}
   - component: {fileID: 1379349396}
   m_Layer: 5
-  m_Name: Image (10)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16533,6 +16867,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 680554551}
   - {fileID: 767609987}
+  needPassiveItems: []
   _moneyCost: 1750
   _skillPointsCost: 0
   _skillCostType: 0
@@ -16683,6 +17018,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 299904341}
   - {fileID: 1093615549}
+  needPassiveItems: []
   _moneyCost: 3750
   _skillPointsCost: 0
   _skillCostType: 0
@@ -17148,6 +17484,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 85243101}
   - {fileID: 1269111600}
+  needPassiveItems: []
   _moneyCost: 0
   _skillPointsCost: 1
   _skillCostType: 0
@@ -17504,6 +17841,7 @@ MonoBehaviour:
   selectedIcon: {fileID: 83511870, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   defaultIcon: {fileID: -1163698406, guid: e0dbff22e5aedaa42a4c0fe374a19ad3, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 0
   _skillPointsCost: 1
   _skillCostType: 0
@@ -17595,7 +17933,7 @@ GameObject:
   - component: {fileID: 1506684317}
   - component: {fileID: 1506684316}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17804,7 +18142,7 @@ GameObject:
   - component: {fileID: 1523108246}
   - component: {fileID: 1523108245}
   m_Layer: 5
-  m_Name: Image (25)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18203,7 +18541,7 @@ GameObject:
   - component: {fileID: 1558236819}
   - component: {fileID: 1558236818}
   m_Layer: 5
-  m_Name: Image (20)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18427,6 +18765,7 @@ MonoBehaviour:
   selectedIcon: {fileID: 874131755, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   defaultIcon: {fileID: 650946717, guid: 2a2a35e73974d0840b101ecaa6f03d6a, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 100
   _skillPointsCost: 0
   _skillCostType: 0
@@ -18720,7 +19059,7 @@ GameObject:
   - component: {fileID: 1593194290}
   - component: {fileID: 1593194289}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18886,7 +19225,7 @@ GameObject:
   - component: {fileID: 1606264193}
   - component: {fileID: 1606264192}
   m_Layer: 5
-  m_Name: Image (35)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18972,7 +19311,7 @@ GameObject:
   - component: {fileID: 1618984587}
   - component: {fileID: 1618984586}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19138,7 +19477,7 @@ GameObject:
   - component: {fileID: 1639309883}
   - component: {fileID: 1639309882}
   m_Layer: 5
-  m_Name: Image (39)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19239,6 +19578,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 1643505831}
   - {fileID: 1105659411}
+  needPassiveItems: []
   _moneyCost: 0
   _skillPointsCost: 1
   _skillCostType: 0
@@ -19354,6 +19694,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 2068750968}
   - {fileID: 586685698}
+  needPassiveItems: []
   _moneyCost: 1000
   _skillPointsCost: 0
   _skillCostType: 0
@@ -19803,6 +20144,7 @@ MonoBehaviour:
   defaultIcon: {fileID: 1367052223, guid: 2b95fb20ab4b160418b2125e7949121e, type: 3}
   needToBuyItems:
   - {fileID: 1495229773}
+  needPassiveItems: []
   _moneyCost: 5
   _skillPointsCost: 0
   _skillCostType: 0
@@ -20135,6 +20477,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 680554551}
   - {fileID: 248669947}
+  needPassiveItems: []
   _moneyCost: 2500
   _skillPointsCost: 0
   _skillCostType: 0
@@ -20349,7 +20692,7 @@ GameObject:
   - component: {fileID: 1807880079}
   - component: {fileID: 1807880078}
   m_Layer: 5
-  m_Name: Image (24)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20549,7 +20892,7 @@ GameObject:
   - component: {fileID: 1811774676}
   - component: {fileID: 1811774675}
   m_Layer: 5
-  m_Name: Image (19)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20795,6 +21138,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 1420329300}
   - {fileID: 1049436639}
+  needPassiveItems: []
   _moneyCost: 4000
   _skillPointsCost: 0
   _skillCostType: 0
@@ -21303,6 +21647,7 @@ MonoBehaviour:
   defaultIcon: {fileID: -1973290614, guid: 5c999d91e63b9b743b936ebf07426eaa, type: 3}
   needToBuyItems:
   - {fileID: 260871844}
+  needPassiveItems: []
   _moneyCost: 1000
   _skillPointsCost: 0
   _skillCostType: 0
@@ -21672,7 +22017,7 @@ GameObject:
   - component: {fileID: 1935772359}
   - component: {fileID: 1935772358}
   m_Layer: 5
-  m_Name: Image (13)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22107,6 +22452,7 @@ MonoBehaviour:
   selectedIcon: {fileID: -1617767299, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   defaultIcon: {fileID: -1622129437, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 1000
   _skillPointsCost: 1
   _skillCostType: 0
@@ -22320,7 +22666,7 @@ GameObject:
   - component: {fileID: 1986725741}
   - component: {fileID: 1986725740}
   m_Layer: 5
-  m_Name: Image (17)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22342,7 +22688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -114.99991, y: 1593.9999}
+  m_AnchoredPosition: {x: -115, y: 1594}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1986725740
@@ -22639,6 +22985,7 @@ MonoBehaviour:
   selectedIcon: {fileID: -2008054745, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   defaultIcon: {fileID: -351680488, guid: cdb1da609a7e6944180af9db85d60d6d, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 3000
   _skillPointsCost: 1
   _skillCostType: 0
@@ -22753,6 +23100,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 1384495901}
   - {fileID: 843327747}
+  needPassiveItems: []
   _moneyCost: 2000
   _skillPointsCost: 0
   _skillCostType: 0
@@ -23019,7 +23367,7 @@ GameObject:
   - component: {fileID: 2048947298}
   - component: {fileID: 2048947297}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23118,6 +23466,7 @@ MonoBehaviour:
   selectedIcon: {fileID: 801304136, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   defaultIcon: {fileID: 1583186441, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
   needToBuyItems: []
+  needPassiveItems: []
   _moneyCost: 1400
   _skillPointsCost: 0
   _skillCostType: 0
@@ -23308,6 +23657,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 887456733}
   - {fileID: 1022405858}
+  needPassiveItems: []
   _moneyCost: 3000
   _skillPointsCost: 0
   _skillCostType: 0
