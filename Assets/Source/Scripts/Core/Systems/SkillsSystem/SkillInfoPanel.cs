@@ -26,8 +26,8 @@ public class SkillInfoPanel : MonoBehaviour
 
     public void UpdateInfoCommonSkill(SkillItem skill)
     {
-        skillMoneyCostText.gameObject.SetActive(false);
-        skillPointsCostText.gameObject.SetActive(false);
+        skillMoneyCostText.gameObject.SetActive(true);
+        skillPointsCostText.gameObject.SetActive(true);
         FillerObject.SetActive(false);
 
         #region Set Pos Before Show
