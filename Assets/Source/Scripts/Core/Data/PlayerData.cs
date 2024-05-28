@@ -70,6 +70,27 @@ public class PlayerData
     [JsonProperty][SerializeField] private int _day;
 
 
+    [JsonProperty][SerializeField] private int _clicks;
+    public int Clicks => _clicks;
+    public void IncreaseClicks() => _clicks++;
+
+    [JsonProperty][SerializeField] private int _cookedFood;
+    public int CookedFood => _cookedFood;
+    public void IncreaseCookedFood() => _cookedFood++;
+
+    [JsonProperty][SerializeField] private int _tournamentWins;
+    public int TournamentWins => _tournamentWins;
+    public void IncreaseTournamentWins() => _tournamentWins++;
+
+    [JsonProperty][SerializeField] private int _mafiaPayments;
+    public int MafiaPayments => _mafiaPayments;
+    public void IncreaseMafiaPayments() => _mafiaPayments++;
+
+    [JsonProperty][SerializeField] private int _weeklyQuestsComplete;
+    public int WeeklyQuestsComplete => _weeklyQuestsComplete;
+    public void IncreaseWeeklyQuestsComplete() => _weeklyQuestsComplete++;
+
+
     private int _clickPower = 1;
     [JsonIgnore] public int ClickPower => _clickPower;
     public void SetClickPower(int count) => _clickPower = count;
@@ -121,17 +142,19 @@ public class PlayerData
 
         _timeManager = timeManager;
 
-        CalendarManager.onNewDay += (int day, DayType dayType) =>
+        _calendarManager.onNewDay += (int day, DayType dayType) =>
         {
             if (day % 7 == 0)
                 SaveData();
         };
-        if (PlayerPrefs.HasKey("data") || PlayerPrefs.HasKey("backup"))
+
+        if (PlayerPrefs.HasKey("data"))
             LoadData();
     }
 
     public void SaveData()
     {
+        Debug.Log("Data saved");
         _skillSaveManager.SaveSkillsData();
         _day = _calendarManager.Day;
         string dataSave = JsonConvert.SerializeObject(this);
@@ -156,6 +179,11 @@ public class PlayerData
         _unlockedFood = loadedData._unlockedFood;
         _currentClickerProgress = loadedData._currentClickerProgress;
         _buyedSkills = loadedData._buyedSkills;
+        _clicks = loadedData._clicks;
+        _cookedFood = loadedData._cookedFood;
+        _tournamentWins = loadedData._tournamentWins;
+        _mafiaPayments = loadedData._mafiaPayments;
+        _weeklyQuestsComplete = loadedData._weeklyQuestsComplete;
         _skillSaveManager.LoadSkillsData(_buyedSkills);
     }
 

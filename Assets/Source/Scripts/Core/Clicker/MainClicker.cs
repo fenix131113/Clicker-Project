@@ -25,8 +25,12 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
     private RectTransform _rect;
     private GameObject currentFoodObject;
 
-    public delegate void OnFoodCooked(int moneyEarned);
-    public event OnFoodCooked onFoodCooked;
+    public delegate void IntegerParameterClickerEvent(int parameter1);
+    public delegate void NoParametersClickerEvent();
+
+    public event IntegerParameterClickerEvent onFoodCookedEarned;
+    public event NoParametersClickerEvent onFoodCooked;
+    public event NoParametersClickerEvent onClick;
 
     [Inject]
     private void Init(PlayerData data, EarningsManager earningsManager, CalendarManager calendarManager)
@@ -37,12 +41,15 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
         _rect = GetComponent<RectTransform>();
         _clickerStartScale = _rect.localScale;
         _cameraStartPos = Camera.main.transform.position;
-        onFoodCooked += FoodCooked;
+        onFoodCookedEarned += FoodCooked;
         currentFoodObject = foodObjects.FirstOrDefault();
+        onClick += data.IncreaseClicks;
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        onClick?.Invoke();
+
         ClickLogic();
         ClickAnimation();
     }
@@ -62,8 +69,10 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
             //craftedItemAnims.Insert(0, craftedItem.transform.DOLocalRotate(new Vector3(0, 0, Random.Range(0, 361)), 1f));
             craftedItemAnims.onComplete += () => Destroy(craftedItem);
             data.Money += data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks);
-            onFoodCooked?.Invoke(data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks));
+            onFoodCookedEarned?.Invoke(data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks));
             data.SetCurrentClickerProgress(data.CurrentClickerProgress % data.MaxProgressBarClicks);
+            for (int i = 0; i < data.CurrentClickerProgress / data.MaxProgressBarClicks; i++)
+                onFoodCooked?.Invoke();
         }
 
         clickProgressFiller.DOFillAmount(1 / (float)data.MaxProgressBarClicks * data.CurrentClickerProgress, 0.1f);
@@ -76,7 +85,7 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
 
         List<GameObject> unlockedFoodObjects = new();
 
-        for(int i = 0; i < data.UnlockedFood.Count; i++)
+        for (int i = 0; i < data.UnlockedFood.Count; i++)
         {
             if (data.UnlockedFood.ElementAt(i))
                 unlockedFoodObjects.Add(foodObjects[i]);

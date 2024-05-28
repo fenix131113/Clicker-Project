@@ -12,12 +12,11 @@ namespace Clicker.Core.Time
 
         #region Events
         public delegate void OnNewDay(int dayNum, DayType dayType);
-        public static OnNewDay onNewDay;
+        public OnNewDay onNewDay;
         #endregion
 
         public void Init(TimeManager timeManager)
         {
-            onNewDay = null;
             _timeManager = timeManager;
         }
         public string GetRuDayType(DayType dayType)

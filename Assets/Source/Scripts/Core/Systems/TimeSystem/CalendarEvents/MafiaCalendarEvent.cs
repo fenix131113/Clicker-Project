@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace Clicker.Core.Time
 {
     public class MafiaCalendarEvent : CalendarEvent
@@ -17,7 +15,7 @@ namespace Clicker.Core.Time
             _eventPeriod = eventPeriod;
             _hour = hour;
             _mafiaManager = mafiaManager;
-            _description = $"Мафия придёт забрать с вас деньги, готовы ли вы? Они возьмут {_mafiaManager.TakeMoneyCount}";
+            _description = $"Мафия придёт забрать с вас деньги, готовы ли вы?";
         }
         public override void EventAction()
         {

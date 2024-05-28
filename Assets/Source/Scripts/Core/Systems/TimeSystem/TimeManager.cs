@@ -27,7 +27,7 @@ namespace Clicker.Core.Time
         public static event OnNewMinute onNewMinute;
 
 
-        // Во сколько раз время идёт быстрее реального
+        // Real time multiplier
         public const int TimeMultiplayer = 2000;
 
 

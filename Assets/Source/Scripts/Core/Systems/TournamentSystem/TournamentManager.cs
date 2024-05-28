@@ -25,16 +25,18 @@ namespace Clicker.Core.Tournament
         [JsonIgnore] public int RemainingHours => _remainingHours;
         #endregion
 
-        [JsonIgnore] private readonly int tournamentStartNeedProgressToWin = 20;
-        [JsonIgnore] private readonly int tournamentHoursTime = 12;
-        [JsonIgnore] private readonly int tournamentPeriod = 3;
+        [JsonIgnore] private readonly int _tournamentStartNeedProgressToWin = 20;
+        [JsonIgnore] private readonly int _tournamentHoursTime = 12;
+        [JsonIgnore] private readonly int _tournamentPeriod = 3;
         [JsonIgnore] private GlobalObjectsContainer _objectsContainer;
         [JsonIgnore] private TimeManager _timeManager;
-        [JsonIgnore] private PlayerData data;
-        [JsonIgnore] private NoticeSystem notifications;
+        [JsonIgnore] private PlayerData _data;
+        [JsonIgnore] private NoticeSystem _notifications;
+        public delegate void TournamentNoParameterEvent();
+        public event TournamentNoParameterEvent onTournamentWin;
 
-        [JsonIgnore] public int TournamentHoursTime => tournamentHoursTime;
-        [JsonIgnore] public int TournamentPeriod => tournamentPeriod;
+        [JsonIgnore] public int TournamentHoursTime => _tournamentHoursTime;
+        [JsonIgnore] public int TournamentPeriod => _tournamentPeriod;
 
         public void LoadSavedData(TournamentManager tournamentManager)
         {
@@ -43,14 +45,14 @@ namespace Clicker.Core.Tournament
             _needProgressToWin = tournamentManager.NeedProgressToWin;
             _remainingHours = tournamentManager.RemainingHours;
         }
-        public void SetData(PlayerData data) => this.data = data;
+        public void SetData(PlayerData data) => _data = data;
 
         [Inject]
         private void Init(GlobalObjectsContainer objectsContainer, TimeManager timeManager, NoticeSystem notifications)
         {
             _objectsContainer = objectsContainer;
             _timeManager = timeManager;
-            this.notifications = notifications;
+            _notifications = notifications;
         }
 
         public void AskForTournament()
@@ -62,17 +64,17 @@ namespace Clicker.Core.Tournament
         }
         private void StartTournament()
         {
-            _objectsContainer.ClickerScript.onFoodCooked -= NewFoodCookedAction;
+            _objectsContainer.ClickerScript.onFoodCookedEarned -= NewFoodCookedAction;
             TimeManager.onNewHour -= NewHourCheck;
             _currentTournamentProgress = 0;
-            _remainingHours = tournamentHoursTime;
-            _needProgressToWin = tournamentStartNeedProgressToWin;
+            _remainingHours = _tournamentHoursTime;
+            _needProgressToWin = _tournamentStartNeedProgressToWin;
             _objectsContainer.TournamentProgressFiller.fillAmount = 0;
             _objectsContainer.TournamentProgressText.text = $"0/{NeedProgressToWin}   {RemainingHours}ч. осталось";
             _timeManager.IsTimePaused = false;
             _objectsContainer.AskForTournamentPanel.SetActive(false);
             TimeManager.onNewHour += NewHourCheck;
-            _objectsContainer.ClickerScript.onFoodCooked += NewFoodCookedAction;
+            _objectsContainer.ClickerScript.onFoodCookedEarned += NewFoodCookedAction;
 
             _objectsContainer.TournamentProgressFiller.transform.parent.parent.gameObject.SetActive(true);
         }
@@ -85,9 +87,9 @@ namespace Clicker.Core.Tournament
 
         private void LooseTournament()
         {
-            notifications.CreateNewNotification("Вы проиграли в турнире");
+            _notifications.CreateNewNotification("Вы проиграли в турнире");
             TimeManager.onNewHour -= NewHourCheck;
-            _objectsContainer.ClickerScript.onFoodCooked -= NewFoodCookedAction;
+            _objectsContainer.ClickerScript.onFoodCookedEarned -= NewFoodCookedAction;
             _objectsContainer.TournamentProgressFiller.transform.parent.parent.gameObject.SetActive(false);
         }
         private void NewHourCheck(int hour)
@@ -99,11 +101,12 @@ namespace Clicker.Core.Tournament
         }
         private void WinTournament()
         {
-            notifications.CreateNewNotification("Вы выиграли в турнире и получили 1 очко навыков");
-            data.AddSkillPoints(1);
+            onTournamentWin?.Invoke();
+            _notifications.CreateNewNotification("Вы выиграли в турнире и получили 1 очко навыков");
+            _data.AddSkillPoints(1);
 
             TimeManager.onNewHour -= NewHourCheck;
-            _objectsContainer.ClickerScript.onFoodCooked -= NewFoodCookedAction;
+            _objectsContainer.ClickerScript.onFoodCookedEarned -= NewFoodCookedAction;
             _objectsContainer.TournamentProgressFiller.transform.parent.parent.gameObject.SetActive(false);
         }
         private void NewFoodCookedAction(int earnedMoney)
