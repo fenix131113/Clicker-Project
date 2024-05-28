@@ -1,5 +1,6 @@
 using Zenject;
 using UnityEngine;
+using Clicker.Core.Tournament;
 
 namespace Clicker.Core.SkillSystem
 {
@@ -9,14 +10,16 @@ namespace Clicker.Core.SkillSystem
         [SerializeField] protected PassiveSkillItem _skillItem;
 
         protected GlobalObjectsContainer _objectsContainer;
+        protected TournamentManager _tournamentManager;
         protected MainClicker _mainClicker;
 
         public int CounterGoal => _counterGoal;
 
         [Inject]
-        private void Init(PlayerData data, GlobalObjectsContainer objectsContainer)
+        private void Init(PlayerData data, GlobalObjectsContainer objectsContainer, TournamentManager tournamentManager)
         {
             this.data = data;
+            _tournamentManager = tournamentManager;
             _objectsContainer = objectsContainer;
             _mainClicker = _objectsContainer.ClickerScript;
 
