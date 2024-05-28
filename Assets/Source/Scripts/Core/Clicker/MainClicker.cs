@@ -44,6 +44,7 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
         onFoodCookedEarned += FoodCooked;
         currentFoodObject = foodObjects.FirstOrDefault();
         onClick += data.IncreaseClicks;
+        onFoodCooked += data.IncreaseCookedFood;
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -71,8 +72,7 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
             data.Money += data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks);
             onFoodCookedEarned?.Invoke(data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks));
             data.SetCurrentClickerProgress(data.CurrentClickerProgress % data.MaxProgressBarClicks);
-            for (int i = 0; i < data.CurrentClickerProgress / data.MaxProgressBarClicks; i++)
-                onFoodCooked?.Invoke();
+            onFoodCooked?.Invoke();
         }
 
         clickProgressFiller.DOFillAmount(1 / (float)data.MaxProgressBarClicks * data.CurrentClickerProgress, 0.1f);

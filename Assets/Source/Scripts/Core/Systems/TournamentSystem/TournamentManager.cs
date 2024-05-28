@@ -45,7 +45,11 @@ namespace Clicker.Core.Tournament
             _needProgressToWin = tournamentManager.NeedProgressToWin;
             _remainingHours = tournamentManager.RemainingHours;
         }
-        public void SetData(PlayerData data) => _data = data;
+        public void SetData(PlayerData data)
+        {
+            _data = data;
+            onTournamentWin += _data.IncreaseTournamentWins;
+        }
 
         [Inject]
         private void Init(GlobalObjectsContainer objectsContainer, TimeManager timeManager, NoticeSystem notifications)
