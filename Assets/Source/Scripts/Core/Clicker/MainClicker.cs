@@ -44,6 +44,7 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
         onFoodCookedEarned += FoodCooked;
         currentFoodObject = foodObjects.FirstOrDefault();
         onClick += data.IncreaseClicks;
+        onFoodCooked += data.IncreaseCookedFood;
     }
 
     public void OnPointerClick(PointerEventData eventData)

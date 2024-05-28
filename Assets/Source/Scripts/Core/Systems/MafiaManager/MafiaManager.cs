@@ -31,7 +31,11 @@ public class MafiaManager
     public delegate void MafiaNoParameterEventHandler();
     public event MafiaNoParameterEventHandler onMafiaPayComplete;
 
-    public void SetData(PlayerData data) => this.data = data;
+    public void SetData(PlayerData data)
+    {
+        this.data = data;
+        onMafiaPayComplete += data.IncreaseMafiaPayments;
+    }
 
     [Inject]
     public void LoadSavedData(MafiaManager mafiaManager)

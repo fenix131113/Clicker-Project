@@ -43,7 +43,7 @@ namespace Clicker.Core.Workers
                 if (dayIndex % 7 == 0)
                 {
                     data.Money -= salary;
-                    earningsManager.AddOrUpdateHistoryEntry(dayIndex - 1, "Зарплата", salary);
+                    earningsManager.AddOrUpdateHistoryEntry(dayIndex - 1, "Зарплата", 0, salary);
                 }
             }
         }
