@@ -28,7 +28,7 @@ namespace Clicker.Core.Time
 
 
         // Real time multiplier
-        public const int TimeMultiplayer = 2000;
+        public const int TimeMultiplayer = 200000;
 
 
         public TimeManager()

@@ -66,7 +66,7 @@ public class WeeklyQuestsController : MonoBehaviour
         {
             new ClickerWeeklyQuest("Кликов", this, 16, 16, _objectsContainer.ClickerScript),
             new FoodCookingWeeklyQuest("Приготовить еды", this, 1, 3, _objectsContainer.ClickerScript),
-            //new EarnMoneyWeeklyQuest("Заработать денег", this, 1, 3),
+            new EarnMoneyWeeklyQuest("Заработать денег", this, 1, 3),
         };
     }
 
