@@ -23,6 +23,7 @@ public class GameInitializer : MonoInstaller
         Container.Bind<PlayerData>().FromNew().AsSingle().NonLazy();
         Container.Bind<CalendarManager>().FromNew().AsSingle().NonLazy();
         Container.Bind<TimeManager>().FromComponentOn(generalContainer).AsSingle();
+        Container.Bind<WeeklyQuestsController>().FromComponentOn(generalContainer).AsSingle();
         Container.Bind<EarningsManager>().FromNew().AsSingle().NonLazy();
     }
 }

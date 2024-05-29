@@ -24,6 +24,9 @@ public class WeeklyQuestsController : MonoBehaviour
 
     public PlayerData Data => _data;
 
+    public delegate void OnQuestComplete();
+    public OnQuestComplete onQuestComplete;
+
     [Inject]
     public void Init(PlayerData data, CalendarManager calendarManager, GlobalObjectsContainer objectsContainer, NoticeSystem notices,
         EarningsManager earnings)
@@ -34,6 +37,7 @@ public class WeeklyQuestsController : MonoBehaviour
         _earnings = earnings;
         _calendarManager = calendarManager;
         calendarManager.onNewDay += OnNewDay;
+        onQuestComplete += _data.IncreaseWeeklyQuestsComplete;
 
         GenerateAllQuests();
 
@@ -62,7 +66,7 @@ public class WeeklyQuestsController : MonoBehaviour
         {
             new ClickerWeeklyQuest("Кликов", this, 16, 16, _objectsContainer.ClickerScript),
             new FoodCookingWeeklyQuest("Приготовить еды", this, 1, 3, _objectsContainer.ClickerScript),
-            new EarnMoneyWeeklyQuest("Заработать денег", this, 1, 3),
+            //new EarnMoneyWeeklyQuest("Заработать денег", this, 1, 3),
         };
     }
 

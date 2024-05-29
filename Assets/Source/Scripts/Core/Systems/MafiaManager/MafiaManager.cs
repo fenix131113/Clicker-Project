@@ -15,9 +15,9 @@ public class MafiaManager
     [JsonProperty][SerializeField] private int _mafiaPayExpiredCount = 0;
 
     [JsonIgnore] private readonly int _mafiaVisitPeriod = 14;
-    [JsonIgnore] private const int _takeMoneyMultiplier = 2;
+    [JsonIgnore] private const int _takeMoneyMultiplier = 4;
 
-    [JsonProperty] private int _takeMoneyCount = 5000;
+    [JsonProperty] private int _takeMoneyCount = 500;
     [JsonIgnore] private GlobalObjectsContainer objectsContainer;
     [JsonIgnore] private TimeManager timeManager;
     [JsonIgnore] private PlayerData data;
@@ -89,10 +89,10 @@ public class MafiaManager
 
     private void CheckLoseConditions()
     {
-        if (MafiaPayExpiredCount >= 3)
+        if (MafiaPayExpiredCount >= 2)
         {
             timeManager.IsTimePaused = true;
-            data.LooseGame("Вы 3 раза не отдали долг мафии и были убиты!");
+            data.LooseGame("Вы 2 раза не отдали долг мафии и были убиты!");
         }
     }
 }
