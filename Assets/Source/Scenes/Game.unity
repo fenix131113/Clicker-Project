@@ -1020,7 +1020,7 @@ MonoBehaviour:
   - {fileID: 469915063}
   - {fileID: 1135716831}
   needPassiveItems: []
-  _moneyCost: 250
+  _moneyCost: 200
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 65994505}
@@ -1435,7 +1435,7 @@ MonoBehaviour:
     \u0437\u0430 \u0435\u0434\u0443 \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 8
     -> 16"
   level: 4
-  _counterGoal: 14000
+  _counterGoal: 5000
   _skillItem: {fileID: 73070917}
 --- !u!114 &73070917
 MonoBehaviour:
@@ -2066,7 +2066,7 @@ MonoBehaviour:
     \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
     10->20"
   level: 4
-  _counterGoal: 6650
+  _counterGoal: 6000
   _skillItem: {fileID: 102277915}
 --- !u!114 &102277915
 MonoBehaviour:
@@ -2282,7 +2282,7 @@ MonoBehaviour:
     \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
     \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 16 -> 32"
   level: 5
-  _counterGoal: 20000
+  _counterGoal: 7500
   _skillItem: {fileID: 118649016}
 --- !u!114 &118649016
 MonoBehaviour:
@@ -3234,7 +3234,7 @@ MonoBehaviour:
     \u0422\u0435\u043F\u0435\u0440\u044C \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430
     \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435! 5->10"
   level: 3
-  _counterGoal: 2650
+  _counterGoal: 3750
   _skillItem: {fileID: 248669953}
 --- !u!114 &248669953
 MonoBehaviour:
@@ -3498,7 +3498,7 @@ MonoBehaviour:
     \u0422\u0435\u043F\u0435\u0440\u044C \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430
     \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435! 2->5"
   level: 2
-  _counterGoal: 500
+  _counterGoal: 2000
   _skillItem: {fileID: 260871850}
 --- !u!114 &260871850
 MonoBehaviour:
@@ -4217,7 +4217,7 @@ MonoBehaviour:
     \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
     \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 4 -> 8"
   level: 3
-  _counterGoal: 5000
+  _counterGoal: 1500
   _skillItem: {fileID: 283433280}
 --- !u!114 &283433280
 MonoBehaviour:
@@ -5268,8 +5268,8 @@ MonoBehaviour:
   - {fileID: 1868031025}
   needPassiveItems:
   - {fileID: 248669953}
-  _moneyCost: 2000
-  _skillPointsCost: 1
+  _moneyCost: 2500
+  _skillPointsCost: 2
   _skillCostType: 0
   _skill: {fileID: 352451055}
 --- !u!114 &352451055
@@ -7158,7 +7158,7 @@ MonoBehaviour:
   - {fileID: 1730482033}
   needPassiveItems:
   - {fileID: 260871850}
-  _moneyCost: 350
+  _moneyCost: 150
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 469915064}
@@ -8643,7 +8643,7 @@ MonoBehaviour:
   needPassiveItems:
   - {fileID: 1022405864}
   _moneyCost: 5000
-  _skillPointsCost: 1
+  _skillPointsCost: 4
   _skillCostType: 0
   _skill: {fileID: 643245384}
 --- !u!114 &643245384
@@ -9108,7 +9108,7 @@ MonoBehaviour:
   - {fileID: 1168632090}
   needPassiveItems:
   - {fileID: 260871850}
-  _moneyCost: 350
+  _moneyCost: 300
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 680554552}
@@ -9792,7 +9792,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 1168632090}
   needPassiveItems: []
-  _moneyCost: 150
+  _moneyCost: 100
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 767609988}
@@ -10981,7 +10981,7 @@ MonoBehaviour:
   needToBuyItems:
   - {fileID: 767609987}
   needPassiveItems: []
-  _moneyCost: 250
+  _moneyCost: 150
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 843327748}
@@ -11555,7 +11555,7 @@ MonoBehaviour:
   needPassiveItems:
   - {fileID: 102277915}
   _moneyCost: 3000
-  _skillPointsCost: 1
+  _skillPointsCost: 3
   _skillCostType: 0
   _skill: {fileID: 880617278}
 --- !u!114 &880617278
@@ -13222,7 +13222,7 @@ MonoBehaviour:
     \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
     20->40"
   level: 5
-  _counterGoal: 10000
+  _counterGoal: 8000
   _skillItem: {fileID: 1022405864}
 --- !u!114 &1022405864
 MonoBehaviour:
@@ -13570,7 +13570,7 @@ MonoBehaviour:
   - {fileID: 1093615549}
   - {fileID: 2039142675}
   needPassiveItems: []
-  _moneyCost: 1750
+  _moneyCost: 2250
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1049436640}
@@ -13821,7 +13821,7 @@ MonoBehaviour:
   - {fileID: 1788207897}
   - {fileID: 1384495901}
   needPassiveItems: []
-  _moneyCost: 1250
+  _moneyCost: 1750
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1093615550}
@@ -14681,7 +14681,7 @@ MonoBehaviour:
   needToBuyItems: []
   needPassiveItems:
   - {fileID: 1495229779}
-  _moneyCost: 100
+  _moneyCost: 75
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1168632091}
@@ -15487,7 +15487,7 @@ MonoBehaviour:
   - {fileID: 65994504}
   - {fileID: 1315157956}
   needPassiveItems: []
-  _moneyCost: 500
+  _moneyCost: 300
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1269111601}
@@ -15868,7 +15868,7 @@ MonoBehaviour:
     \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
     \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 2 -> 4"
   level: 2
-  _counterGoal: 1500
+  _counterGoal: 500
   _skillItem: {fileID: 1281765144}
 --- !u!114 &1281765144
 MonoBehaviour:
@@ -16749,7 +16749,7 @@ MonoBehaviour:
   needToBuyItems: []
   needPassiveItems:
   - {fileID: 1495229779}
-  _moneyCost: 100
+  _moneyCost: 250
   _skillPointsCost: 1
   _skillCostType: 0
   _skill: {fileID: 1378183815}
@@ -16939,7 +16939,7 @@ MonoBehaviour:
   - {fileID: 680554551}
   - {fileID: 767609987}
   needPassiveItems: []
-  _moneyCost: 500
+  _moneyCost: 400
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1384495902}
@@ -17971,7 +17971,7 @@ MonoBehaviour:
     \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
     1->2"
   level: 1
-  _counterGoal: 50
+  _counterGoal: 100
   _skillItem: {fileID: 1495229779}
 --- !u!114 &1495229779
 MonoBehaviour:
@@ -18893,7 +18893,7 @@ MonoBehaviour:
     \u0437\u0430 \u0435\u0434\u0443 \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 1
     -> 2"
   level: 1
-  _counterGoal: 100
+  _counterGoal: 50
   _skillItem: {fileID: 1574376410}
 --- !u!114 &1574376410
 MonoBehaviour:
@@ -20545,7 +20545,7 @@ MonoBehaviour:
   - {fileID: 680554551}
   needPassiveItems:
   - {fileID: 248669953}
-  _moneyCost: 1000
+  _moneyCost: 1250
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1788207898}
@@ -21716,8 +21716,8 @@ MonoBehaviour:
   - {fileID: 1378183814}
   needPassiveItems:
   - {fileID: 260871850}
-  _moneyCost: 1000
-  _skillPointsCost: 1
+  _moneyCost: 750
+  _skillPointsCost: 2
   _skillCostType: 0
   _skill: {fileID: 1868031026}
 --- !u!114 &1868031026
@@ -23283,7 +23283,7 @@ MonoBehaviour:
   - {fileID: 1384495901}
   - {fileID: 843327747}
   needPassiveItems: []
-  _moneyCost: 750
+  _moneyCost: 500
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 2039142676}
