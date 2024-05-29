@@ -64,9 +64,9 @@ public class WeeklyQuestsController : MonoBehaviour
     {
         _allQuests = new()
         {
-            new ClickerWeeklyQuest("Кликов", this, 100, 201, _objectsContainer.ClickerScript),
-            new FoodCookingWeeklyQuest("Приготовить еды", this, 10, 21, _objectsContainer.ClickerScript),
-            //new EarnMoneyWeeklyQuest("Заработать денег", this, 1, 3),
+            new ClickerWeeklyQuest("Кликов", this, 16, 16, _objectsContainer.ClickerScript),
+            new FoodCookingWeeklyQuest("Приготовить еды", this, 1, 3, _objectsContainer.ClickerScript),
+            new EarnMoneyWeeklyQuest("Заработать денег", this, 1, 3),
         };
     }
 
@@ -133,7 +133,7 @@ public class WeeklyQuestsController : MonoBehaviour
                 questIndex = Random.Range(0, _allQuests.Count);
 
             _currentWeeklyQuests[i] = new WeeklyQuestContainer(questIndex, Random.Range(_allQuests[questIndex].MinNeedProgress,
-                _allQuests[questIndex].MaxNeedProgress + 1), Random.Range(1, 8), Random.Range(40, 101), Random.Range(0, 2));
+                _allQuests[questIndex].MaxNeedProgress + 1), Random.Range(1, 8), Random.Range(1, 1001), Random.Range(0, 2));
 
             _allQuests[questIndex].onProgressIncreased += _currentWeeklyQuests[i].IncreaseProgress;
             _allQuests[questIndex].onProgressIncreased += (int parametr1) => CheckConditions();

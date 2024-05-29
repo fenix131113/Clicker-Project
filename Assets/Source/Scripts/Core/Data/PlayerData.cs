@@ -40,8 +40,9 @@ public class PlayerData
         get { return _money; }
         set
         {
-            onGetMoney?.Invoke(value - _money);
+            int oldMoney = _money;
             _money = value;
+            onGetMoney?.Invoke(value - oldMoney);
             if (value < 0)
                 LooseGame("Вы обанкротились!");
         }
