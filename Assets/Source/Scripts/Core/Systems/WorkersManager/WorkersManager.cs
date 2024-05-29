@@ -11,7 +11,7 @@ namespace Clicker.Core.Workers
         public void AddWorkers(int count) => _workers += count;
 
 
-        [JsonIgnore] private int _salaryPerWorker = 30;
+        [JsonIgnore] private int _salaryPerWorker = 50;
         [JsonIgnore] public int SalayPerWorker => _salaryPerWorker;
         public void SetSalaryPerWorker(int count) => _salaryPerWorker = count;
 
