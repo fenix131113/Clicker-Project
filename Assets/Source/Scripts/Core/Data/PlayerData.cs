@@ -40,13 +40,20 @@ public class PlayerData
         get { return _money; }
         set
         {
+            onGetMoney?.Invoke(value - _money);
             _money = value;
             if (value < 0)
                 LooseGame("Вы обанкротились!");
         }
     }
+    public void AddMoneySilently(int count)
+    {
+        _money += count;
+        if (_money < 0)
+            LooseGame("Вы обанкротились!");
+    }
 
-    [JsonProperty][SerializeField] private int _skillPoints = 1;
+    [JsonProperty][SerializeField] private int _skillPoints = 0;
     [JsonIgnore] public int SkillPoints => _skillPoints;
     public void AddSkillPoints(int count) => _skillPoints += count;
     public void RemoveSkillPoints(int count) => _skillPoints -= count;
@@ -110,6 +117,9 @@ public class PlayerData
     private GlobalObjectsContainer _objectsContainer;
     private TimeManager _timeManager;
     private CalendarManager _calendarManager;
+
+    public delegate void PlayerDataIntParameterEvent(int parameter1);
+    public event PlayerDataIntParameterEvent onGetMoney;
 
     [Inject]
     public void Init(RobberyManager robberyManager, WorkersManager workersManager,

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class WeeklyQuestContainer
+public class WeeklyQuestContainer : System.IComparable<WeeklyQuestContainer>
 {
     private int _questIndex;
     private int _needProgress;
@@ -11,6 +11,7 @@ public class WeeklyQuestContainer
     private bool _isLoose;
     private int _moneyReward;
     private int _skillPointsReward;
+    private int _visualBlockIndex;
 
     public int QuestIndex => _questIndex;
     public int NeedProgress => _needProgress;
@@ -30,9 +31,10 @@ public class WeeklyQuestContainer
         _skillPointsReward = skillPointsReward;
     }
 
-    public void IncreaseProgress()
+    public void IncreaseProgress(int count)
     {
-        _progress = Mathf.Clamp(_progress + 1, 0, _needProgress);
+        if(!IsLoose && !Complete)
+        _progress = Mathf.Clamp(_progress + count, 0, _needProgress);
     }
 
     public void DecreaseDaysLeft()
@@ -47,5 +49,15 @@ public class WeeklyQuestContainer
     public void SetLoose()
     {
         _isLoose = true;
+    }
+
+    public int CompareTo(WeeklyQuestContainer other)
+    {
+        if (other.QuestIndex > _questIndex)
+            return -1;
+        else if (other.QuestIndex == _questIndex)
+            return 0;
+        else
+            return 1;
     }
 }

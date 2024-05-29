@@ -71,6 +71,7 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
             craftedItemAnims.onComplete += () => Destroy(craftedItem);
             data.Money += data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks);
             onFoodCookedEarned?.Invoke(data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks));
+            CreateEarnedMoneyLabel(data.MoneyPerFood, data.CurrentClickerProgress / data.MaxProgressBarClicks);
             data.SetCurrentClickerProgress(data.CurrentClickerProgress % data.MaxProgressBarClicks);
             onFoodCooked?.Invoke();
         }
@@ -80,7 +81,6 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
 
     private void FoodCooked(int earnedMoney)
     {
-        CreateEarnedMoneyLabel(earnedMoney);
         earningsManager.AddOrUpdateHistoryEntry(calendarManager.Day, "Кликер", earnedMoney);
 
         List<GameObject> unlockedFoodObjects = new();
@@ -96,10 +96,10 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
         clickProgressFiller.GetComponent<Image>().sprite = currentFoodObject.GetComponent<Image>().sprite;
         currentFoodObject.SetActive(true);
     }
-    private void CreateEarnedMoneyLabel(int earnedMoney)
+    private void CreateEarnedMoneyLabel(int moneyPerFood, int counter)
     {
         GameObject label = Instantiate(moneyEarnPrefab, canvas);
-        label.GetComponent<Text>().text = $"+{earnedMoney}$";
+        label.GetComponent<Text>().text = $"+{moneyPerFood}$x{counter}";
         label.GetComponent<RectTransform>().position = Input.mousePosition;
         label.GetComponent<RectTransform>().DOMove(Input.mousePosition + new Vector3(0, 300), 1f);
         label.GetComponent<Text>().DOFade(0f, 1f).onComplete += () => Destroy(label);

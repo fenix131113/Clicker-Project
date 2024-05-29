@@ -8,7 +8,7 @@ public class WeeklyQuestBase
     public int MinNeedProgress => _minNeedProgress;
     public int MaxNeedProgress => _maxNeedProgress;
 
-    public delegate void OnProgressIncreased();
+    public delegate void OnProgressIncreased(int count = 1);
     public OnProgressIncreased onProgressIncreased;
 
     public WeeklyQuestBase(string desctiption, WeeklyQuestsController controller, int minNeedProgress, int maxNeedProgress)
@@ -21,5 +21,14 @@ public class WeeklyQuestBase
     protected void QuestEvent()
     {
         onProgressIncreased?.Invoke();
+    }
+
+    protected void QuestEvent(int count)
+    {
+        onProgressIncreased?.Invoke(count);
+    }
+    public virtual void UnsubscribeEvents()
+    {
+        throw new System.NotImplementedException();
     }
 }
