@@ -1437,7 +1437,7 @@ MonoBehaviour:
     \u0438 \u0432\u043D\u0438\u043C\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C!
     \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
     \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 8$ -> 16$\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
-    \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C: 14000 \u0431\u0443\u0440\u0433\u0435\u0440\u043E\u0432"
+    \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C \u0435\u0434\u044B"
   level: 4
   _counterGoal: 5000
   _skillItem: {fileID: 73070917}
@@ -1934,7 +1934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.065}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: 578}
+  m_AnchoredPosition: {x: 12.000183, y: -11.000244}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95843523
@@ -2178,7 +2178,6 @@ GameObject:
   - component: {fileID: 118649014}
   - component: {fileID: 118649013}
   - component: {fileID: 118649012}
-  - component: {fileID: 118649011}
   - component: {fileID: 118649016}
   - component: {fileID: 118649015}
   m_Layer: 5
@@ -2188,27 +2187,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &118649011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118649009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e865156fff2249442b1ee3244e6454a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442"
-  description: "\u0412\u044B \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0430\u043B\u0438
-    \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439 \u0441\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439
-    \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442! \"\u0422\u0430\u043A
-    \u0430 \u0447\u0442\u043E \u043C\u044B \u0442\u0430\u043C \u0434\u043E\u0431\u0430\u0432\u043B\u044F\u0435\u043C?
-    \u0430 \u0442\u043E \u044F \u0447\u0442\u043E-\u0442\u043E \u043F\u043E\u0434\u0437\u0430\u0431\u044B\u043B..\"
-    \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
-    \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 16 -> 32"
-  level: 5
 --- !u!114 &118649012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2286,7 +2264,7 @@ MonoBehaviour:
     \u0430 \u0442\u043E \u044F \u0447\u0442\u043E-\u0442\u043E \u043F\u043E\u0434\u0437\u0430\u0431\u044B\u043B..\"
     \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
     \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 16$ -> 32$\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
-    \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C: 20000 \u0431\u0443\u0440\u0433\u0435\u0440\u043E\u0432"
+    \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C \u0435\u0434\u044B"
   level: 5
   _counterGoal: 7500
   _skillItem: {fileID: 118649016}
@@ -2629,7 +2607,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.566}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 433.40015, y: 2519.5002}
+  m_AnchoredPosition: {x: 433.4004, y: 1930.5}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &155100528
@@ -3029,7 +3007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.566}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 435, y: -193.5}
+  m_AnchoredPosition: {x: 435.00024, y: -782.50024}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &222242064
@@ -3104,7 +3082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -116, y: -440}
+  m_AnchoredPosition: {x: -115.999756, y: -1029.0002}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &241547401
@@ -3293,7 +3271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -113.399414, y: 912.80005}
+  m_AnchoredPosition: {x: -113.39917, y: 323.7998}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &252713053
@@ -4126,8 +4104,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2537.5, y: 3652}
-  m_SizeDelta: {x: 5075.0586, y: 7594.287}
+  m_AnchoredPosition: {x: -132.37, y: 2746}
+  m_SizeDelta: {x: 264.7355, y: 4609.1035}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &283433273
 GameObject:
@@ -4222,8 +4200,8 @@ MonoBehaviour:
   description: "\u0413\u043B\u0430\u0432\u043D\u043E\u0435 \u0432 \u0433\u043E\u0442\u043E\u0432\u043A\u0435
     - \u044D\u0442\u043E \u043B\u044E\u0431\u043E\u0432\u044C! \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C
     \u0437\u0430 \u0435\u0434\u0443 \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 4$
-    -> 8$\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C:
-    5000 \u0431\u0443\u0440\u0433\u0435\u0440\u043E\u0432"
+    -> 8$\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C
+    \u0435\u0434\u044B"
   level: 3
   _counterGoal: 1500
   _skillItem: {fileID: 283433280}
@@ -4952,7 +4930,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 133, y: 2274}
+  m_AnchoredPosition: {x: 133.00024, y: 1684.9998}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339078338
@@ -5029,7 +5007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: 2772}
+  m_AnchoredPosition: {x: 10, y: 2183}
   m_SizeDelta: {x: 130, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &343119412
@@ -7022,7 +7000,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 134, y: 1595}
+  m_AnchoredPosition: {x: 134.00024, y: 1005.99976}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &468249823
@@ -7291,7 +7269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30.566}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -419.5, y: 1163.1997}
+  m_AnchoredPosition: {x: -419.49976, y: 574.19946}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &480163587
@@ -7366,7 +7344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 371.00024, y: 2400}
+  m_AnchoredPosition: {x: 371.0005, y: 1810.9998}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &485897403
@@ -7690,7 +7668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 94}
+  m_AnchoredPosition: {x: 0.00024414062, y: -495}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &529844349
@@ -7744,7 +7722,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 305, y: -55}
+  m_AnchoredPosition: {x: 305.00024, y: -644}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &549383843
@@ -7942,10 +7920,10 @@ MonoBehaviour:
   - {fileID: 142686592}
   - {fileID: 887456733}
   - {fileID: 2068750968}
-  - {fileID: 1227686168}
-  - {fileID: 881161172}
-  - {fileID: 2055426067}
-  - {fileID: 1186266691}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 1135716831}
   - {fileID: 65994504}
   - {fileID: 85243101}
@@ -8398,7 +8376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.065}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: 2277}
+  m_AnchoredPosition: {x: 9.000183, y: 1687.9998}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &598087016
@@ -10026,7 +10004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 371.00024, y: 1723}
+  m_AnchoredPosition: {x: 371.0005, y: 1133.9998}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779451335
@@ -10101,7 +10079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.566}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 435, y: 481.5}
+  m_AnchoredPosition: {x: 435.00024, y: -107.500244}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782994975
@@ -10176,7 +10154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -346.4, y: -313}
+  m_AnchoredPosition: {x: -346.39978, y: -902.00024}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784143792
@@ -10952,7 +10930,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.566}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 435, y: 1161.5}
+  m_AnchoredPosition: {x: 435.00024, y: 572.49976}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &831308692
@@ -11144,7 +11122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.065}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: 2585}
+  m_AnchoredPosition: {x: 9.000183, y: 1995.9998}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845167626
@@ -11699,9 +11677,8 @@ GameObject:
   - component: {fileID: 881161176}
   - component: {fileID: 881161175}
   - component: {fileID: 881161174}
-  - component: {fileID: 881161172}
-  - component: {fileID: 881161173}
   - component: {fileID: 881161177}
+  - component: {fileID: 881161178}
   m_Layer: 5
   m_Name: UtilityCostSkill3
   m_TagString: Untagged
@@ -11709,46 +11686,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &881161172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881161171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: 1106504620, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  selectedIcon: {fileID: -1659611648, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  defaultIcon: {fileID: 598686723, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 1000
-  _skillPointsCost: 0
-  _skillCostType: 0
-  _skill: {fileID: 881161173}
---- !u!114 &881161173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881161171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e457bf5852efa0b47ab51fbb92408ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
-    \u0433\u0435\u043D\u0438\u0439"
-  description: "\u041F\u043E\u043D\u0438\u0436\u0435\u043D\u0438\u0435 \u043A\u043E\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0445
-    \u0440\u0430\u0441\u0445\u043E\u0434\u043E\u0432 40$ -> 35$\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
-    \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0445
-    \u0437\u0430\u0434\u0430\u043D\u0438\u0439: 12"
-  level: 3
 --- !u!114 &881161174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11818,11 +11755,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentImage: {fileID: 0}
-  _openedIcon: {fileID: 0}
-  _selectedIcon: {fileID: 0}
-  _defaultIcon: {fileID: 0}
-  _passiveSkill: {fileID: 0}
+  _currentImage: {fileID: 881161174}
+  _openedIcon: {fileID: 1106504620, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _selectedIcon: {fileID: -1659611648, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _defaultIcon: {fileID: 598686723, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _passiveSkill: {fileID: 881161178}
+--- !u!114 &881161178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881161171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f801ef0a7e1a2bb4c88ce9ae2c59e453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
+    \u0433\u0435\u043D\u0438\u0439"
+  description: "\u041F\u043E\u043D\u0438\u0436\u0435\u043D\u0438\u0435 \u043A\u043E\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0445
+    \u0440\u0430\u0441\u0445\u043E\u0434\u043E\u0432 \n40$ -> 35$\n\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+    \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0445
+    \u0437\u0430\u0434\u0430\u043D\u0438\u0439"
+  level: 3
+  _counterGoal: 6
+  _skillItem: {fileID: 881161177}
 --- !u!1 &887456731
 GameObject:
   m_ObjectHideFlags: 0
@@ -11976,7 +11934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135, y: 236}
+  m_AnchoredPosition: {x: 135.00024, y: -353.00024}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890044684
@@ -12051,7 +12009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135.6, y: 913.8}
+  m_AnchoredPosition: {x: 135.60022, y: 324.7998}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899086495
@@ -12126,7 +12084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.065}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: -96}
+  m_AnchoredPosition: {x: 13.000183, y: -685.00024}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &906332165
@@ -12212,7 +12170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.566}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 433.40015, y: 1842.4999}
+  m_AnchoredPosition: {x: 433.4004, y: 1253.4996}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &913454905
@@ -12955,7 +12913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: 2400.0002}
+  m_AnchoredPosition: {x: -347.99976, y: 1811}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &991590244
@@ -14354,7 +14312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -346.3999, y: 1042}
+  m_AnchoredPosition: {x: -346.39966, y: 452.99976}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1126529242
@@ -14685,7 +14643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30.566}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -419.5, y: 483.19995}
+  m_AnchoredPosition: {x: -419.49976, y: -105.80029}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1165822026
@@ -15077,7 +15035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372.6, y: 1042}
+  m_AnchoredPosition: {x: 372.60022, y: 452.99976}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1178384400
@@ -15204,9 +15162,8 @@ GameObject:
   - component: {fileID: 1186266695}
   - component: {fileID: 1186266694}
   - component: {fileID: 1186266693}
-  - component: {fileID: 1186266691}
-  - component: {fileID: 1186266692}
   - component: {fileID: 1186266696}
+  - component: {fileID: 1186266697}
   m_Layer: 5
   m_Name: UtilityCostSkill5
   m_TagString: Untagged
@@ -15214,47 +15171,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1186266691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186266690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: -658714203, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  selectedIcon: {fileID: 1584439380, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  defaultIcon: {fileID: -730420889, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  needToBuyItems:
-  - {fileID: 0}
-  needPassiveItems: []
-  _moneyCost: 2000
-  _skillPointsCost: 0
-  _skillCostType: 0
-  _skill: {fileID: 1186266692}
---- !u!114 &1186266692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186266690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e457bf5852efa0b47ab51fbb92408ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
-    \u0433\u0435\u043D\u0438\u0439"
-  description: "\u041F\u043E\u043D\u0438\u0436\u0435\u043D\u0438\u0435 \u043A\u043E\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0445
-    \u0440\u0430\u0441\u0445\u043E\u0434\u043E\u0432 30$ -> 20$\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
-    \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0445
-    \u0437\u0430\u0434\u0430\u043D\u0438\u0439: 30"
-  level: 5
 --- !u!114 &1186266693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15324,11 +15240,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentImage: {fileID: 0}
-  _openedIcon: {fileID: 0}
-  _selectedIcon: {fileID: 0}
-  _defaultIcon: {fileID: 0}
-  _passiveSkill: {fileID: 0}
+  _currentImage: {fileID: 1186266693}
+  _openedIcon: {fileID: -658714203, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _selectedIcon: {fileID: 1584439380, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _defaultIcon: {fileID: -730420889, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _passiveSkill: {fileID: 1186266697}
+--- !u!114 &1186266697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186266690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f801ef0a7e1a2bb4c88ce9ae2c59e453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
+    \u0433\u0435\u043D\u0438\u0439"
+  description: "\u041F\u043E\u043D\u0438\u0436\u0435\u043D\u0438\u0435 \u043A\u043E\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0445
+    \u0440\u0430\u0441\u0445\u043E\u0434\u043E\u0432 \n30$ -> 20$\n\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+    \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0445
+    \u0437\u0430\u0434\u0430\u043D\u0438\u0439"
+  level: 5
+  _counterGoal: 10
+  _skillItem: {fileID: 1186266696}
 --- !u!1 &1188720008
 GameObject:
   m_ObjectHideFlags: 0
@@ -15363,7 +15300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.065}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: 1936}
+  m_AnchoredPosition: {x: 10.000183, y: 1346.9998}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1188720010
@@ -15415,9 +15352,8 @@ GameObject:
   - component: {fileID: 1227686172}
   - component: {fileID: 1227686171}
   - component: {fileID: 1227686170}
-  - component: {fileID: 1227686168}
-  - component: {fileID: 1227686169}
   - component: {fileID: 1227686173}
+  - component: {fileID: 1227686174}
   m_Layer: 5
   m_Name: UtilityCostSkill2
   m_TagString: Untagged
@@ -15425,46 +15361,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1227686168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227686167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: -144585379, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  selectedIcon: {fileID: -547937972, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  defaultIcon: {fileID: 376113126, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 600
-  _skillPointsCost: 0
-  _skillCostType: 0
-  _skill: {fileID: 1227686169}
---- !u!114 &1227686169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227686167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e457bf5852efa0b47ab51fbb92408ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
-    \u0433\u0435\u043D\u0438\u0439"
-  description: "\u041F\u043E\u043D\u0438\u0436\u0435\u043D\u0438\u0435 \u043A\u043E\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0445
-    \u0440\u0430\u0441\u0445\u043E\u0434\u043E\u0432 45$ -> 40$\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
-    \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0445
-    \u0437\u0430\u0434\u0430\u043D\u0438\u0439: 6"
-  level: 2
 --- !u!114 &1227686170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15534,11 +15430,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentImage: {fileID: 0}
-  _openedIcon: {fileID: 0}
-  _selectedIcon: {fileID: 0}
-  _defaultIcon: {fileID: 0}
-  _passiveSkill: {fileID: 0}
+  _currentImage: {fileID: 1227686170}
+  _openedIcon: {fileID: -144585379, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _selectedIcon: {fileID: -547937972, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _defaultIcon: {fileID: 376113126, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _passiveSkill: {fileID: 1227686174}
+--- !u!114 &1227686174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227686167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f801ef0a7e1a2bb4c88ce9ae2c59e453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
+    \u0433\u0435\u043D\u0438\u0439"
+  description: "\u041F\u043E\u043D\u0438\u0436\u0435\u043D\u0438\u0435 \u043A\u043E\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0445
+    \u0440\u0430\u0441\u0445\u043E\u0434\u043E\u0432 \n45$ -> 40$\n\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+    \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0445
+    \u0437\u0430\u0434\u0430\u043D\u0438\u0439"
+  level: 2
+  _counterGoal: 4
+  _skillItem: {fileID: 1227686173}
 --- !u!1 &1269111599
 GameObject:
   m_ObjectHideFlags: 0
@@ -15961,7 +15878,7 @@ MonoBehaviour:
     \u0438 \u0442\u043E\u043B\u044C\u043A\u043E \u0410\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u043E\u0441\u0442\u044C!
     \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0437\u0430 \u0435\u0434\u0443
     \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 2$ -> 4$\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
-    \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C: 1500 \u0431\u0443\u0440\u0433\u0435\u0440\u043E\u0432"
+    \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C \u0435\u0434\u044B"
   level: 2
   _counterGoal: 500
   _skillItem: {fileID: 1281765144}
@@ -16016,7 +15933,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.065}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: 1596.7}
+  m_AnchoredPosition: {x: 10.000183, y: 1007.6997}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1283854708
@@ -16333,8 +16250,8 @@ GameObject:
   - component: {fileID: 1331507239}
   - component: {fileID: 1331507238}
   - component: {fileID: 1331507237}
-  - component: {fileID: 1331507236}
   - component: {fileID: 1331507240}
+  - component: {fileID: 1331507241}
   m_Layer: 5
   m_Name: UtilityCostSkill1
   m_TagString: Untagged
@@ -16342,25 +16259,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1331507236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331507234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e457bf5852efa0b47ab51fbb92408ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
-    \u0433\u0435\u043D\u0438\u0439"
-  description: "\u041F\u043E\u043D\u0438\u0436\u0435\u043D\u0438\u0435 \u043A\u043E\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0445
-    \u0440\u0430\u0441\u0445\u043E\u0434\u043E\u0432 50$ -> 45$\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
-    \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0445
-    \u0437\u0430\u0434\u0430\u043D\u0438\u0439: 2"
-  level: 1
 --- !u!114 &1331507237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16430,11 +16328,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentImage: {fileID: 0}
-  _openedIcon: {fileID: 0}
-  _selectedIcon: {fileID: 0}
-  _defaultIcon: {fileID: 0}
-  _passiveSkill: {fileID: 0}
+  _currentImage: {fileID: 1331507237}
+  _openedIcon: {fileID: 781024812, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _selectedIcon: {fileID: -1438956500, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _defaultIcon: {fileID: 1023879185, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _passiveSkill: {fileID: 1331507241}
+--- !u!114 &1331507241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331507234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f801ef0a7e1a2bb4c88ce9ae2c59e453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
+    \u0433\u0435\u043D\u0438\u0439"
+  description: "\u041F\u043E\u043D\u0438\u0436\u0435\u043D\u0438\u0435 \u043A\u043E\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0445
+    \u0440\u0430\u0441\u0445\u043E\u0434\u043E\u0432 \n50$ -> 45$\n\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+    \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0445
+    \u0437\u0430\u0434\u0430\u043D\u0438\u0439"
+  level: 1
+  _counterGoal: 2
+  _skillItem: {fileID: 1331507240}
 --- !u!1 &1348954969
 GameObject:
   m_ObjectHideFlags: 0
@@ -16469,7 +16388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30.566}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -419.5, y: -191.8}
+  m_AnchoredPosition: {x: -419.49976, y: -780.8003}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1348954971
@@ -16771,7 +16690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: 1723}
+  m_AnchoredPosition: {x: -347.99976, y: 1133.9998}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377612095
@@ -16966,7 +16885,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 133, y: -439}
+  m_AnchoredPosition: {x: 133.00024, y: -1028.0002}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1379349396
@@ -18147,7 +18066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.065}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.600098, y: -437}
+  m_AnchoredPosition: {x: 12.600281, y: -1026.0002}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1506684316
@@ -18275,9 +18194,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 25
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -18356,7 +18275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -346.3999, y: 362}
+  m_AnchoredPosition: {x: -346.39966, y: -227.00024}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1523108245
@@ -18755,7 +18674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372.6, y: -313}
+  m_AnchoredPosition: {x: 372.60022, y: -902.00024}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558236818
@@ -19014,8 +18933,8 @@ MonoBehaviour:
   description: "\u0421\u043E\u0443\u0441\u0430 \u043C\u0430\u043B\u043E \u043D\u0435
     \u0431\u044B\u0432\u0430\u0435\u0442! \u0421\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C
     \u0437\u0430 \u0435\u0434\u0443 \u0432\u044B\u0440\u043E\u0441\u043B\u0430! 1$
-    -> 2$\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C:
-    100 \u0431\u0443\u0440\u0433\u0435\u0440\u043E\u0432"
+    -> 2$\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C
+    \u0435\u0434\u044B"
   level: 1
   _counterGoal: 50
   _skillItem: {fileID: 1574376410}
@@ -19272,7 +19191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.065}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: 1259}
+  m_AnchoredPosition: {x: 11.000183, y: 669.99976}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1593194289
@@ -19438,7 +19357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30.566}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -421.09985, y: 1844.1996}
+  m_AnchoredPosition: {x: -421.0996, y: 1255.1993}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606264192
@@ -19524,7 +19443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.065}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: 241.4}
+  m_AnchoredPosition: {x: 12.000183, y: -347.60034}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618984586
@@ -19690,7 +19609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30.566}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -421.09985, y: 2521.2}
+  m_AnchoredPosition: {x: -421.0996, y: 1932.1997}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1639309882
@@ -20912,7 +20831,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372.6, y: 362}
+  m_AnchoredPosition: {x: 372.60022, y: -227.00024}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1807880078
@@ -21112,7 +21031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115.99951, y: 2273.0002}
+  m_AnchoredPosition: {x: -115.99927, y: 1684}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1811774675
@@ -22347,7 +22266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -114, y: 235}
+  m_AnchoredPosition: {x: -113.999756, y: -354.00024}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1935772358
@@ -22997,7 +22916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -134.572}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115, y: 1594}
+  m_AnchoredPosition: {x: -114.999756, y: 1004.99976}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1986725740
@@ -23269,7 +23188,6 @@ GameObject:
   - component: {fileID: 2033803188}
   - component: {fileID: 2033803187}
   - component: {fileID: 2033803186}
-  - component: {fileID: 2033803185}
   - component: {fileID: 2033803190}
   - component: {fileID: 2033803189}
   m_Layer: 5
@@ -23279,21 +23197,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2033803185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033803183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54d4d1504d9b104abb10f904ac310dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u0425\u043E\u0442 \u0434\u043E\u0433"
-  description: 
-  level: 1
 --- !u!114 &2033803186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23717,7 +23620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.065}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: 919}
+  m_AnchoredPosition: {x: 11.000183, y: 329.99976}
   m_SizeDelta: {x: 2.4752, y: 95.675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2048947297
@@ -23769,9 +23672,8 @@ GameObject:
   - component: {fileID: 2055426071}
   - component: {fileID: 2055426070}
   - component: {fileID: 2055426069}
-  - component: {fileID: 2055426067}
-  - component: {fileID: 2055426068}
   - component: {fileID: 2055426072}
+  - component: {fileID: 2055426073}
   m_Layer: 5
   m_Name: UtilityCostSkill4
   m_TagString: Untagged
@@ -23779,46 +23681,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2055426067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2055426066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e529e9bc63eb479d777477ae76c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyedIcon: {fileID: -1411943241, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  selectedIcon: {fileID: 801304136, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  defaultIcon: {fileID: 1583186441, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
-  needToBuyItems: []
-  needPassiveItems: []
-  _moneyCost: 1400
-  _skillPointsCost: 0
-  _skillCostType: 0
-  _skill: {fileID: 2055426068}
---- !u!114 &2055426068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2055426066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e457bf5852efa0b47ab51fbb92408ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
-    \u0433\u0435\u043D\u0438\u0439"
-  description: "\u041F\u043E\u043D\u0438\u0436\u0435\u043D\u0438\u0435 \u043A\u043E\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0445
-    \u0440\u0430\u0441\u0445\u043E\u0434\u043E\u0432 35$ -> 30$\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
-    \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0445
-    \u0437\u0430\u0434\u0430\u043D\u0438\u0439: 20"
-  level: 4
 --- !u!114 &2055426069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23888,11 +23750,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a97e69b226acb34e819e88584270492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentImage: {fileID: 0}
-  _openedIcon: {fileID: 0}
-  _selectedIcon: {fileID: 0}
-  _defaultIcon: {fileID: 0}
-  _passiveSkill: {fileID: 0}
+  _currentImage: {fileID: 2055426069}
+  _openedIcon: {fileID: -1411943241, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _selectedIcon: {fileID: 801304136, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _defaultIcon: {fileID: 1583186441, guid: 7ff1d8d9eb8f9c946b2e1644a4da75e7, type: 3}
+  _passiveSkill: {fileID: 2055426073}
+--- !u!114 &2055426073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055426066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f801ef0a7e1a2bb4c88ce9ae2c59e453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: "\u041A\u043E\u043C\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0439
+    \u0433\u0435\u043D\u0438\u0439"
+  description: "\u041F\u043E\u043D\u0438\u0436\u0435\u043D\u0438\u0435 \u043A\u043E\u043C\u0443\u043D\u0430\u043B\u044C\u043D\u044B\u0445
+    \u0440\u0430\u0441\u0445\u043E\u0434\u043E\u0432 \n35$ -> 30$\n\n\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+    \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0445
+    \u0437\u0430\u0434\u0430\u043D\u0438\u0439"
+  level: 4
+  _counterGoal: 8
+  _skillItem: {fileID: 2055426072}
 --- !u!1 &2059452793
 GameObject:
   m_ObjectHideFlags: 0
@@ -24158,6 +24041,12 @@ MonoBehaviour:
   - {fileID: 265219757}
   - {fileID: 467732774}
   - {fileID: 1442450847}
+  foodCookedSounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: a5b80af0f244f274aa5e811870313ccb, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: a6eb96214897936418bbd1e10f8e3e3c, type: 3}
   clickAnimDuration: 0.2
   clickProgressFiller: {fileID: 1886486686}
   canvas: {fileID: 980914158}

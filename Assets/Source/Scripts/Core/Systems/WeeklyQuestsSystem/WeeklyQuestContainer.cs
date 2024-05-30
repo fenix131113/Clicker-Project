@@ -25,7 +25,12 @@ public class WeeklyQuestContainer : System.IComparable<WeeklyQuestContainer>
     public WeeklyQuestContainer(int questIndex, WeeklyQuestDifficultItem difficultItem, float difficultModifier, float rewardModifier)
     {
         _questIndex = questIndex;
+
+        if(questIndex != 0)
         _needProgress = (int)(difficultItem.NeedProgress * difficultModifier);
+        else
+            _needProgress = difficultItem.NeedProgress;
+
         _daysLeft = difficultItem.DaysLeft;
         _moneyReward = (int)(difficultItem.MoneyReward * rewardModifier);
         _skillPointsReward = difficultItem.SkillPointsReward;
