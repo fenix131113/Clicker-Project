@@ -27,7 +27,7 @@ namespace Clicker.Core.Tournament
 
         [JsonIgnore] private readonly int _tournamentHoursTime = 12;
         [JsonIgnore] private readonly int _tournamentPeriod = 3;
-        [JsonIgnore] private int _tournamentStartNeedProgressToWin = 10;
+        [JsonIgnore] private int _tournamentStartNeedProgressToWin = 7;
         [JsonIgnore] private float _tournamentFoodCountModifier = 1;
         [JsonIgnore] private GlobalObjectsContainer _objectsContainer;
         [JsonIgnore] private TimeManager _timeManager;

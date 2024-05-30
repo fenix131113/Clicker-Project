@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 public class GeneralPassiveMoneyController
 {
-    [JsonIgnore] private int _utilityServiceCost = 50;
+    [JsonIgnore] private int _utilityServiceCost = 25;
     [JsonIgnore] public int UtilityServiceCost => _utilityServiceCost;
     public void SetUtilityServiceCost(int count) => _utilityServiceCost = count;
 
@@ -14,7 +14,7 @@ public class GeneralPassiveMoneyController
     public void SetConsumablesPayPeriod(int days) => _consumablesPayPeriod = days;
 
 
-    [JsonIgnore] private int _consumablesCost = 50;
+    [JsonIgnore] private int _consumablesCost = 25;
     [JsonIgnore] public int ConsumablesCost => _consumablesCost;
     public void SetConsumablesCost(int cost) => _consumablesCost = cost;
 
