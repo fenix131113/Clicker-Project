@@ -22,13 +22,13 @@ public class WeeklyQuestContainer : System.IComparable<WeeklyQuestContainer>
     public int MoneyReward => _moneyReward;
     public int SkillPointsReward => _skillPointsReward;
 
-    public WeeklyQuestContainer(int questIndex, int needProgress, int daysLeft, int moneyReward, int skillPointsReward)
+    public WeeklyQuestContainer(int questIndex, WeeklyQuestDifficultItem difficultItem, float difficultModifier, float rewardModifier)
     {
         _questIndex = questIndex;
-        _needProgress = needProgress;
-        _daysLeft = daysLeft;
-        _moneyReward = moneyReward;
-        _skillPointsReward = skillPointsReward;
+        _needProgress = (int)(difficultItem.NeedProgress * difficultModifier);
+        _daysLeft = difficultItem.DaysLeft;
+        _moneyReward = (int)(difficultItem.MoneyReward * rewardModifier);
+        _skillPointsReward = difficultItem.SkillPointsReward;
     }
 
     public void IncreaseProgress(int count)

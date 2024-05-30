@@ -1,7 +1,7 @@
 public class FoodCookingWeeklyQuest : WeeklyQuestBase
 {
     private MainClicker _mainClicker;
-    public FoodCookingWeeklyQuest(string desctiption, WeeklyQuestsController controller, int minNeedProgress, int maxNeedProgress, MainClicker mainClicker) : base(desctiption, controller, minNeedProgress, maxNeedProgress)
+    public FoodCookingWeeklyQuest(string desctiption, WeeklyQuestsController controller, WeeklyQuestDifficultItem[] difficultItems, MainClicker mainClicker) : base(desctiption, controller, difficultItems)
     {
         _mainClicker = mainClicker;
         mainClicker.onFoodCooked += QuestEvent;

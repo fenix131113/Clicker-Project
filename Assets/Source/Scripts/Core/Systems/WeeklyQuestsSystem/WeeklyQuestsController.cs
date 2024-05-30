@@ -13,6 +13,7 @@ public class WeeklyQuestsController : MonoBehaviour
 
     private List<WeeklyQuestBase> _allQuests = new List<WeeklyQuestBase>();
     private float _rewardModifier = 1f;
+    private float _questsDifficultModifier = 1f;
 
     private WeeklyQuestContainer[] _currentWeeklyQuests = new WeeklyQuestContainer[2];
     private GameObject[] _currentWeeklyObjects = new GameObject[2];
@@ -23,6 +24,11 @@ public class WeeklyQuestsController : MonoBehaviour
     private CalendarManager _calendarManager;
 
     public PlayerData Data => _data;
+    public WeeklyQuestContainer[] CurrentWeeklyQuests => _currentWeeklyQuests;
+    public float RewardModifier => _rewardModifier;
+    public float QuestsDifficultModifier => _questsDifficultModifier;
+    public void SetQuestsDifficultModifier(float modifier) => _questsDifficultModifier = modifier;
+    public void SetRewardModifier(float modifier) => _rewardModifier = modifier;
 
     public delegate void OnQuestComplete();
     public OnQuestComplete onQuestComplete;
@@ -43,6 +49,8 @@ public class WeeklyQuestsController : MonoBehaviour
 
         if (!PlayerPrefs.HasKey("data"))
             GenerateNewRandomQuests();
+        else
+            LoadData(data.SavedWeeklyQuests);
     }
 
     private void OnNewDay(int day, DayType dayType)
@@ -56,7 +64,24 @@ public class WeeklyQuestsController : MonoBehaviour
             for (int i = 0; i < 2; i++)
                 _currentWeeklyQuests[i].DecreaseDaysLeft();
             CheckQuestsDeadline();
+            UpdateVisual();
         }
+    }
+
+    public void LoadData(WeeklyQuestContainer[] weeklyQuests)
+    {
+        _currentWeeklyQuests = weeklyQuests;
+
+        for (int i = 0; i < _currentWeeklyQuests.Length; i++)
+        {
+            _allQuests[_currentWeeklyQuests[i].QuestIndex].onProgressIncreased += _currentWeeklyQuests[i].IncreaseProgress;
+            _allQuests[_currentWeeklyQuests[i].QuestIndex].onProgressIncreased += (int parametr1) => CheckConditions();
+
+
+
+            _currentWeeklyObjects[i] = Instantiate(_weeklyQuestCellPrefab, _weeklyQuestsContainerTransform);
+        }
+        UpdateVisual();
     }
 
     // Call this method FIRST OF ALL
@@ -64,9 +89,9 @@ public class WeeklyQuestsController : MonoBehaviour
     {
         _allQuests = new()
         {
-            new ClickerWeeklyQuest("Кликов", this, 16, 16, _objectsContainer.ClickerScript),
-            new FoodCookingWeeklyQuest("Приготовить еды", this, 1, 3, _objectsContainer.ClickerScript),
-            new EarnMoneyWeeklyQuest("Заработать денег", this, 1, 3),
+            new ClickerWeeklyQuest("Кликов", this, new WeeklyQuestDifficultItem[]{ new(1, 50, 1, 150),}, _objectsContainer.ClickerScript),
+            new FoodCookingWeeklyQuest("Приготовить еды", this, new WeeklyQuestDifficultItem[]{ new(1, 15, 0, 150), }, _objectsContainer.ClickerScript),
+            new EarnMoneyWeeklyQuest("Заработать денег", this, new WeeklyQuestDifficultItem[]{ new(1, 50, 0, 150), }),
         };
     }
 
@@ -109,7 +134,6 @@ public class WeeklyQuestsController : MonoBehaviour
                     noticeMessage += "\n" + _currentWeeklyQuests[i].MoneyReward.ToString() + "$";
                     _earnings.AddOrUpdateHistoryEntry(_calendarManager.Day, "Задания", _currentWeeklyQuests[i].MoneyReward);
                     _data.AddMoneySilently(_currentWeeklyQuests[i].MoneyReward);
-                    Debug.Log(_currentWeeklyQuests[i].MoneyReward);
                 }
                 if (_currentWeeklyQuests[i].SkillPointsReward > 0)
                 {
@@ -132,8 +156,9 @@ public class WeeklyQuestsController : MonoBehaviour
             while (i == 1 && questIndex == _currentWeeklyQuests[0].QuestIndex)
                 questIndex = Random.Range(0, _allQuests.Count);
 
-            _currentWeeklyQuests[i] = new WeeklyQuestContainer(questIndex, Random.Range(_allQuests[questIndex].MinNeedProgress,
-                _allQuests[questIndex].MaxNeedProgress + 1), Random.Range(1, 8), Random.Range(1, 1001), Random.Range(0, 2));
+            _currentWeeklyQuests[i] = new WeeklyQuestContainer(questIndex,
+                _allQuests[questIndex].WeeklyQuestDifficultItems[Random.Range(0, _allQuests[questIndex].WeeklyQuestDifficultItems.Length)],
+                _questsDifficultModifier, RewardModifier);
 
             _allQuests[questIndex].onProgressIncreased += _currentWeeklyQuests[i].IncreaseProgress;
             _allQuests[questIndex].onProgressIncreased += (int parametr1) => CheckConditions();

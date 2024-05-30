@@ -31,7 +31,6 @@ public class MainDataVisualizer : MonoBehaviour
     private void Update()
     {
         moneyText.text = $"Деньги: {_data.Money}$";
-        Debug.Log($"Деньги: {_data.Money}$");
         skillPointsText.text = $"Очки навыков: {_data.SkillPoints}";
     }
 }
