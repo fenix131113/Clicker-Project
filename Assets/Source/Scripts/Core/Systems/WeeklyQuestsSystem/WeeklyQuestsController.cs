@@ -89,9 +89,9 @@ public class WeeklyQuestsController : MonoBehaviour
     {
         _allQuests = new()
         {
-            new ClickerWeeklyQuest("Кликов", this, new WeeklyQuestDifficultItem[]{ new(1, 50, 1, 150),}, _objectsContainer.ClickerScript),
-            new FoodCookingWeeklyQuest("Приготовить еды", this, new WeeklyQuestDifficultItem[]{ new(1, 15, 0, 150), }, _objectsContainer.ClickerScript),
-            new EarnMoneyWeeklyQuest("Заработать денег", this, new WeeklyQuestDifficultItem[]{ new(1, 50, 0, 150), }),
+            new ClickerWeeklyQuest("Кликов", this, new WeeklyQuestDifficultItem[]{ new(1, 15, 0, 75), new(1, 30, 0, 125), new(1, 0, 1, 175), new(2, 15, 0, 150), new(2, 30, 0, 200), new(2, 0, 1, 275),  new(3, 15, 0, 250), new(3, 30, 0, 350), new(3, 0, 1, 450), new(4, 15, 0, 375), new(4, 30, 0, 500), new(4, 0, 1, 650),  new(5, 15, 0, 525), new(5, 30, 0, 675), new(5, 0, 1, 800), new(6, 15, 0, 700), new(6, 30, 0, 850), new(6, 0, 1, 1000), new(7, 15, 0, 875), new(7, 30, 0, 1000), new(7, 0, 1, 1200),}, _objectsContainer.ClickerScript),
+            new FoodCookingWeeklyQuest("Приготовить еды", this, new WeeklyQuestDifficultItem[]{ new(1, 20, 0, 10), new(1, 40, 0, 15), new(1, 0, 1, 25), new(2, 20, 0, 20), new(2, 40, 0, 35), new(2, 0, 1, 55),  new(3, 20, 0, 40), new(3, 40, 0, 65), new(3, 0, 1, 90), new(4, 20, 0, 90), new(4, 40, 0, 120), new(4, 0, 1, 150),  new(5, 20, 0, 120), new(5, 40, 0, 150), new(5, 0, 1, 185), new(6, 20, 0, 150), new(6, 40, 0, 180), new(6, 0, 1, 225), new(7, 20, 0, 180), new(7, 40, 0, 250), new(7, 0, 1, 300),}, _objectsContainer.ClickerScript),
+            new EarnMoneyWeeklyQuest("Заработать денег", this, new WeeklyQuestDifficultItem[]{ new(1, 20, 0, 15), new(1, 40, 0, 25), new(1, 0, 1, 40), new(2, 20, 0, 30), new(2, 40, 0, 50), new(2, 0, 1, 80),  new(3, 20, 0, 50), new(3, 40, 0, 90), new(3, 0, 1, 130), new(4, 20, 0, 90), new(4, 40, 0, 130), new(4, 0, 1, 180),  new(5, 20, 0, 130), new(5, 40, 0, 180), new(5, 0, 1, 230), new(6, 20, 0, 180), new(6, 40, 0, 250), new(6, 0, 1, 300), new(7, 20, 0, 230), new(7, 40, 0, 300), new(7, 0, 1, 400),}),
         };
     }
 
