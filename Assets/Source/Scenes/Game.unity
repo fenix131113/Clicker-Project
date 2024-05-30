@@ -5695,13 +5695,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368739406}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13052653, y: -0, z: -0, w: 0.9914449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -8.579}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &383769117
 GameObject:
   m_ObjectHideFlags: 0
@@ -7857,9 +7857,9 @@ GameObject:
   - component: {fileID: 563905088}
   - component: {fileID: 563905090}
   - component: {fileID: 563905091}
-  - component: {fileID: 563905089}
   - component: {fileID: 563905092}
   - component: {fileID: 563905093}
+  - component: {fileID: 563905094}
   m_Layer: 0
   m_Name: -----GENERAL-----
   m_TagString: Untagged
@@ -7923,6 +7923,7 @@ MonoBehaviour:
   loosePanBlocker: {fileID: 1775665366}
   gameInitializer: {fileID: 13910968}
   annoncmentSound: {fileID: 8300000, guid: 39852ebe2ad2551458bffc422d9f857f, type: 3}
+  mafiaPanelText: {fileID: 398503558}
 --- !u!114 &563905085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8049,18 +8050,6 @@ MonoBehaviour:
   _dayEventsContentTransform: {fileID: 331656928}
   _dayEventPrefab: {fileID: 7639059551546224192, guid: f2fabeb8ce05f984eae3692276be327a, type: 3}
   _emptyDayEventsTextObject: {fileID: 1469686372}
---- !u!114 &563905089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563905080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4804b64fe03a19a43bb7eaa253596e17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &563905090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8137,6 +8126,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weeklyQuestCellPrefab: {fileID: 3603102562216909515, guid: c4dbae86951baeb47a707235938f6069, type: 3}
   _weeklyQuestsContainerTransform: {fileID: 1889558176}
+--- !u!114 &563905094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563905080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f0fbb4cfd5c0f448889e031bbf33aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &586685697
 GameObject:
   m_ObjectHideFlags: 0
@@ -8869,7 +8870,7 @@ Transform:
   m_GameObject: {fileID: 650900329}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 984.75824, y: 510.66385, z: -121.36106}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22032,15 +22033,15 @@ RectTransform:
   m_GameObject: {fileID: 1889558175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 980914158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -234.19, y: 170.93}
-  m_SizeDelta: {x: 468.3838, y: 341.8681}
+  m_AnchoredPosition: {x: -209.3642, y: 158.94113}
+  m_SizeDelta: {x: 418.7325, y: 317.8904}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1889558177
 MonoBehaviour:
@@ -22059,7 +22060,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 10
     m_Bottom: 10
-  m_ChildAlignment: 1
+  m_ChildAlignment: 4
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -22081,15 +22082,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: a04a91b12dc38994e9230ef5a1af7f88, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

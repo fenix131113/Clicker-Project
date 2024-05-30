@@ -62,6 +62,7 @@ public class MafiaManager
     {
         _isWaitForPayment = true;
         timeManager.IsTimePaused = true;
+        objectsContainer.MafiaPanelText.text = $"Вы готовы заплатить {TakeMoneyCount}$ мафии?";
         objectsContainer.MafiaTakeMoneyAskPanel.SetActive(true);
     }
 

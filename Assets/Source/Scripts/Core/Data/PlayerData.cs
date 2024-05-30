@@ -109,15 +109,19 @@ public class PlayerData
     public void SetMoneyPerFood(int count) => _moneyPerFood = count;
 
 
-    private int _maxProgressBarClicks = 15;
+    [JsonIgnore] private int _maxProgressBarClicks = 15;
     [JsonIgnore] public int MaxProgressBarClicks => _maxProgressBarClicks;
     public void SetMaxProgressBarClicks(int count) => _maxProgressBarClicks = count;
+
+    [JsonProperty] private WeeklyQuestContainer[] _savedWeeklyQuests;
+    [JsonIgnore] public WeeklyQuestContainer[] SavedWeeklyQuests => _savedWeeklyQuests;
 
 
     private SkillSaveManager _skillSaveManager;
     private GlobalObjectsContainer _objectsContainer;
     private TimeManager _timeManager;
     private CalendarManager _calendarManager;
+    private WeeklyQuestsController _weeklyQuestsController;
 
     public delegate void PlayerDataIntParameterEvent(int parameter1);
     public event PlayerDataIntParameterEvent onGetMoney;
@@ -126,7 +130,7 @@ public class PlayerData
     public void Init(RobberyManager robberyManager, WorkersManager workersManager,
         GeneralPassiveMoneyController passiveMoneyController, TournamentManager tournamentManager,
         SkillSaveManager skillSaveManager, MafiaManager mafiaManager, GlobalObjectsContainer objectsContainer,
-        TimeManager timeManager, CalendarManager calendarManager, EarningsManager earnings)
+        TimeManager timeManager, CalendarManager calendarManager, EarningsManager earnings, WeeklyQuestsController weeklyQuestsController)
     {
         _robberyManager = robberyManager;
         robberyManager.SetData(this, calendarManager);
@@ -151,6 +155,7 @@ public class PlayerData
         _calendarManager = calendarManager;
         earnings.SetCalendar(_calendarManager);
 
+        _weeklyQuestsController = weeklyQuestsController;
         _timeManager = timeManager;
 
         _calendarManager.onNewDay += (int day, DayType dayType) =>
@@ -165,8 +170,8 @@ public class PlayerData
 
     public void SaveData()
     {
-        Debug.Log("Data saved");
         _skillSaveManager.SaveSkillsData();
+        _savedWeeklyQuests = _weeklyQuestsController.CurrentWeeklyQuests;
         _day = _calendarManager.Day;
         string dataSave = JsonConvert.SerializeObject(this);
         PlayerPrefs.SetString("data", dataSave);
@@ -178,11 +183,11 @@ public class PlayerData
 
         if (!PlayerPrefs.HasKey(dataKey))
             return;
-        Debug.Log("LoadData");
 
         PlayerData loadedData = JsonConvert.DeserializeObject<PlayerData>(PlayerPrefs.GetString(dataKey));
         _mafiaManager.LoadSavedData(loadedData._mafiaManager);
         _tournamentManager.LoadSavedData(loadedData._tournamentManager);
+        _savedWeeklyQuests = loadedData._savedWeeklyQuests;
 
         _calendarManager.SetDay(loadedData._day);
         _money = loadedData._money;

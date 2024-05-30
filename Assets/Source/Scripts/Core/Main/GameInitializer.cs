@@ -18,12 +18,14 @@ public class GameInitializer : MonoInstaller
         Container.Bind<RobberyManager>().FromNew().AsSingle().NonLazy();
         Container.Bind<TournamentManager>().FromNew().AsSingle().NonLazy();
         Container.Bind<WorkersManager>().FromNew().AsSingle().NonLazy();
-        Container.Bind<NoticeSystem>().FromNew().AsSingle().NonLazy();
+        Container.BindInterfacesAndSelfTo<NoticeSystem>().AsSingle().NonLazy();
         Container.Bind<GeneralPassiveMoneyController>().FromNew().AsSingle().NonLazy();
         Container.Bind<PlayerData>().FromNew().AsSingle().NonLazy();
         Container.Bind<CalendarManager>().FromNew().AsSingle().NonLazy();
         Container.Bind<TimeManager>().FromComponentOn(generalContainer).AsSingle();
         Container.Bind<WeeklyQuestsController>().FromComponentOn(generalContainer).AsSingle();
         Container.Bind<EarningsManager>().FromNew().AsSingle().NonLazy();
+
+        
     }
 }

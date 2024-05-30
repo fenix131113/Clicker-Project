@@ -2,21 +2,20 @@ public class WeeklyQuestBase
 {
     protected WeeklyQuestsController _controller;
     protected string _description;
-    protected int _minNeedProgress;
-    protected int _maxNeedProgress;
+    protected WeeklyQuestDifficultItem[] _weeklyQuestDifficultItems;
+
+
     public string Description => _description;
-    public int MinNeedProgress => _minNeedProgress;
-    public int MaxNeedProgress => _maxNeedProgress;
+    public WeeklyQuestDifficultItem[] WeeklyQuestDifficultItems => _weeklyQuestDifficultItems;
 
     public delegate void OnProgressIncreased(int count = 1);
     public OnProgressIncreased onProgressIncreased;
 
-    public WeeklyQuestBase(string desctiption, WeeklyQuestsController controller, int minNeedProgress, int maxNeedProgress)
+    public WeeklyQuestBase(string desctiption, WeeklyQuestsController controller, WeeklyQuestDifficultItem[] difficultItems)
     {
         _description = desctiption;
         _controller = controller;
-        _minNeedProgress = minNeedProgress;
-        _maxNeedProgress = maxNeedProgress;
+        _weeklyQuestDifficultItems = difficultItems;
     }
     protected void QuestEvent()
     {
