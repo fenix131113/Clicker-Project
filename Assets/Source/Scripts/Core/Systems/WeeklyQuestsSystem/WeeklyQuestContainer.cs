@@ -38,7 +38,7 @@ public class WeeklyQuestContainer : System.IComparable<WeeklyQuestContainer>
 
     public void IncreaseProgress(int count)
     {
-        if(!IsLoose && !Complete)
+        if(!IsLoose && !Complete && count > 0)
         _progress = Mathf.Clamp(_progress + count, 0, _needProgress);
     }
 

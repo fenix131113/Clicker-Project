@@ -93,7 +93,7 @@ namespace Clicker.Core.Time
         // Call this method FIRST OF ALL (for load all events)
         // Also reset all events collection and daysEvents array and generate again
         // Regenerate all events need to apply changes in events that contains dynamic data
-        private void ReloadCalendar()
+        public void ReloadCalendar()
         {
             // Reset daysEvents array
             ResetDaysEvents();
