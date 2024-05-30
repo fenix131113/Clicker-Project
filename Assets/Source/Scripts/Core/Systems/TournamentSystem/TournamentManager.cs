@@ -74,12 +74,11 @@ namespace Clicker.Core.Tournament
         }
         private void StartTournament()
         {
-            _tournamentStartNeedProgressToWin = (int)(_tournamentStartNeedProgressToWin * _tournamentFoodCountModifier);
             _objectsContainer.ClickerScript.onFoodCookedEarned -= NewFoodCookedAction;
             TimeManager.onNewHour -= NewHourCheck;
             _currentTournamentProgress = 0;
             _remainingHours = _tournamentHoursTime;
-            _needProgressToWin = _tournamentStartNeedProgressToWin;
+            _needProgressToWin = (int)(_tournamentStartNeedProgressToWin * _tournamentFoodCountModifier);
             _objectsContainer.TournamentProgressFiller.fillAmount = 0;
             _objectsContainer.TournamentProgressText.text = $"0/{NeedProgressToWin}   {RemainingHours}ч. осталось";
             _timeManager.IsTimePaused = false;

@@ -49,7 +49,7 @@ public class RobberyManager
             if (timeout == 0)
             {
                 float currentChance = (float)System.Math.Round(UnityEngine.Random.Range(0f, 100f), 2);
-                if (currentChance <= _robberyChance && data.Money >= 500)
+                if (currentChance <= _robberyChance && data.Money >= 50)
                     RobberyEnd();
             }
             else
