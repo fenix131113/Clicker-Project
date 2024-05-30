@@ -1,5 +1,6 @@
 using Clicker.Core.Earnings;
 using Clicker.Core.Tournament;
+using Clicker.Core.Workers;
 using DG.Tweening;
 using System.Collections.Generic;
 using TMPro;
@@ -25,13 +26,15 @@ namespace Clicker.Core.Time
         private MafiaManager _mafiaManager;
         private PlayerData _data;
         private CalendarManager _calendarManager;
+        private WorkersManager _workersManager;
         GeneralPassiveMoneyController _passiveController;
 
         public int SelectedDayIndex { get { return _selectedDayIndex; } set { _selectedDayIndex = value; } }
 
         [Inject]
         private void Init(TimeManager timeManager, TournamentManager tournaments, MafiaManager mafiaManager,
-            PlayerData data, CalendarManager calendarManager, GeneralPassiveMoneyController passiveController)
+            PlayerData data, CalendarManager calendarManager, GeneralPassiveMoneyController passiveController,
+            WorkersManager workersManager)
         {
             _timeManager = timeManager;
             _tournaments = tournaments;
@@ -39,6 +42,7 @@ namespace Clicker.Core.Time
             _data = data;
             _calendarManager = calendarManager;
             _passiveController = passiveController;
+            _workersManager = workersManager;
         }
 
         private void Awake()
@@ -100,6 +104,7 @@ namespace Clicker.Core.Time
                 new MafiaCalendarEvent(_mafiaManager.MafiaVisitPeriod, 15, _mafiaManager),
                 new UtilitiesPayEvent(7, 7, _data, _passiveController),
                 new ConsumablePaymentEvent(_data.PassiveMoneyController.ConsumablesPayPeriod, 7, _data, _passiveController),
+                new WorkersSalaryPayEvent(7, 7, _data, _workersManager),
             };
 
 

@@ -11,7 +11,7 @@ namespace Clicker.Core.Workers
         public void AddWorkers(int count) => _workers += count;
 
 
-        [JsonIgnore] private int _salaryPerWorker = 100;
+        [JsonIgnore] private int _salaryPerWorker = 70;
         [JsonIgnore] public int SalayPerWorker => _salaryPerWorker;
         public void SetSalaryPerWorker(int count) => _salaryPerWorker = count;
 
@@ -23,6 +23,7 @@ namespace Clicker.Core.Workers
 
         [JsonIgnore] private PlayerData data;
         [JsonIgnore] private NoticeSystem notices;
+        [JsonIgnore] private CalendarManager calendarManager;
         [JsonIgnore] private readonly EarningsManager earningsManager;
 
         public void SetData(PlayerData data) => this.data = data;
@@ -31,24 +32,25 @@ namespace Clicker.Core.Workers
             calendarManager.onNewDay += OnNewDay;
             this.earningsManager = earningsManager;
             this.notices = notices;
+            this.calendarManager = calendarManager;
         }
 
-        private void OnNewDay(int dayIndex, DayType dayType)
+        private void OnNewDay(int day, DayType dayType)
         {
             if (Workers > 0)
             {
                 int earning = WorkerFoodPerDay * Workers * data.MoneyPerFood;
-                int salary = SalayPerWorker * Workers;
                 data.Money += earning;
-                earningsManager.AddOrUpdateHistoryEntry(dayIndex - 1, "Доход с работников", earning);
+                earningsManager.AddOrUpdateHistoryEntry(day, "Доход с работников", earning);
                 notices.CreateNewNotification($"Ваши рабочие принесли доход: {earning}");
-
-                if (dayIndex % 7 == 0)
-                {
-                    data.Money -= salary;
-                    earningsManager.AddOrUpdateHistoryEntry(dayIndex - 1, "Зарплата", 0, salary);
-                }
             }
+        }
+
+        public void PaySalary()
+        {
+            int salary = SalayPerWorker * Workers;
+            data.Money -= salary;
+            earningsManager.AddOrUpdateHistoryEntry(calendarManager.Day, "Зарплата", 0, salary);
         }
     }
 }
