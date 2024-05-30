@@ -28,7 +28,7 @@ namespace Clicker.Core.Tournament
         [JsonIgnore] private readonly int _tournamentHoursTime = 12;
         [JsonIgnore] private readonly int _tournamentPeriod = 3;
         [JsonIgnore] private int _tournamentStartNeedProgressToWin = 10;
-        [JsonIgnore] private int _tournamentFoodCountModifier = 1;
+        [JsonIgnore] private float _tournamentFoodCountModifier = 1;
         [JsonIgnore] private GlobalObjectsContainer _objectsContainer;
         [JsonIgnore] private TimeManager _timeManager;
         [JsonIgnore] private PlayerData _data;
@@ -38,7 +38,7 @@ namespace Clicker.Core.Tournament
 
         [JsonIgnore] public int TournamentHoursTime => _tournamentHoursTime;
         [JsonIgnore] public int TournamentPeriod => _tournamentPeriod;
-        [JsonIgnore] public int TournamentFoodCountModifier => _tournamentFoodCountModifier;
+        [JsonIgnore] public float TournamentFoodCountModifier => _tournamentFoodCountModifier;
 
         public void LoadSavedData(TournamentManager tournamentManager)
         {
@@ -60,9 +60,9 @@ namespace Clicker.Core.Tournament
             _timeManager = timeManager;
             _notifications = notifications;
         }
-        public void SetFoodCountModifier(int value)
+        public void SetFoodCountModifier(float value)
         {
-            _tournamentFoodCountModifier += value;
+            _tournamentFoodCountModifier = value;
         }
 
         public void AskForTournament()
@@ -74,7 +74,7 @@ namespace Clicker.Core.Tournament
         }
         private void StartTournament()
         {
-            _tournamentStartNeedProgressToWin *= _tournamentFoodCountModifier;
+            _tournamentStartNeedProgressToWin = (int)(_tournamentStartNeedProgressToWin * _tournamentFoodCountModifier);
             _objectsContainer.ClickerScript.onFoodCookedEarned -= NewFoodCookedAction;
             TimeManager.onNewHour -= NewHourCheck;
             _currentTournamentProgress = 0;

@@ -22,13 +22,15 @@ namespace Clicker.Core.Workers
 
 
         [JsonIgnore] private PlayerData data;
+        [JsonIgnore] private NoticeSystem notices;
         [JsonIgnore] private readonly EarningsManager earningsManager;
 
         public void SetData(PlayerData data) => this.data = data;
-        public WorkersManager(EarningsManager earningsManager,CalendarManager calendarManager)
+        public WorkersManager(EarningsManager earningsManager, CalendarManager calendarManager, NoticeSystem notices)
         {
             calendarManager.onNewDay += OnNewDay;
             this.earningsManager = earningsManager;
+            this.notices = notices;
         }
 
         private void OnNewDay(int dayIndex, DayType dayType)
@@ -39,6 +41,7 @@ namespace Clicker.Core.Workers
                 int salary = SalayPerWorker * Workers;
                 data.Money += earning;
                 earningsManager.AddOrUpdateHistoryEntry(dayIndex - 1, "Доход с работников", earning);
+                notices.CreateNewNotification($"Ваши рабочие принесли доход: {earning}");
 
                 if (dayIndex % 7 == 0)
                 {

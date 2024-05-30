@@ -10,12 +10,12 @@ namespace Clicker.Core.Time
 
         private PlayerData _data;
 
-        public UtilitiesPayEvent(int eventPeriod, int hour, PlayerData data)
+        public UtilitiesPayEvent(int eventPeriod, int hour, PlayerData data, GeneralPassiveMoneyController passiveController)
         {
             _eventPeriod = eventPeriod;
             _hour = hour;
             _data = data;
-            _description = $"Оплата за коммунальные услуги";
+            _description = $"Оплата за коммунальные услуги\n\n<color=\"red\"><size=34>{passiveController.UtilityServiceCost}$";
         }
         public override void EventAction()
         {

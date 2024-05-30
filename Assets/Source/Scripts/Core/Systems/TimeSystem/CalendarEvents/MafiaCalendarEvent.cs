@@ -15,7 +15,7 @@ namespace Clicker.Core.Time
             _eventPeriod = eventPeriod;
             _hour = hour;
             _mafiaManager = mafiaManager;
-            _description = $"Мафия придёт забрать с вас деньги, готовы ли вы?";
+            _description = $"Мафия придёт забрать с вас деньги, готовы ли вы?\nОни заберут:\n<color=\"red\"><size=30>{mafiaManager.TakeMoneyCount}$";
         }
         public override void EventAction()
         {

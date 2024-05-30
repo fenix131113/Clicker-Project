@@ -64,6 +64,7 @@ public class PanelsController : MonoBehaviour
     public void OpenCalendar()
     {
         calendarEventController.SelectDay(0);
+        calendarEventController.LightCurrentDay();
 
         timeManager.IsTimePaused = true;
 

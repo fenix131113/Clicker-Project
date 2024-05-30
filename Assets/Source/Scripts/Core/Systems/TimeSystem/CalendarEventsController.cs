@@ -1,5 +1,6 @@
 using Clicker.Core.Earnings;
 using Clicker.Core.Tournament;
+using DG.Tweening;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace Clicker.Core.Time
         [SerializeField] private Transform _dayEventsContentTransform;
         [SerializeField] private GameObject _dayEventPrefab;
         [SerializeField] private GameObject _emptyDayEventsTextObject;
+        [SerializeField] private GameObject _dayEventsNotification;
 
         private List<CalendarEvent>[] _daysEvents = new List<CalendarEvent>[31];
         private List<CalendarEvent> _allEvents = new();
@@ -23,17 +25,20 @@ namespace Clicker.Core.Time
         private MafiaManager _mafiaManager;
         private PlayerData _data;
         private CalendarManager _calendarManager;
+        GeneralPassiveMoneyController _passiveController;
 
         public int SelectedDayIndex { get { return _selectedDayIndex; } set { _selectedDayIndex = value; } }
 
         [Inject]
-        private void Init(TimeManager timeManager, TournamentManager tournaments, MafiaManager mafiaManager, PlayerData data, CalendarManager calendarManager)
+        private void Init(TimeManager timeManager, TournamentManager tournaments, MafiaManager mafiaManager,
+            PlayerData data, CalendarManager calendarManager, GeneralPassiveMoneyController passiveController)
         {
             _timeManager = timeManager;
             _tournaments = tournaments;
             _mafiaManager = mafiaManager;
             _data = data;
             _calendarManager = calendarManager;
+            _passiveController = passiveController;
         }
 
         private void Awake()
@@ -42,6 +47,7 @@ namespace Clicker.Core.Time
 
             TimeManager.onNewMinute += CheckEventsData;
             _calendarManager.onNewDay += OnNewDay;
+            CheckDaysEventAndNoticePlayer();
         }
 
         private void OnNewDay(int dayNum, DayType dayType)
@@ -53,6 +59,21 @@ namespace Clicker.Core.Time
             // Clear all events complete status every day
             foreach (CalendarEvent c in _allEvents)
                 c.EventComplete = false;
+
+            CheckDaysEventAndNoticePlayer();
+        }
+
+        // Checks event in current day and activate notification on calendar button
+        private void CheckDaysEventAndNoticePlayer()
+        {
+            if (_daysEvents[_calendarManager.Day > 31 ? _calendarManager.Day % 31 : _calendarManager.Day - 1].Count > 0)
+            {
+                _dayEventsNotification.gameObject.SetActive(true);
+                RectTransform rect = _dayEventsNotification.GetComponent<RectTransform>();
+                rect.DOLocalMoveY(rect.localPosition.y + 10f, 0.15f).SetEase(Ease.InOutBounce).onComplete += () => rect.DOLocalMoveY(rect.localPosition.y - 10f, 0.15f).SetEase(Ease.InOutBounce);
+            }
+            else
+                _dayEventsNotification.SetActive(false);
         }
 
         // Check every event data and compare with current data
@@ -77,8 +98,8 @@ namespace Clicker.Core.Time
             {
                 new CookTournamentCalendarEvent(_tournaments.TournamentPeriod, 15, _tournaments),
                 new MafiaCalendarEvent(_mafiaManager.MafiaVisitPeriod, 15, _mafiaManager),
-                new UtilitiesPayEvent(7, 7, _data),
-                new ConsumablePaymentEvent(_data.PassiveMoneyController.ConsumablesPayPeriod, 7, _data),
+                new UtilitiesPayEvent(7, 7, _data, _passiveController),
+                new ConsumablePaymentEvent(_data.PassiveMoneyController.ConsumablesPayPeriod, 7, _data, _passiveController),
             };
 
 
@@ -176,6 +197,14 @@ namespace Clicker.Core.Time
             DrawDayEventsInfoByIndex(_selectedDayIndex);
         }
 
+        public void LightCurrentDay()
+        {
+            foreach (CalendarCell cell in _calendarCells)
+                cell.transform.GetChild(1).GetComponent<TMP_Text>().color = Color.white;
+
+            _calendarCells[_calendarManager.Day > 31 ? _calendarManager.Day % 31 : _calendarManager.Day - 1]
+                .transform.GetChild(1).GetComponent<TMP_Text>().color = Color.yellow;
+        }
         public void DeactivateCurrentCalendarSelection()
         {
             if (SelectedDayIndex >= 0)
