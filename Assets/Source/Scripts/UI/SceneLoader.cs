@@ -7,4 +7,12 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(buildIndex);
     }
+
+    public void LoadGame()
+    {
+        if (PlayerPrefs.HasKey("data"))
+            SceneManager.LoadScene(2);
+        else
+            SceneManager.LoadScene(1);
+    }
 }

@@ -71,4 +71,7 @@ public class GlobalObjectsContainer : MonoBehaviour
 
     [SerializeField] private AudioClip annoncmentSound;
     public AudioClip AnnouncmentSound => annoncmentSound;
+
+    [SerializeField] private TMP_Text mafiaPanelText;
+    public TMP_Text MafiaPanelText => mafiaPanelText;
 }

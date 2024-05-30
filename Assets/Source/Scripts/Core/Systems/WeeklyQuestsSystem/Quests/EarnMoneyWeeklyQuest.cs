@@ -1,7 +1,7 @@
 
 public class EarnMoneyWeeklyQuest : WeeklyQuestBase
 {
-    public EarnMoneyWeeklyQuest(string desctiption, WeeklyQuestsController controller, int minNeedProgress, int maxNeedProgress) : base(desctiption, controller, minNeedProgress, maxNeedProgress)
+    public EarnMoneyWeeklyQuest(string desctiption, WeeklyQuestsController controller, WeeklyQuestDifficultItem[] difficultItems) : base(desctiption, controller, difficultItems)
     {
         _controller.Data.onGetMoney += QuestEvent;
     }
