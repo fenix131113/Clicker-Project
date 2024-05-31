@@ -14,23 +14,23 @@ namespace Clicker.Core.SkillSystem.Skills
             switch (level)
             {
                 case 1:
-                    data.PassiveMoneyController.SetUtilityServiceCost(data.PassiveMoneyController.UtilityServiceCost + 50);
+                    data.PassiveMoneyController.SetUtilityServiceCost(data.PassiveMoneyController.UtilityServiceCost + 25);
                     data.PassiveMoneyController.SetConsumablesPayPeriod(data.PassiveMoneyController.ConsumablesPayPeriod + 1);
                     break;
                 case 2:
-                    data.PassiveMoneyController.SetUtilityServiceCost(data.PassiveMoneyController.UtilityServiceCost + 100);
+                    data.PassiveMoneyController.SetUtilityServiceCost(data.PassiveMoneyController.UtilityServiceCost + 25);
                     data.PassiveMoneyController.SetConsumablesPayPeriod(data.PassiveMoneyController.ConsumablesPayPeriod + 2);
                     break;
                 case 3:
-                    data.PassiveMoneyController.SetUtilityServiceCost(data.PassiveMoneyController.UtilityServiceCost + 200);
+                    data.PassiveMoneyController.SetUtilityServiceCost(data.PassiveMoneyController.UtilityServiceCost + 50);
                     data.PassiveMoneyController.SetConsumablesPayPeriod(data.PassiveMoneyController.ConsumablesPayPeriod + 2);
                     break;
                 case 4:
-                    data.PassiveMoneyController.SetUtilityServiceCost(data.PassiveMoneyController.UtilityServiceCost + 350);
+                    data.PassiveMoneyController.SetUtilityServiceCost(data.PassiveMoneyController.UtilityServiceCost + 50);
                     data.PassiveMoneyController.SetConsumablesPayPeriod(data.PassiveMoneyController.ConsumablesPayPeriod + 2);
                     break;
                 case 5:
-                    data.PassiveMoneyController.SetUtilityServiceCost(data.PassiveMoneyController.UtilityServiceCost + 500);
+                    data.PassiveMoneyController.SetUtilityServiceCost(data.PassiveMoneyController.UtilityServiceCost + 100);
                     data.PassiveMoneyController.SetConsumablesPayPeriod(data.PassiveMoneyController.ConsumablesPayPeriod + 3);
                     break;
             }

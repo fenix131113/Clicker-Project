@@ -1032,7 +1032,7 @@ MonoBehaviour:
   - {fileID: 469915063}
   - {fileID: 1135716831}
   needPassiveItems: []
-  _moneyCost: 200
+  _moneyCost: 300
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 65994505}
@@ -4581,7 +4581,7 @@ MonoBehaviour:
   - {fileID: 1788207897}
   needPassiveItems:
   - {fileID: 102277915}
-  _moneyCost: 2500
+  _moneyCost: 4500
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 299904342}
@@ -5346,7 +5346,7 @@ MonoBehaviour:
   needPassiveItems:
   - {fileID: 248669953}
   _moneyCost: 2500
-  _skillPointsCost: 2
+  _skillPointsCost: 3
   _skillCostType: 0
   _skill: {fileID: 352451055}
 --- !u!114 &352451055
@@ -7266,7 +7266,7 @@ MonoBehaviour:
   - {fileID: 1730482033}
   needPassiveItems:
   - {fileID: 260871850}
-  _moneyCost: 150
+  _moneyCost: 250
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 469915064}
@@ -8249,7 +8249,7 @@ MonoBehaviour:
   - {fileID: 887456733}
   - {fileID: 85243101}
   needPassiveItems: []
-  _moneyCost: 1500
+  _moneyCost: 3750
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 586685699}
@@ -8739,8 +8739,8 @@ MonoBehaviour:
   - {fileID: 880617277}
   needPassiveItems:
   - {fileID: 1022405864}
-  _moneyCost: 5000
-  _skillPointsCost: 4
+  _moneyCost: 15000
+  _skillPointsCost: 6
   _skillCostType: 0
   _skill: {fileID: 643245384}
 --- !u!114 &643245384
@@ -9218,7 +9218,7 @@ MonoBehaviour:
   - {fileID: 1168632090}
   needPassiveItems:
   - {fileID: 260871850}
-  _moneyCost: 300
+  _moneyCost: 400
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 680554552}
@@ -9609,7 +9609,7 @@ MonoBehaviour:
   - {fileID: 991349043}
   - {fileID: 1420329300}
   needPassiveItems: []
-  _moneyCost: 5000
+  _moneyCost: 12000
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 730646923}
@@ -11719,8 +11719,8 @@ MonoBehaviour:
   - {fileID: 352451054}
   needPassiveItems:
   - {fileID: 102277915}
-  _moneyCost: 3000
-  _skillPointsCost: 3
+  _moneyCost: 6500
+  _skillPointsCost: 4
   _skillCostType: 0
   _skill: {fileID: 880617278}
 --- !u!114 &880617278
@@ -11973,7 +11973,7 @@ MonoBehaviour:
   - {fileID: 142686592}
   needPassiveItems:
   - {fileID: 102277915}
-  _moneyCost: 1500
+  _moneyCost: 3000
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 887456734}
@@ -12935,7 +12935,7 @@ MonoBehaviour:
   - {fileID: 299904341}
   needPassiveItems:
   - {fileID: 1022405864}
-  _moneyCost: 4500
+  _moneyCost: 9000
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 991349044}
@@ -13127,7 +13127,7 @@ MonoBehaviour:
   - {fileID: 730646922}
   - {fileID: 1824691878}
   needPassiveItems: []
-  _moneyCost: 6500
+  _moneyCost: 15000
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1002338228}
@@ -13380,7 +13380,7 @@ MonoBehaviour:
     \u0432\u0430\u0448\u0430 \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0435\u0435!
     20->40"
   level: 5
-  _counterGoal: 7000
+  _counterGoal: 6500
   _skillItem: {fileID: 1022405864}
 --- !u!114 &1022405864
 MonoBehaviour:
@@ -14111,7 +14111,7 @@ MonoBehaviour:
   - {fileID: 586685698}
   - {fileID: 1452983827}
   needPassiveItems: []
-  _moneyCost: 3000
+  _moneyCost: 4500
   _skillPointsCost: 1
   _skillCostType: 0
   _skill: {fileID: 1105659412}
@@ -15751,7 +15751,7 @@ MonoBehaviour:
   - {fileID: 65994504}
   - {fileID: 1315157956}
   needPassiveItems: []
-  _moneyCost: 300
+  _moneyCost: 350
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1269111601}
@@ -17109,7 +17109,7 @@ MonoBehaviour:
   needPassiveItems:
   - {fileID: 1495229779}
   _moneyCost: 250
-  _skillPointsCost: 1
+  _skillPointsCost: 2
   _skillCostType: 0
   _skill: {fileID: 1378183815}
 --- !u!114 &1378183815
@@ -17304,7 +17304,7 @@ MonoBehaviour:
   - {fileID: 680554551}
   - {fileID: 767609987}
   needPassiveItems: []
-  _moneyCost: 400
+  _moneyCost: 450
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1384495902}
@@ -17461,7 +17461,7 @@ MonoBehaviour:
   - {fileID: 299904341}
   - {fileID: 1093615549}
   needPassiveItems: []
-  _moneyCost: 2750
+  _moneyCost: 5000
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1420329301}
@@ -20135,7 +20135,7 @@ MonoBehaviour:
   - {fileID: 1643505831}
   - {fileID: 1105659411}
   needPassiveItems: []
-  _moneyCost: 5000
+  _moneyCost: 10000
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1642006750}
@@ -20255,7 +20255,7 @@ MonoBehaviour:
   - {fileID: 2068750968}
   - {fileID: 586685698}
   needPassiveItems: []
-  _moneyCost: 3000
+  _moneyCost: 8500
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1643505832}
@@ -21718,7 +21718,7 @@ MonoBehaviour:
   - {fileID: 1420329300}
   - {fileID: 1049436639}
   needPassiveItems: []
-  _moneyCost: 3500
+  _moneyCost: 5500
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 1824691879}
@@ -24392,7 +24392,7 @@ MonoBehaviour:
   - {fileID: 887456733}
   needPassiveItems:
   - {fileID: 1022405864}
-  _moneyCost: 3000
+  _moneyCost: 6000
   _skillPointsCost: 0
   _skillCostType: 0
   _skill: {fileID: 2068750969}

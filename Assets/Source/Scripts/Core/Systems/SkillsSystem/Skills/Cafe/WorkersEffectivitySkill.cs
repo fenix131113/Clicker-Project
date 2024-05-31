@@ -19,7 +19,7 @@ namespace Clicker.Core.SkillSystem.Skills
                     break;
                 case 2:
                     data.WorkersManager.SetWorkerFoodPerDay(data.WorkersManager.WorkerFoodPerDay + 5);
-                    data.WorkersManager.SetSalaryPerWorker(data.WorkersManager.SalayPerWorker + 75);
+                    data.WorkersManager.SetSalaryPerWorker(data.WorkersManager.SalayPerWorker + 25);
                     break;
                 case 3:
                     data.WorkersManager.SetWorkerFoodPerDay(data.WorkersManager.WorkerFoodPerDay + 5);
@@ -27,11 +27,11 @@ namespace Clicker.Core.SkillSystem.Skills
                     break;
                 case 4:
                     data.WorkersManager.SetWorkerFoodPerDay(data.WorkersManager.WorkerFoodPerDay + 5);
-                    data.WorkersManager.SetSalaryPerWorker(data.WorkersManager.SalayPerWorker + 350);
+                    data.WorkersManager.SetSalaryPerWorker(data.WorkersManager.SalayPerWorker + 250);
                     break;
                 case 5:
                     data.WorkersManager.SetWorkerFoodPerDay(data.WorkersManager.WorkerFoodPerDay + 5);
-                    data.WorkersManager.SetSalaryPerWorker(data.WorkersManager.SalayPerWorker + 500);
+                    data.WorkersManager.SetSalaryPerWorker(data.WorkersManager.SalayPerWorker + 300);
                     break;
             }
         }
