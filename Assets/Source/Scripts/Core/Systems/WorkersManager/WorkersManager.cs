@@ -42,7 +42,7 @@ namespace Clicker.Core.Workers
                 int earning = WorkerFoodPerDay * Workers * data.MoneyPerFood;
                 data.Money += earning;
                 earningsManager.AddOrUpdateHistoryEntry(day, "Доход с работников", earning);
-                notices.CreateNewNotification($"Ваши рабочие принесли доход: {earning}");
+                notices.CreateNewNotification($"Ваши рабочие принесли доход: {earning}$");
             }
         }
 

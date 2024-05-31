@@ -1,4 +1,3 @@
-using Clicker.Core.Earnings;
 using Clicker.Core.Tournament;
 using Clicker.Core.Workers;
 using DG.Tweening;

@@ -113,8 +113,8 @@ public class PlayerData
     [JsonIgnore] public int MaxProgressBarClicks => _maxProgressBarClicks;
     public void SetMaxProgressBarClicks(int count) => _maxProgressBarClicks = count;
 
-    [JsonProperty] private WeeklyQuestContainer[] _savedWeeklyQuests;
-    [JsonIgnore] public WeeklyQuestContainer[] SavedWeeklyQuests => _savedWeeklyQuests;
+    //[JsonProperty] private WeeklyQuestContainer[] _savedWeeklyQuests;
+    //[JsonIgnore] public WeeklyQuestContainer[] SavedWeeklyQuests => _savedWeeklyQuests;
 
 
     private SkillSaveManager _skillSaveManager;
@@ -171,7 +171,7 @@ public class PlayerData
     public void SaveData()
     {
         _skillSaveManager.SaveSkillsData();
-        _savedWeeklyQuests = _weeklyQuestsController.CurrentWeeklyQuests;
+        //_savedWeeklyQuests = _weeklyQuestsController.CurrentWeeklyQuests;
         _day = _calendarManager.Day;
         string dataSave = JsonConvert.SerializeObject(this);
         PlayerPrefs.SetString("data", dataSave);
@@ -187,7 +187,7 @@ public class PlayerData
         PlayerData loadedData = JsonConvert.DeserializeObject<PlayerData>(PlayerPrefs.GetString(dataKey));
         _mafiaManager.LoadSavedData(loadedData._mafiaManager);
         _tournamentManager.LoadSavedData(loadedData._tournamentManager);
-        _savedWeeklyQuests = loadedData._savedWeeklyQuests;
+        //_savedWeeklyQuests = loadedData._savedWeeklyQuests;
 
         _calendarManager.SetDay(loadedData._day);
         _money = loadedData._money;
