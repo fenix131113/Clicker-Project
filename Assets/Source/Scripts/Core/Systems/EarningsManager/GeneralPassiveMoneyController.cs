@@ -14,7 +14,7 @@ public class GeneralPassiveMoneyController
     public void SetConsumablesPayPeriod(int days) => _consumablesPayPeriod = days;
 
 
-    [JsonIgnore] private int _consumablesCost = 25;
+    [JsonIgnore] private int _consumablesCost = 50;
     [JsonIgnore] public int ConsumablesCost => _consumablesCost;
     public void SetConsumablesCost(int cost) => _consumablesCost = cost;
 
