@@ -42,15 +42,18 @@ public class WeeklyQuestsController : MonoBehaviour
         _notices = notices;
         _earnings = earnings;
         _calendarManager = calendarManager;
-        calendarManager.onNewDay += OnNewDay;
         onQuestComplete += _data.IncreaseWeeklyQuestsComplete;
 
         GenerateAllQuests();
 
-        if (!PlayerPrefs.HasKey("data"))
-            GenerateNewRandomQuests();
-        else
-            LoadData(data.SavedWeeklyQuests);
+        //if (!PlayerPrefs.HasKey("data"))
+        //    GenerateNewRandomQuests();
+        //else
+        //    LoadData(data.SavedWeeklyQuests);
+
+        GenerateNewRandomQuests();
+
+        calendarManager.onNewDay += OnNewDay;
     }
 
     private void OnNewDay(int day, DayType dayType)
@@ -142,6 +145,7 @@ public class WeeklyQuestsController : MonoBehaviour
                 }
                 _notices.CreateNewNotification(noticeMessage);
                 _currentWeeklyQuests[i].SetCompleted();
+                onQuestComplete?.Invoke();
             }
     }
 

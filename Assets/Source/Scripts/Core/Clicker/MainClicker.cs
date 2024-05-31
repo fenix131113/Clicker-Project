@@ -94,7 +94,7 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
             onFoodCookedEarned?.Invoke(data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks));
             CreateEarnedMoneyLabel(data.MoneyPerFood * (data.CurrentClickerProgress / data.MaxProgressBarClicks));
             data.SetCurrentClickerProgress(data.CurrentClickerProgress % data.MaxProgressBarClicks);
-            audioController.PlaySound(foodCookedSounds[_currentFoodIndex]);
+            audioController.PlaySound(foodCookedSounds[_currentFoodIndex], 0.7f);
             onFoodCooked?.Invoke();
         }
 

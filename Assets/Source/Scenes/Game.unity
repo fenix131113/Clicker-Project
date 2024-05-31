@@ -797,7 +797,7 @@ MonoBehaviour:
   m_text: 1/24
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f65211607a99f694fab02bb0eecbebe9, type: 2}
-  m_sharedMaterial: {fileID: -4592900693216259282, guid: 8555d7ea5500ec54987076fae64d990b, type: 2}
+  m_sharedMaterial: {fileID: 375693525607131859, guid: f65211607a99f694fab02bb0eecbebe9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12885,8 +12885,8 @@ RectTransform:
   - {fileID: 792531842}
   - {fileID: 468803730}
   - {fileID: 597513216}
-  - {fileID: 1178207936}
   - {fileID: 1356675610}
+  - {fileID: 1178207936}
   - {fileID: 514388946}
   - {fileID: 1775665367}
   m_Father: {fileID: 0}
@@ -17593,7 +17593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.105882354, g: 0.13725491, b: 0.1882353, a: 1}
+  m_Color: {r: 0.16006587, g: 0.21768679, b: 0.31132078, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -24544,7 +24544,7 @@ MonoBehaviour:
   - {fileID: 467732774}
   - {fileID: 1442450847}
   foodCookedSounds:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 88137561e82777b44a95f84fca3647b6, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
