@@ -10,7 +10,10 @@ public class PlayerPrefsCleaner : MonoBehaviour
     public static void DebugPrefs()
     {
         Debug.Log("Data: " + PlayerPrefs.HasKey("data"));
-        Debug.Log("Backup: " + PlayerPrefs.HasKey("backup"));
-        Debug.Log("Died: " + PlayerPrefs.HasKey("died"));
+    }    
+    [MenuItem("Clicker/Print Prefs")]
+    public static void PrintData()
+    {
+        Debug.Log(PlayerPrefs.GetString("data"));
     }
 }
