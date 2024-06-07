@@ -33,12 +33,14 @@ public class PanelsController : MonoBehaviour
 
     private TimeManager timeManager;
     private EarningsManager earningsManager;
+    private GlobalObjectsContainer objectsContainer;
 
     [Inject]
-    private void Init(TimeManager timeManager, EarningsManager earningsManager)
+    private void Init(TimeManager timeManager, EarningsManager earningsManager, GlobalObjectsContainer objectsContainer)
     {
         this.timeManager = timeManager;
         this.earningsManager = earningsManager;
+        this.objectsContainer = objectsContainer;
     }
 
     public void OpenSettings()
@@ -92,6 +94,7 @@ public class PanelsController : MonoBehaviour
         timeManager.IsTimePaused = true;
         skillPanelBlockerFade.gameObject.SetActive(true);
         skillPanelBlockerFade.DOFade(0.7f, 0.4f);
+        objectsContainer.SkillInfoPanel.SelectFirstSkill();
 
         skillPanelRect.DOMove(new Vector2(Screen.width / 2, Screen.height / 2), 0.4f);
     }
@@ -130,7 +133,7 @@ public class PanelsController : MonoBehaviour
         {
 
             TMP_Text dayBlockText = Instantiate(dayBlock, earningsContainerTransform).transform.GetChild(0).GetComponent<TMP_Text>();
-            dayBlockText.text = $"Δενό {historyDay.Day}";
+            dayBlockText.text = $"Day {historyDay.Day}";
             foreach (EarningsHistoryCategory category in historyDay.Catigories)
             {
                 Transform categoryCell = Instantiate(categoryBlock, earningsContainerTransform).transform;

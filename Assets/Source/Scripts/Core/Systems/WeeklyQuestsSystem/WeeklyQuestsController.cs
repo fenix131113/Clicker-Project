@@ -92,9 +92,9 @@ public class WeeklyQuestsController : MonoBehaviour
     {
         _allQuests = new()
         {
-            new ClickerWeeklyQuest("Кликов", this, new WeeklyQuestDifficultItem[]{ new(1, 125, 0, 75), new(1, 175, 0, 125), new(1, 0, 1, 175), new(2, 125, 0, 150), new(2, 175, 0, 200), new(2, 0, 1, 275),  new(3, 125, 0, 250), new(3, 175, 0, 350), new(3, 0, 1, 450), new(4, 125, 0, 375), new(4, 175, 0, 500), new(4, 0, 1, 650),  new(5, 125, 0, 525), new(5, 175, 0, 675), new(5, 0, 1, 800), new(6, 125, 0, 700), new(6, 175, 0, 850), new(6, 0, 1, 1000), new(7, 125, 0, 875), new(7, 175, 0, 1000), new(7, 0, 1, 1200),}, _objectsContainer.ClickerScript),
-            new FoodCookingWeeklyQuest("Приготовить еды", this, new WeeklyQuestDifficultItem[]{ new(1, 150, 0, 10), new(1, 200, 0, 15), new(1, 0, 1, 25), new(2, 150, 0, 20), new(2, 200, 0, 35), new(2, 0, 1, 55),  new(3, 150, 0, 40), new(3, 200, 0, 65), new(3, 0, 1, 90), new(4, 150, 0, 90), new(4, 200, 0, 120), new(4, 0, 1, 150),  new(5, 150, 0, 120), new(5, 200, 0, 150), new(5, 0, 1, 185), new(6, 150, 0, 150), new(6, 200, 0, 180), new(6, 0, 1, 225), new(7, 150, 0, 180), new(7, 200, 0, 250), new(7, 0, 1, 300),}, _objectsContainer.ClickerScript),
-            new EarnMoneyWeeklyQuest("Заработать денег", this, new WeeklyQuestDifficultItem[]{ new(1, 150, 0, 15), new(1, 200, 0, 25), new(1, 0, 1, 40), new(2, 150, 0, 30), new(2, 200, 0, 50), new(2, 0, 1, 80),  new(3, 150, 0, 50), new(3, 200, 0, 90), new(3, 0, 1, 130), new(4, 150, 0, 90), new(4, 200, 0, 130), new(4, 0, 1, 180),  new(5, 150, 0, 130), new(5, 200, 0, 180), new(5, 0, 1, 230), new(6, 150, 0, 180), new(6, 200, 0, 250), new(6, 0, 1, 300), new(7, 150, 0, 230), new(7, 200, 0, 300), new(7, 0, 1, 400),}),
+            new ClickerWeeklyQuest("Clicks", this, new WeeklyQuestDifficultItem[]{ new(1, 125, 0, 75), new(1, 175, 0, 125), new(1, 0, 1, 175), new(2, 125, 0, 150), new(2, 175, 0, 200), new(2, 0, 1, 275),  new(3, 125, 0, 250), new(3, 175, 0, 350), new(3, 0, 1, 450), new(4, 125, 0, 375), new(4, 175, 0, 500), new(4, 0, 1, 650),  new(5, 125, 0, 525), new(5, 175, 0, 675), new(5, 0, 1, 800), new(6, 125, 0, 700), new(6, 175, 0, 850), new(6, 0, 1, 1000), new(7, 125, 0, 875), new(7, 175, 0, 1000), new(7, 0, 1, 1200),}, _objectsContainer.ClickerScript),
+            new FoodCookingWeeklyQuest("Cooked food", this, new WeeklyQuestDifficultItem[]{ new(1, 150, 0, 10), new(1, 200, 0, 15), new(1, 0, 1, 25), new(2, 150, 0, 20), new(2, 200, 0, 35), new(2, 0, 1, 55),  new(3, 150, 0, 40), new(3, 200, 0, 65), new(3, 0, 1, 90), new(4, 150, 0, 90), new(4, 200, 0, 120), new(4, 0, 1, 150),  new(5, 150, 0, 120), new(5, 200, 0, 150), new(5, 0, 1, 185), new(6, 150, 0, 150), new(6, 200, 0, 180), new(6, 0, 1, 225), new(7, 150, 0, 180), new(7, 200, 0, 250), new(7, 0, 1, 300),}, _objectsContainer.ClickerScript),
+            new EarnMoneyWeeklyQuest("Earn money", this, new WeeklyQuestDifficultItem[]{ new(1, 150, 0, 15), new(1, 200, 0, 25), new(1, 0, 1, 40), new(2, 150, 0, 30), new(2, 200, 0, 50), new(2, 0, 1, 80),  new(3, 150, 0, 50), new(3, 200, 0, 90), new(3, 0, 1, 130), new(4, 150, 0, 90), new(4, 200, 0, 130), new(4, 0, 1, 180),  new(5, 150, 0, 130), new(5, 200, 0, 180), new(5, 0, 1, 230), new(6, 150, 0, 180), new(6, 200, 0, 250), new(6, 0, 1, 300), new(7, 150, 0, 230), new(7, 200, 0, 300), new(7, 0, 1, 400),}),
         };
     }
 
@@ -112,7 +112,7 @@ public class WeeklyQuestsController : MonoBehaviour
         for (int i = 0; i < _currentWeeklyObjects.Length; i++)
         {
             _currentWeeklyObjects[i].transform.GetChild(0).GetComponent<TMP_Text>().text = _allQuests[_currentWeeklyQuests[i].QuestIndex].Description;
-            _currentWeeklyObjects[i].transform.GetChild(2).GetComponent<TMP_Text>().text = "Осталось дней: " + _currentWeeklyQuests[i].DaysLeft.ToString();
+            _currentWeeklyObjects[i].transform.GetChild(2).GetComponent<TMP_Text>().text = "Days left: " + _currentWeeklyQuests[i].DaysLeft.ToString();
 
             if (!_currentWeeklyQuests[i].Complete && _currentWeeklyQuests[i].IsLoose)
                 _currentWeeklyObjects[i].transform.GetChild(1).GetChild(1).GetComponent<TMP_Text>().text = "X";
@@ -131,16 +131,16 @@ public class WeeklyQuestsController : MonoBehaviour
             if (!_currentWeeklyQuests[i].Complete && !_currentWeeklyQuests[i].IsLoose && _currentWeeklyQuests[i].Progress == _currentWeeklyQuests[i].NeedProgress)
             {
                 _allQuests[_currentWeeklyQuests[i].QuestIndex].onProgressIncreased = null;
-                string noticeMessage = "Вы выполнили задание и получили:";
+                string noticeMessage = "You completed the task and received:";
                 if (_currentWeeklyQuests[i].MoneyReward > 0)
                 {
                     noticeMessage += "\n" + _currentWeeklyQuests[i].MoneyReward.ToString() + "$";
-                    _earnings.AddOrUpdateHistoryEntry(_calendarManager.Day, "Задания", _currentWeeklyQuests[i].MoneyReward);
+                    _earnings.AddOrUpdateHistoryEntry(_calendarManager.Day, "Quests", _currentWeeklyQuests[i].MoneyReward);
                     _data.AddMoneySilently(_currentWeeklyQuests[i].MoneyReward);
                 }
                 if (_currentWeeklyQuests[i].SkillPointsReward > 0)
                 {
-                    noticeMessage += "\n" + "Очки навыков: " + _currentWeeklyQuests[i].SkillPointsReward.ToString();
+                    noticeMessage += "\n" + "Skill points: " + _currentWeeklyQuests[i].SkillPointsReward.ToString();
                     _data.AddSkillPoints(_currentWeeklyQuests[i].SkillPointsReward);
                 }
                 _notices.CreateNewNotification(noticeMessage);

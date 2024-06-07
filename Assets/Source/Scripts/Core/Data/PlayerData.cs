@@ -44,14 +44,14 @@ public class PlayerData
             _money = value;
             onGetMoney?.Invoke(value - oldMoney);
             if (value < 0)
-                LooseGame("Вы обанкротились!");
+                LooseGame("You've gone bankrupt!");
         }
     }
     public void AddMoneySilently(int count)
     {
         _money += count;
         if (_money < 0)
-            LooseGame("Вы обанкротились!");
+            LooseGame("You've gone bankrupt!");
     }
 
     [JsonProperty][SerializeField] private int _skillPoints = 0;

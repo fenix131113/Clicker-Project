@@ -41,8 +41,8 @@ namespace Clicker.Core.Workers
             {
                 int earning = WorkerFoodPerDay * Workers * data.MoneyPerFood;
                 data.Money += earning;
-                earningsManager.AddOrUpdateHistoryEntry(day, "Доход с работников", earning);
-                notices.CreateNewNotification($"Ваши рабочие принесли доход: {earning}$");
+                earningsManager.AddOrUpdateHistoryEntry(day, "Employee income", earning);
+                notices.CreateNewNotification($"Your workers generated income: {earning}$");
             }
         }
 
@@ -50,7 +50,7 @@ namespace Clicker.Core.Workers
         {
             int salary = SalayPerWorker * Workers;
             data.Money -= salary;
-            earningsManager.AddOrUpdateHistoryEntry(calendarManager.Day, "Зарплата", 0, salary);
+            earningsManager.AddOrUpdateHistoryEntry(calendarManager.Day, "Salary", 0, salary);
         }
     }
 }

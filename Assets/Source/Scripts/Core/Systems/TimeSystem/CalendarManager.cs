@@ -19,24 +19,24 @@ namespace Clicker.Core.Time
         {
             _timeManager = timeManager;
         }
-        public string GetRuDayType(DayType dayType)
+        public string GetEuDayType(DayType dayType)
         {
             switch (dayType)
             {
                 case DayType.Monday:
-                    return "Понедельник";
+                    return "Monday";
                 case DayType.Tuesday:
-                    return "Вторник";
+                    return "Tuesday";
                 case DayType.Wednesday:
-                    return "Среда";
+                    return "Wednesday";
                 case DayType.Thursday:
-                    return "Четверг";
+                    return "Thursday";
                 case DayType.Friday:
-                    return "Пятница";
+                    return "Friday";
                 case DayType.Saturday:
-                    return "Суббота";
+                    return "Saturday";
                 case DayType.Sunday:
-                    return "Воскресенье";
+                    return "Sunday";
             }
             return null;
         }

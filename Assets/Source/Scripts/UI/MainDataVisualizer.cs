@@ -25,12 +25,12 @@ public class MainDataVisualizer : MonoBehaviour
 
     private void EveryMinuteAction(int minute)
     {
-        dateAndTimeText.text = $"День {_calendarManager.Day} | {_calendarManager.GetRuDayType(_calendarManager.GetDayType)}\n{_timeManager.GetFormattedHours()}:{_timeManager.GetFormattedMinutes()}";
+        dateAndTimeText.text = $"Day {_calendarManager.Day} | {_calendarManager.GetEuDayType(_calendarManager.GetDayType)}\n{_timeManager.GetFormattedHours()}:{_timeManager.GetFormattedMinutes()}";
     }
 
     private void Update()
     {
-        moneyText.text = $"Деньги: {_data.Money}$";
-        skillPointsText.text = $"Очки навыков: {_data.SkillPoints}";
+        moneyText.text = $"Money: {_data.Money}$";
+        skillPointsText.text = $"Skill points: {_data.SkillPoints}";
     }
 }

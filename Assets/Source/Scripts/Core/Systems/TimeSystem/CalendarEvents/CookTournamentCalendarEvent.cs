@@ -4,8 +4,8 @@ namespace Clicker.Core.Time
 {
     public class CookTournamentCalendarEvent : CalendarEvent
     {
-        protected override string _eventName { get; set; } = "Турнир";
-        protected override string _description { get; set; } = "Соревнование, за победу в котором вы получите 1 очко навыков";
+        protected override string _eventName { get; set; } = "Tournament";
+        protected override string _description { get; set; } = "A competition where you will earn 1 skill point for winning";
         protected override int _eventPeriod { get; set; }
         protected override int _hour { get; set; }
         protected override bool _eventComplete { get; set; }

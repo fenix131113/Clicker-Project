@@ -2,7 +2,7 @@ namespace Clicker.Core.Time
 {
     public class UtilitiesPayEvent : CalendarEvent
     {
-        protected override string _eventName { get; set; } = "Коммунальные услуги";
+        protected override string _eventName { get; set; } = "Utilities";
         protected override string _description { get; set; } = "Utilities_Pay_Event_Description";
         protected override int _eventPeriod { get; set; }
         protected override int _hour { get; set; }
@@ -15,7 +15,7 @@ namespace Clicker.Core.Time
             _eventPeriod = eventPeriod;
             _hour = hour;
             _data = data;
-            _description = $"Оплата за коммунальные услуги\n\n<color=\"red\"><size=34>{passiveController.UtilityServiceCost}$";
+            _description = $"Payment for utilities\n\n<color=\"red\"><size=40>{passiveController.UtilityServiceCost}$";
         }
         public override void EventAction()
         {

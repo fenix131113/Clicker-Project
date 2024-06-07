@@ -9,8 +9,8 @@ public class GlobalObjectsContainer : MonoBehaviour
     public GameObject MafiaTakeMoneyAskPanel => mafiaTakeMoneyAskPanel;
 
 
-    [SerializeField] private RectTransform skillInfoPanel;
-    public RectTransform SkillInfoPanelRectTransform => skillInfoPanel;
+    [SerializeField] private SkillInfoPanel skillInfoPanel;
+    public SkillInfoPanel SkillInfoPanel => skillInfoPanel;
 
 
     [SerializeField] private HoldButton acceptPaymentToMafiaButton;

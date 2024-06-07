@@ -36,13 +36,13 @@ public class GeneralPassiveMoneyController
     {
         //Utility service payment
         data.Money -= UtilityServiceCost;
-        earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day, "Коммунальные услуги", 0, UtilityServiceCost);
+        earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day, "Utilities", 0, UtilityServiceCost);
     }
 
     public void ConsumablePayment()
     {
         //Consumables payment
         data.Money -= ConsumablesCost;
-        earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day, "Расходы", 0, ConsumablesCost);
+        earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day, "Expenditures", 0, ConsumablesCost);
     }
 }

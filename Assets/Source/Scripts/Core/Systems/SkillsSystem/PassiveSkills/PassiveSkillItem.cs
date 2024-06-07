@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Clicker.Core.SkillSystem
 {
-    public class PassiveSkillItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class PassiveSkillItem : MonoBehaviour, IPointerClickHandler
     {
         [SerializeField] private Image _currentImage;
         [SerializeField] private Sprite _openedIcon;
@@ -31,22 +31,22 @@ namespace Clicker.Core.SkillSystem
             _isOpened = true;
             _currentImage.sprite = _openedIcon;
             if (withNotification)
-                _notices.CreateNewNotification($"Вы открыли новый пассивный навык \"{Skill.SkillName}\"");
+                _notices.CreateNewNotification($"You have unlocked a new passive skill \"{Skill.SkillName}\"");
         }
-
-        public void OnPointerEnter(PointerEventData eventData)
+        public void OnPointerClick(PointerEventData eventData)
         {
-            _objectsContainer.SkillInfoPanelRectTransform.GetComponent<SkillInfoPanel>().UpdateInfoPassiveSkill(this);
-            _objectsContainer.SkillInfoPanelRectTransform.gameObject.SetActive(true);
-
+            _objectsContainer.SkillInfoPanel.UpdateInfoPassiveSkill(this);
+            _objectsContainer.SkillInfoPanel.SelectSkill(this);
+        }
+        public void SetSelectedVisual()
+        {
             if (!_isOpened)
                 _currentImage.sprite = _selectedIcon;
         }
-        public void OnPointerExit(PointerEventData eventData)
+        public void SetUnselectedVisual()
         {
             if (!_isOpened)
                 _currentImage.sprite = _defaultIcon;
-            _objectsContainer.SkillInfoPanelRectTransform.gameObject.SetActive(false);
         }
     }
 }

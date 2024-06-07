@@ -103,7 +103,7 @@ public class MainClicker : MonoBehaviour, IPointerClickHandler
 
     private void FoodCooked(int earnedMoney)
     {
-        earningsManager.AddOrUpdateHistoryEntry(calendarManager.Day, "Кликер", earnedMoney);
+        earningsManager.AddOrUpdateHistoryEntry(calendarManager.Day, "Clicker", earnedMoney);
 
         List<GameObject> unlockedFoodObjects = new();
 

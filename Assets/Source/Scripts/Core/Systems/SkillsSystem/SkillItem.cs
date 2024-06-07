@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -5,7 +6,7 @@ using Zenject;
 
 namespace Clicker.Core.SkillSystem
 {
-    public class SkillItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+    public class SkillItem : MonoBehaviour, IPointerClickHandler
     {
 
         [SerializeField] private Sprite buyedIcon;
@@ -42,6 +43,9 @@ namespace Clicker.Core.SkillSystem
         private AudioController _audioController;
         private PlayerData _data;
         private Image _img;
+
+        public IReadOnlyCollection<SkillItem> NeedToBuyItems => needToBuyItems;
+        public IReadOnlyCollection<PassiveSkillItem> NeedPassiveItems => needPassiveItems;
 
         [Inject]
         public void Init(PlayerData data, GlobalObjectsContainer objectsContainer, AudioController audioController)
@@ -124,54 +128,25 @@ namespace Clicker.Core.SkillSystem
             CheckBuyedStatus();
         }
 
-        public void OnPointerEnter(PointerEventData eventData)
+        public void SelectSkill()
         {
-            // Include this code to hide skill info panel when skill !isBuyed
+            _objectsContainer.SkillInfoPanel.UpdateInfoCommonSkill(this);
 
-            //if (needToBuyItems.Length > 0)
-            //    foreach (SkillItem item in needToBuyItems)
-            //        if (!item.IsBuyed)
-            //            return;
-            _objectsContainer.SkillInfoPanelRectTransform.GetComponent<SkillInfoPanel>().UpdateInfoCommonSkill(this);
-            _objectsContainer.SkillInfoPanelRectTransform.gameObject.SetActive(true);
-
-            bool commonSkillsBuyed = false;
-            bool passiveSkillsBuyed = false;
-
-            if (!_isBuyed && needToBuyItems.Length > 0)
-            {
-                foreach (SkillItem item in needToBuyItems)
-                    if (!item.IsBuyed)
-                        break;
-                    else if (item == needToBuyItems[^1])
-                        commonSkillsBuyed = true;
-            }
-            if (!_isBuyed && needPassiveItems.Length > 0)
-            {
-                foreach (var item in needPassiveItems)
-                    if (!item.IsOpened)
-                        break;
-                    else if (item == needPassiveItems[^1])
-                        passiveSkillsBuyed = true;
-            }
-
-            if (!IsBuyed && commonSkillsBuyed && passiveSkillsBuyed && needPassiveItems.Length > 0 && needToBuyItems.Length > 0)
-                _img.sprite = selectedIcon;
-            else if (!IsBuyed && passiveSkillsBuyed && needPassiveItems.Length > 0 && needToBuyItems.Length == 0)
-                _img.sprite = selectedIcon;
-            else if (!IsBuyed && commonSkillsBuyed && needPassiveItems.Length == 0 && needToBuyItems.Length > 0)
-                _img.sprite = selectedIcon;
-            else if (!IsBuyed && needPassiveItems.Length == 0 && needToBuyItems.Length == 0)
+            _objectsContainer.SkillInfoPanel.SelectSkill(this);
+        }
+        public void SetSelectedVisual()
+        {
+            if (!_isBuyed)
                 _img.sprite = selectedIcon;
         }
-
-        public void OnPointerExit(PointerEventData eventData)
+        public void SetUnselectedVisual()
         {
             if (!_isBuyed)
                 _img.sprite = defaultIcon;
-            _objectsContainer.SkillInfoPanelRectTransform.gameObject.SetActive(false);
         }
-
-        public void OnPointerClick(PointerEventData eventData) => Buy();
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            SelectSkill();
+        }
     }
 }

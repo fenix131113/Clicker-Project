@@ -31,10 +31,10 @@ public class NoticeSystem : ITickable
     {
         GameObject notification = Object.Instantiate(_objectsContainer.NoticePanelPrefab, _objectsContainer.NotificationsContainer);
         notification.transform.GetChild(0).GetComponent<TMP_Text>().text = message;
-        notification.GetComponent<RectTransform>().DOLocalMoveY(notification.GetComponent<RectTransform>().localPosition.y + notification.GetComponent<RectTransform>().sizeDelta.y, 0.5f).onComplete += () =>
+        notification.GetComponent<RectTransform>().DOLocalMoveX(notification.GetComponent<RectTransform>().localPosition.x - notification.GetComponent<RectTransform>().sizeDelta.x, 0.5f).onComplete += () =>
         {
             Sequence deleteNotificationAnim = DOTween.Sequence();
-            deleteNotificationAnim.Insert(2.5f, notification.GetComponent<RectTransform>().DOLocalMoveY(notification.GetComponent<RectTransform>().localPosition.y - notification.GetComponent<RectTransform>().sizeDelta.y - 1, 0.5f));
+            deleteNotificationAnim.Insert(2.5f, notification.GetComponent<RectTransform>().DOLocalMoveX(notification.GetComponent<RectTransform>().localPosition.x - notification.GetComponent<RectTransform>().sizeDelta.x - 1, 0.5f));
             deleteNotificationAnim.onComplete += () => { Object.Destroy(notification); _messageCreated = false; };
         };
     }

@@ -3,7 +3,7 @@ using Clicker.Core.Workers;
 
 public class WorkersSalaryPayEvent : CalendarEvent
 {
-    protected override string _eventName { get; set; } = "Зарплата рабочим";
+    protected override string _eventName { get; set; } = "Workers salary";
     protected override string _description { get; set; } = "Salary_Pay_Event_Description";
     protected override int _eventPeriod { get; set; }
     protected override int _hour { get; set; }
@@ -18,7 +18,7 @@ public class WorkersSalaryPayEvent : CalendarEvent
         _hour = hour;
         _data = data;
         _workersManager = workersManager;
-        _description = $"Выплата зарплаты рабочим\n\n<color=\"red\"><size=34>{workersManager.SalayPerWorker * workersManager.Workers}$";
+        _description = $"Payment of worker's salaries\n\n<color=\"red\"><size=40>{workersManager.SalayPerWorker * workersManager.Workers}$";
     }
     public override void EventAction()
     {

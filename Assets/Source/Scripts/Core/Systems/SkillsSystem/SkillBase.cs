@@ -8,7 +8,7 @@ namespace Clicker.Core.SkillSystem
 		public string SkillName => skillName;
 
 
-        [SerializeField][Multiline(5)] protected string description = "";
+        [SerializeField][Multiline(7)] protected string description = "";
 		public string Description => description;
 
 

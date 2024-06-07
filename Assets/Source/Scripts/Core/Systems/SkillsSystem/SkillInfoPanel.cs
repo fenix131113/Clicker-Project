@@ -10,58 +10,97 @@ public class SkillInfoPanel : MonoBehaviour
     [SerializeField] private TMP_Text skillMoneyCostText;
     [SerializeField] private TMP_Text skillPointsCostText;
     [SerializeField] private TMP_Text fillerAmountText;
-    [SerializeField] private Image Filler;
-    [SerializeField] private GameObject FillerObject;
+    [SerializeField] private GameObject buyButtonObject;
+    [SerializeField] private Image filler;
+    [SerializeField] private GameObject fillerObject;
+    [SerializeField] private PassiveSkillItem startPassiveSelectedSkill;
 
-    private RectTransform _rect;
+    private SkillItem selectedSkillItem;
+    private PassiveSkillItem selectedPassiveItem;
 
-    private void Awake() => _rect = GetComponent<RectTransform>();
-    void Update()
+    public void SelectFirstSkill()
     {
-        if (Input.mousePosition.y > Screen.height / 2)
-            _rect.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y - _rect.sizeDelta.y / 2 - 50);
-        else
-            _rect.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y + _rect.sizeDelta.y / 2 + 50);
+        UpdateInfoPassiveSkill(startPassiveSelectedSkill);
+        SelectSkill(startPassiveSelectedSkill);
+    }
+    public void BuySelectedSkill()
+    {
+        if (!selectedSkillItem)
+            return;
+
+        selectedSkillItem.Buy();
+    }
+    public void SelectSkill(SkillItem skillItem)
+    {
+        if (selectedSkillItem)
+            selectedSkillItem.SetUnselectedVisual();
+        if (selectedPassiveItem)
+        {
+            selectedPassiveItem.SetUnselectedVisual();
+            selectedPassiveItem = null;
+        }
+        selectedSkillItem = skillItem;
+        selectedSkillItem.SetSelectedVisual();
+    }
+    public void SelectSkill(PassiveSkillItem passiveSkillItem)
+    {
+        if (selectedSkillItem)
+        {
+            selectedSkillItem.SetUnselectedVisual();
+            selectedSkillItem = null;
+        }
+        if (selectedPassiveItem)
+            selectedPassiveItem.SetUnselectedVisual();
+
+        selectedPassiveItem = passiveSkillItem;
+        selectedPassiveItem.SetSelectedVisual();
     }
 
     public void UpdateInfoCommonSkill(SkillItem skill)
     {
         skillMoneyCostText.gameObject.SetActive(true);
         skillPointsCostText.gameObject.SetActive(true);
-        FillerObject.SetActive(false);
+        fillerObject.SetActive(false);
 
-        #region Set Pos Before Show
-        if (_rect == null)
-            _rect = GetComponent<RectTransform>();
-        if (Input.mousePosition.y > Screen.height / 2)
-            _rect.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y - _rect.sizeDelta.y / 2);
+
+        bool allNeededSkills = true;
+
+        foreach (SkillItem skillItem in skill.NeedToBuyItems)
+            if (!skillItem.IsBuyed)
+            {
+                allNeededSkills = false;
+                break;
+            }
+        if(allNeededSkills)
+            foreach (PassiveSkillItem passiveItem in skill.NeedPassiveItems)
+                if (!passiveItem.IsOpened)
+                {
+                    allNeededSkills = false;
+                    break;
+                }
+
+
+        if (skill.IsBuyed || !allNeededSkills)
+            buyButtonObject.SetActive(false);
         else
-            _rect.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y + _rect.sizeDelta.y / 2);
-        #endregion
+            buyButtonObject.SetActive(true);
 
         //Set data in texts logic
         skillNameText.text = skill.Skill.SkillName;
         skillDescriptionText.text = skill.Skill.Description;
-        skillMoneyCostText.text = $"Деньги: {skill.MoneyCost}$";
-        skillPointsCostText.text = $"Очки навыков: {skill.SkillPointsCost}";
+        skillMoneyCostText.text = $"Money: {skill.MoneyCost}$";
+        skillPointsCostText.text = $"Skill points: {skill.SkillPointsCost}";
     }
     public void UpdateInfoPassiveSkill(PassiveSkillItem skill)
     {
         skillMoneyCostText.gameObject.SetActive(false);
         skillPointsCostText.gameObject.SetActive(false);
-        FillerObject.SetActive(true);
+        fillerObject.SetActive(true);
+
+        buyButtonObject.SetActive(false);
 
         fillerAmountText.text = $"{Mathf.Clamp(skill.Skill.GetCurrentCounter(), 0, skill.Skill.CounterGoal)} / {skill.Skill.CounterGoal}";
-        Filler.fillAmount = (float)skill.Skill.GetCurrentCounter() / skill.Skill.CounterGoal;
-
-        #region Set Pos Before Show
-        if (_rect == null)
-            _rect = GetComponent<RectTransform>();
-        if (Input.mousePosition.y > Screen.height / 2)
-            _rect.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y - _rect.sizeDelta.y / 2);
-        else
-            _rect.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y + _rect.sizeDelta.y / 2);
-        #endregion
+        filler.fillAmount = (float)skill.Skill.GetCurrentCounter() / skill.Skill.CounterGoal;
 
         //Set data in texts logic
         skillNameText.text = skill.Skill.SkillName;

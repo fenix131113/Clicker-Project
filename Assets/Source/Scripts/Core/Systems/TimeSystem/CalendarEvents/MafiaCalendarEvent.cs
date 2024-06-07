@@ -2,7 +2,7 @@ namespace Clicker.Core.Time
 {
     public class MafiaCalendarEvent : CalendarEvent
     {
-        protected override string _eventName { get; set; } = "Визит мафии";
+        protected override string _eventName { get; set; } = "Mafia visit";
         protected override string _description { get; set; } = "Mafia_Event_Description";
         protected override int _eventPeriod { get; set; }
         protected override int _hour { get; set; }
@@ -15,7 +15,7 @@ namespace Clicker.Core.Time
             _eventPeriod = eventPeriod;
             _hour = hour;
             _mafiaManager = mafiaManager;
-            _description = $"Мафия придёт забрать с вас деньги, готовы ли вы?\nОни заберут:\n<color=\"red\"><size=30>{mafiaManager.TakeMoneyCount}$";
+            _description = $"The mafia will come to take money from you, are you ready?\nThey will take:\n<color=\"red\"><size=40>{mafiaManager.TakeMoneyCount}$";
         }
         public override void EventAction()
         {

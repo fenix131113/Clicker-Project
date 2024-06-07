@@ -59,8 +59,8 @@ public class RobberyManager
     private void RobberyEnd()
     {
         //take money percentMoney
-        earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day, "Ограбление", 0, (int)(data.Money * (_robberyMoneyPercent * 0.01f)));
-        notifications.CreateNewNotification($"Вас обокрали на {(int)(data.Money * (_robberyMoneyPercent * 0.01f))}$");
+        earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day, "Robbery", 0, (int)(data.Money * (_robberyMoneyPercent * 0.01f)));
+        notifications.CreateNewNotification($"You have been robbed of{(int)(data.Money * (_robberyMoneyPercent * 0.01f))}$");
         data.Money -= (int)(data.Money * (_robberyMoneyPercent * 0.01f));
         timeout = 48;
     }

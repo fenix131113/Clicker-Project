@@ -62,7 +62,7 @@ public class MafiaManager
     {
         _isWaitForPayment = true;
         timeManager.IsTimePaused = true;
-        objectsContainer.MafiaPanelText.text = $"Вы готовы заплатить {TakeMoneyCount}$ мафии?";
+        objectsContainer.MafiaPanelText.text = $"Are you ready to pay {TakeMoneyCount}$ to the mafia?";
         objectsContainer.MafiaTakeMoneyAskPanel.SetActive(true);
     }
 
@@ -83,7 +83,7 @@ public class MafiaManager
             timeManager.IsTimePaused = false;
             _isWaitForPayment = false;
             objectsContainer.MafiaTakeMoneyAskPanel.SetActive(false);
-            earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day, "Мафия", 0, TakeMoneyCount);
+            earningsManager.AddOrUpdateHistoryEntry(_calendarManager.Day, "Mafia", 0, TakeMoneyCount);
             _takeMoneyCount *= _takeMoneyMultiplier;
         }
     }
@@ -93,7 +93,7 @@ public class MafiaManager
         if (MafiaPayExpiredCount >= 2)
         {
             timeManager.IsTimePaused = true;
-            data.LooseGame("Вы 2 раза не отдали долг мафии и были убиты!");
+            data.LooseGame("You failed to repay the mafia's debt twice and were killed!");
         }
     }
 }
